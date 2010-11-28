@@ -1,0 +1,426 @@
+1 Problem statement
+
+	The problem is to create a program to maintain records for students at a university. For each student
+	their name, student number (6 digits), number of credits earned and grade point average are to be stored.
+	Along with the recording of the student data the program needs to display information on a single student
+	and display a report of all students order by grade point average.
+
+2 Problem Solution
+
+	2.1 General Description
+		A class describing a student and a second class describing a list of students. A third class will
+		be created to provide command line access to the classes.
+	
+	2.2.1 Student Class
+			
+			2.2.1 Class Variables
+				private String name - The students name
+				private String id - The student number
+				private int credits - The credits the student has received
+				private double gpa - The grade point average of the student
+			
+			2.2.2 Constructor
+				Header
+				public Student(String name, String id, int credits, double gpa)
+				
+				Description
+				Sets the name, student number, credits and grade point average of the
+				student.
+				
+				Pseudocode
+				if name is valid
+					set name
+				else
+					throw an error
+
+				if student id is valid
+					set student id
+				else
+					throw an error
+
+				if credits is valid
+					set credits
+				else
+					throw an error
+
+				if gpa is valid
+					set gpa
+				else
+					throw an error
+
+			2.2.3 setName Method
+				Header
+				public void setName(String name)
+
+				Description
+				Sets the name of the student
+				
+				Pseudocode
+				if name is valid
+					set name
+				else
+					throw an error
+
+			2.2.4 setId Method
+				Header
+				public void setId(String id)
+
+				Description
+				Sets the student number of the student
+				
+				Pseudocode
+				if student number is valid
+					set student number
+				else
+					throw an error
+
+			2.2.5 setCredits Method
+				Header
+				public void setCredits(int credits)
+
+				Description
+				Sets the credits of the student
+				
+				Pseudocode
+				if credits is valid
+					set credits
+				else
+					throw an error
+
+			2.2.6 setGpa Method
+				Header
+				public void setGpa(double gpa)
+
+				Description
+				Sets the gpa of the student
+				
+				Pseudocode
+				if gpa is valid
+					set gpa
+				else
+					throw an error
+
+			2.2.7 getName Method
+				Header
+				public String getName()
+
+				Description
+				Gets the name of the student
+				
+				Pseudocode
+				return name
+
+			2.2.8 getId Method
+				Header
+				public String getId()
+
+				Description
+				Gets the student number of the student
+				
+				Pseudocode
+				return student number
+
+			2.2.9 getCredits Method
+				Header
+				public int getCredits()
+
+				Description
+				Gets the number credits the student has
+				
+				Pseudocode
+				return credits
+
+			2.2.9 getGpa Method
+				Header
+				public Double getGpa()
+
+				Description
+				Gets the GPA of the student
+				
+				Pseudocode
+				return gpa
+
+			2.2.10 toString Method
+				Header
+				public String toString()
+
+				Description
+				Returns a string representation of the object
+				
+				Pseudocode
+				return name (student number) Credits: credits GPA: gpa
+
+
+	2.3 StudentList Class
+
+			2.3.1 Class Variables
+				private ArrayList<Student> students -  The list of students
+			
+			2.3.2 Constructor
+				Header
+				public StudentList()
+
+				Description
+				Creates a new ArrayList of students
+				
+				Pseudocode
+				set students to a new ArrayList of students
+
+			2.3.3 add Method
+				Header
+				public void add(String name, String id, int credits, double gpa)
+
+				Description
+				Adds a student when supplied with a name, student number, credits and grade point
+				average of the student.
+
+				Pseudocode
+				add a student to the students list
+				
+			2.3.4 findIndexById Method
+				Header
+				private int findIndexById(String id)
+
+				Description
+				Finds and returns the index of an item in the students list with the given student
+				number
+
+				Pseudocode
+				for each student in the students list
+					if student id matches
+						return student id
+
+			2.3.5 print Method
+				Header
+				public void print(String id)
+
+				Description
+				Prints a students information given a student number 
+
+				Pseudocode
+				check for student id
+				if student id is found
+					print out student information
+				if student is not found
+					print student not found message
+
+			2.3.6 updateGpa Method
+				Header
+				public void updateGpa(String id, double value)
+
+				Description
+				Updates the GPA for a given student id
+				
+				Pseudocode
+				find index for student
+				if student was found
+					update students GPA
+
+			2.3.7 updateCredits Method
+				Header
+				public void updateCredits(String id, int value)
+
+				Description
+				Updates the Credits for a given student id
+				
+				Pseudocode
+				find index for student
+				if student was found
+					update students credits
+
+			2.3.8 report Method
+				Header
+				public void updateCredits(String id, int value)
+
+				Description
+				Prints a report of all students ordered by GPA
+				
+				Pseudocode
+				Sort students list by GPA
+				for each student in students list
+					print student information
+			
+			2.3.9 StudentListCompare class (class StudentListCompare implements Comparator<Student>)
+				A sub class used in the sorting of the students
+				2.3.9.1 compare Method
+					Header
+					public int compare(Student stu1, Student stu2)
+
+					Description
+					Compares two students by GPA
+					
+					Pseudocode
+					if student 1 gpa is greater then students 2
+						return -1
+					else if students gpa is less then students 2
+						return 1
+					return 0 if they are the same
+	2.4 StudentRecords class
+		2.4.1 main Method
+			Header
+			public static void main(String[] args)
+
+			Description
+			Processes user commands
+			
+			Pseudocode
+			create Students List
+			create Scanner
+ 			loop
+				print command prompt ">>"
+				get command from user
+				if command is add
+					prompt for student name
+					prompt for student number
+					prompt for credits
+					prompt for GPA
+					add a student
+				else if command is update
+					prompt for student number
+					prompt for item to update
+					if update is credits
+						prompt for credits
+						update credits
+					else if update is gpa
+						prompt for gpa
+						update gpa
+				else if command is print
+					prompt for student id
+					print student information for student number
+				else if command is report
+					print a report of all students
+				else if command is not quit
+					print a help message
+			end loop when command is quit
+							
+3 Input and Output
+	3.1 Input data
+		Information on students (Name, Student Number, Credits and GPA)
+		Commands: Add, Update, Print, Report and Quit
+		
+	3.2 Output
+		Print information on a student when supplied a student id.
+		Print a report of all students information sorted by GPA
+
+4 Testing
+	- Tested add command by adding a student using the add command
+	- Tested the print command by using the print command and providing a valid student number
+	- Tested the update command with both credits and gpa using the update command then printing the student info
+	- Tested the report command by using the report command after adding several more students
+	- Tested invalid input on add command by supplying invalid data for name, student number, credits and gpa
+	- Tested invalid student number, command, gpa and credits on the update command
+	- Tested invalid student number on the print command
+	- Tested invalid command by passing "abc" as a command
+	- Tested quit command
+	4.1 Tests
+	(All tests run in one session; tests use data entered in previous tests)
+		Add Command and Print Command:
+		>> add
+		  Student Name: Tim Oram
+		Student Number: 123456
+		       Credits: 43
+		           GPA: 3.8
+		Student Added
+		>> print 
+		Student Number: 123456
+		Tim Oram (123456) Credits: 43  GPA: 3.8
+		
+		Update Command:
+   		>> update
+		Student Number: 123456
+		What to Update (credits or gpa): credits
+		Enter the number of credits: 32
+		Credits have been updated.
+		>> update
+		Student Number: 123456
+		What to Update (credits or gpa): gpa
+		Enter the GPA: 4.0
+		GPA have been updated.
+		>> print 
+		Student Number: 123456
+		Tim Oram (123456) Credits: 32  GPA: 4.0
+
+		Report Command:
+		>> add
+		  Student Name: Charles Babbage
+		Student Number: 111791
+		       Credits: 48
+		           GPA: 3.5
+		Student Added
+		>> add
+		  Student Name: Grace Hopper
+		Student Number: 121906
+		       Credits: 21
+		           GPA: 4.0
+		Student Added
+		>> add
+		  Student Name: Alonzo Church
+		Student Number: 061903
+		       Credits: 15
+		           GPA: 3.0
+		Student Added
+		>> report
+		Tim Oram (123456) Credits: 32  GPA: 4.0
+		Grace Hopper (121906) Credits: 21  GPA: 4.0
+		Charles Babbage (111791) Credits: 48  GPA: 3.5
+		Alonzo Church (061903) Credits: 15  GPA: 3.0
+
+		Invalid Data Handling Add Command:
+		>> add 
+		  Student Name: 
+		Student Number: 123456
+		       Credits: 45
+		           GPA: 3.2
+		Empty Student Name Supplied
+		>> add     
+		  Student Name: Alan Turing             
+		Student Number: 
+		       Credits: 23
+		           GPA: 3.2
+		Student ID needs to be 6 characters
+		>> add
+		  Student Name: Alan Turing
+		Student Number: 061912
+		       Credits: -23
+		           GPA: 3.2
+		Number of credits is required to be equal or greater then 0
+		>> add
+		  Student Name: Alan Turing
+		Student Number: 061912
+		       Credits: 23
+		           GPA: -3.2
+		GPA is required to be equal or greater then 0
+
+		Invalid Data Handling Update Command:
+		>> update
+		Student Number: 123456
+		What to Update (credits or gpa): gpa
+		Enter the GPA: 2.3
+		Invalid student number provided
+		>> update  
+		Student Number: 123456
+		What to Update (credits or gpa): abc
+		Invalid update command. Must by credits or gpa.
+		>> update
+		Student Number: 123456
+		What to Update (credits or gpa): credits
+		Enter the number of credits: -12
+		Number of credits is required to be equal or greater then 0 
+		>> update
+		Student Number: 123456
+		What to Update (credits or gpa): gpa
+		Enter the GPA: -2.3
+		GPA is required to be equal or greater then 0
+		
+		Invalid Student Number Print Command:
+		>> print
+		Student Number: 12345
+		Record not found for Student Number: 12345
+
+		Invalid Command Given:
+		>> abc 
+		Invalid Command Supplied
+		Available commands are: add, update, print, report and quit
+
+
+
