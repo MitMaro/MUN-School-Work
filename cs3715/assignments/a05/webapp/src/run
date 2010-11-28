@@ -25,4 +25,4 @@ fi
 
 echo "Starting Jetty on Port $PORT"
 
-CLASSPATH="../WEB-INF/classes/:$MY_CLASSPATH" java ca/mitmaro/Server 8080 ../
+CLASSPATH="../WEB-INF/classes/:$MY_CLASSPATH" java ca/mitmaro/Server $PORT ../
