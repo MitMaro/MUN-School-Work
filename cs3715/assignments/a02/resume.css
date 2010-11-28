@@ -1,0 +1,168 @@
+body {
+	font-size:100%;
+	line-height:1.125em;
+	margin:0;
+	padding:0;
+	background:#fff url(backgrounds/gradient_saw_tooth.png) repeat;
+}
+
+h1 {
+	font-variant:small-caps;
+	text-align:center;
+	margin:0;
+	padding:0 0 10px 0;
+}
+
+h2 {
+	letter-spacing: 0.05em;
+	line-height:1.25em;
+	text-align:right;
+	font-size:1.0em;
+	font-variant:small-caps;
+	color:#222;
+	margin:0;
+	padding:0;
+}
+
+h3 {
+	letter-spacing: 0.025em;
+	font-weight:bold;
+	font-size:1.0em;
+	margin:0;
+	padding:0;
+}
+
+a {
+	color:#449;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+div#doc {
+	border: 0px solid #fff;
+	width:800px;
+	margin:auto;
+}
+
+div.header {
+	margin:0 0 20px 0;
+}
+
+div.header div.title {
+	border-bottom:1px solid #999;
+	margin:15px 0 10px 0;
+}
+
+div.header ul {
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+div.header ul li {
+	font-size:1.0em;
+	letter-spacing: 0.06em;
+	margin:0 10px 0 0;
+	padding:0;
+	clear:right;
+	list-style:none;
+	color:#333;
+}
+
+div.header ul li span {
+	font-weight:bold;
+	font-variant:small-caps;
+	letter-spacing: 0;
+}
+
+div.section_title {
+	background:#fff url(backgrounds/gradient_25.png) repeat-x bottom;
+	margin:10px 0 2px 0;
+	padding:3px 10px;
+	border:1px solid #ccc;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+}
+
+div.section {
+	background:#fff url(backgrounds/gradient_300_flip.png) repeat-x left -20px;
+	padding:5px 10px;
+	border: 1px solid #ccc;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+}
+
+
+div.section p {
+	text-align:justify;
+	word-spacing:0.30em;
+	text-indent:25px;
+	font-size:1.0em;
+	padding:0 10px;
+}
+
+div.section ul {
+	padding: 0;
+	margin:0 0 0 30px;
+	word-spacing:0.10em;
+}
+
+div.section ul li {
+	color:#444;
+	text-indent:-15px;
+	font-size:1.0em;
+	margin:10px 0;
+	list-style:none;
+}
+
+div.section ul li ul {
+	margin: 10px 0 0 15px;
+	font-size:0.9em;
+}
+
+div.section ul li ul li {
+	font-size:1.05em;
+	list-style:circle;
+	text-indent:0;
+}
+
+div.experience_item,
+div.achievement_item,
+div.education_item {
+	margin-top:3px;
+	margin-bottom:30px;
+}
+
+div.section div.title {
+	color:#333;
+	border-bottom:1px dotted #ddd;
+	margin-bottom:2px;
+	padding-bottom:2px;
+}
+
+div.section div.title div.date {
+	font-family: Courier, "Courier New", FreeMono, monospace;
+	font-variant:small-caps;
+	font-size:0.9em;
+	text-align:right;
+	float:right;
+	clear:left;
+	width:225px;
+	line-height:20px;
+	word-spacing:-0.3em;
+	letter-spacing: 0.02em;
+}
+
+div.section div.company, div.section div.school {
+	font-family: Helvetica, Arial, FreeSans, sans-serif;
+	font-variant:small-caps;
+	font-size:0.9em;
+	color:#444;
+}
+
+div.section div.company span.location {
+	font-variant:normal;
+}
