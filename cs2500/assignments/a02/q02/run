@@ -1,0 +1,50 @@
+#!/bin/bash
+clear
+echo
+
+echo "BASH$ python maze1.py"
+python maze1.py
+
+echo "BASH$ python maze1.py maze1.dat move1.dat 2 1"
+python maze1.py maze1.dat move1.dat 2 1
+
+echo "BASH$ python maze1.py maze1.dat move1.dat 1 1"
+python maze1.py maze1.dat move1.dat 1 1
+
+echo "BASH$ python maze1.py maze1.dat move1.dat 1 2"
+python maze1.py maze1.dat move1.dat 1 2
+
+echo "BASH$ python maze1.py maze1.dat move1.dat 3 3"
+python maze1.py maze1.dat move1.dat 3 3
+
+echo "BASH$ python maze1.py maze1.dat move2.dat 2 1"
+python maze1.py maze1.dat move2.dat 2 1
+
+echo "BASH$ python maze1.py maze1.dat move2.dat 1 1"
+python maze1.py maze1.dat move2.dat 1 1
+
+echo "BASH$ python maze1.py maze1.dat move2.dat 1 2"
+python maze1.py maze1.dat move2.dat 1 2
+
+echo "BASH$ python maze1.py maze1.dat move2.dat 3 3"
+python maze1.py maze1.dat move2.dat 3 3
+
+echo "BASH$ python maze1.py maze2.dat move1.dat 5 3"
+python maze1.py maze2.dat move1.dat 5 3
+
+echo "BASH$ python maze1.py maze2.dat move1.dat 4 3"
+python maze1.py maze2.dat move1.dat 4 3
+
+echo "BASH$ python maze1.py maze2.dat move1.dat -4 -4"
+python maze1.py maze2.dat move1.dat -4 -4
+
+echo "BASH$ python maze1.py maze2.dat move2.dat 5 3"
+python maze1.py maze2.dat move2.dat 5 3
+
+echo "BASH$ python maze1.py maze2.dat move2.dat 4 3"
+python maze1.py maze2.dat move2.dat 4 3
+
+echo "BASH python maze1.py maze2.dat move2.dat -4 -4"
+python maze1.py maze2.dat move2.dat -4 -4
+
+echo

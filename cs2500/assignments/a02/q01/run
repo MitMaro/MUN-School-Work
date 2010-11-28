@@ -1,0 +1,16 @@
+#!/bin/bash
+clear
+echo "BASH$ python ffc1.py"
+python ffc1.py
+
+echo "BASH$ python ffc1.py ffc1.dat p++-"
+python ffc1.py ffc1.dat p++-
+
+echo "BASH$ python ffc1.py ffc2.dat p++-"
+python ffc1.py ffc2.dat p++-
+
+echo "BASH$ python ffc1.py ffc3.dat pi"
+python ffc1.py ffc3.dat pi
+
+echo "BASH$ python ffc1.py ffc3.dat p+"
+python ffc1.py ffc3.dat p+
