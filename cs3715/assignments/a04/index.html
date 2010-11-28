@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+	Computer Science 3715
+	Assignment #4
+	Loan Calculator
+	
+	By: Tim Oram
+	Student Number: #########
+	-->
+	<title>Loan Calculator</title>
+	<script type="text/javascript" src="common.js"></script>
+	<link rel="stylesheet" type="text/css" href="common.css" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<div class="app">
+		<div class="title">
+			<h1>Loan Calculator</h1>
+		</div>
+		<ul class="inputs">
+			<li><label id="principal_label" for="principal">Principal:</label>
+				<input type="text" id="principal"/></li>
+			<li><label id="interest_label" for="interest">Interest Rate:</label>
+				<input type="text" id="interest"/></li>
+			<li><label id="months_label" for="months">Months:</label>
+				<input type="text" id="months"/></li>
+			<li class="controls">
+				<input type="submit" id="calculate" value="Calculate"/>
+			</li>
+		</ul>
+		<ul class="outputs">
+			<li><div class="label">Monthly Payment:</div>
+				<input  readonly="readonly" type="text" id="monthly_payment"/>
+			</li>
+			<li><div class="label">Total Payment:</div>
+				<input readonly="readonly" type="text" id="total_payment"/>
+			</li>
+			<li><div class="label">Interest:</div>
+				<input readonly="readonly" type="text" id="interest_payment"/>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/*
+Computer Science 3715
+Assignment #4
+Loan Calculator
+
+By: Tim Oram
+Student Number: #########
+*/
+
+body {
+	font-size:100%;
+	line-height:1.125em;
+	margin:0;
+	padding:25px;
+}
+
+div.app {
+	width:275px;
+	margin:auto;
+	border:1px solid #999;
+	border-radius: 10px;
+	-moz-box-shadow:1px 2px 2px #999999;
+	-webkit-box-shadow:1px 2px 2px #999999;
+	box-shadow:1px 2px 2px #999999;
+	padding:7px;
+}
+
+div.title h1 {
+	padding:0 0 5px 0;
+	margin:0 25px 8px 25px;
+	border-bottom:1px solid #efefef;
+	text-align:center;
+	font-size:1.5em;
+}
+
+label.error {
+	color:#900;
+}
+
+label.valid {
+	color:#090;
+}
+
+ul {
+	margin:0;
+	padding:5px;
+	list-style:none;
+}
+
+ul.inputs, ul.outputs {
+	border:1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom:20px;
+	padding:10px 5px 0 5px;
+}
+
+ul li {
+	margin:0 0 3px 0;
+	font-weight:bold;
+}
+
+ul.inputs li {
+	border-bottom:1px dotted #ccc;
+}
+
+
+ul.inputs li.controls {
+	border-bottom:0px;
+	text-align:center;
+	padding:4px 0 1px 0;
+}
+
+ul.inputs label, ul.outputs div.label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	width:150px;
+}
+
+ul.inputs input[type="text"], ul.outputs input[type="text"] {
+	width:75px;
+	padding:2px 4px;
+	border:1px solid #999;
+	border-radius: 2px;
+	-moz-box-shadow:1px 1px 2px #aaa;
+	-webkit-box-shadow:1px 1px 2px #aaa;
+	box-shadow:1px 1px 2px #aaa;
+}
+
+ul.inputs input[type="text"].valid {
+	-moz-box-shadow:1px 1px 2px #0a0;
+	-webkit-box-shadow:1px 1px 2px #0a0;
+	box-shadow:1px 1px 2px #0a0;
+}
+
+ul.inputs input[type="text"].error {
+	-moz-box-shadow:1px 1px 2px #a00;
+	-webkit-box-shadow:1px 1px 2px #a00;
+	box-shadow:1px 1px 2px #a00;
+}
+
+ul.outputs input[type="text"] {
+	border:1px solid #aaa;
+	border-radius: 2px;
+	-moz-box-shadow:1px 1px 2px #ddd;
+	-webkit-box-shadow:1px 1px 2px #ddd;
+	box-shadow:1px 1px 2px #ddd;
+}
+
+ul.inputs input[type="submit"] {
+	background:#fff;
+	padding:5px 15px;
+	border:1px solid #999;
+	border-radius: 4px;
+	-moz-box-shadow:1px 1px 2px #aaa;
+	-webkit-box-shadow:1px 1px 2px #aaa;
+	box-shadow:1px 1px 2px #aaa;
+	font-size:0.9em;
+	font-weight:bold;
+	font-variant:small-caps;
+}
+
