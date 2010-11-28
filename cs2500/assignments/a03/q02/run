@@ -1,0 +1,17 @@
+#!/bin/bash
+clear
+echo
+
+echo "BASH$ python anon1.py"
+python anon1.py
+echo
+echo  "BASH$ python anon1.py text1.dat name1.dat"
+python anon1.py text1.dat name1.dat
+echo "BASH$ cat text1.dat.anon"
+cat text1.dat.anon
+echo
+echo "BASH$ python anon1.py text1.dat name2.dat"
+python anon1.py text1.dat name2.dat
+echo "BASH$ cat text1.dat.anon"
+cat text1.dat.anon
+echo

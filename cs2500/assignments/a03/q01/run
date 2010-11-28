@@ -1,0 +1,35 @@
+#!/bin/bash
+clear
+echo
+
+echo "BASH$ python ffc2.py"
+python ffc2.py
+
+echo "BASH$ python ffc2.py ffc2a.dat"
+python ffc2.py ffc2a.dat
+
+echo "BASH$ python ffc2.py ffc2a.dat -x12 spp+-"
+python ffc2.py ffc2a.dat -x12 spp+-
+
+echo "BASH$ python ffc2.py ffc2a.dat -c4 -spp+-"
+python ffc2.py ffc2a.dat -c4 -spp+-
+
+echo "BASH$ python ffc2.py ffc2a.dat -spp+- -r3"
+python ffc2.py ffc2a.dat -spp+- -r3
+
+echo "BASH$ python ffc2.py ffc2a.dat -r3 -spp+-"
+python ffc2.py ffc2a.dat -r3 -spp+-
+
+echo "BASH$ python ffc2.py ffc2a.dat -c3 -spp+-"
+python ffc2.py ffc2a.dat -c3 -spp+-
+
+echo "BASH$ python ffc2.py ffc2b.dat"
+python ffc2.py ffc2b.dat
+
+echo "BASH$ python ffc2.py ffc2b.dat -r4 -c3"
+python ffc2.py ffc2b.dat -r4 -c3
+
+echo "BASH$ python ffc2.py ffc2b.dat -r3 -c4 -sp++-"
+python ffc2.py ffc2b.dat -r3 -c4 -sp++-
+
+echo
