@@ -1,0 +1,87 @@
+MMMAC:q03 mitmaro$ javac *.java
+MMMAC:q03 mitmaro$ java AppointmentBook
+Appointment Book
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:00:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:30:00 pm
+Description: 
+Meeting with department head.
+Appointment Added
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:31:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:40:00 pm
+Description: 
+Meeting Upstairs
+Appointment Added
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 12:45:00 pm
+Unparseable date: "12:45:00 pm"
+>> add     
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 12:45:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:30:45 pm
+Description: 
+An appointment overlapping another entirely.
+Error: Given Appointment Overlaps Another
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 12:30:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:00:00 pm
+Description: 
+An appointment the ends at anothers start.
+Error: Given Appointment Overlaps Another
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 12:30:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:01:00 pm
+Description: 
+An appointment that ends insides another appointment
+Error: Given Appointment Overlaps Another
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:40:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:50:00 pm
+Description: 
+An appointment whose start overlaps the end of another      
+Error: Given Appointment Overlaps Another
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 10/11/2000 1:00:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 10/11/2000 2:00:00 pm
+Description: 
+Meeting downtown
+Appointment Added
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 12:45:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 12:59:00 pm
+Description: 
+This appoinment will be added before others
+Appointment Added
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 2:00 pm
+Unparseable date: "11/11/2000 2:00 pm"
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 2:00:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 2:30:00 pm
+Description: 
+This appointment will be added after all others
+Appointment Added
+>> add
+Start Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:50:00 pm
+  End Date & Time (dd/mm/yyyy hh:mm:ss am/pm): 11/11/2000 1:59:00 pm
+Description: 
+This appointment in inserted between other appointments
+Appointment Added
+>> report
+Invalid Command Supplied
+Available commands are: add, print and quit
+>> print
+Please Give Date to Print (dd/mm/yyyy):11/11/2000
+11 Nov 2000 12:45:00 PM - 11 Nov 2000 12:59:00 PM: This appoinment will be added before others
+11 Nov 2000 01:00:00 PM - 11 Nov 2000 01:30:00 PM: Meeting with department head.
+11 Nov 2000 01:31:00 PM - 11 Nov 2000 01:40:00 PM: Meeting Upstairs
+11 Nov 2000 01:50:00 PM - 11 Nov 2000 01:59:00 PM: This appointment in inserted between other appointments
+11 Nov 2000 02:00:00 PM - 11 Nov 2000 02:30:00 PM: This appointment will be added after all others
+>> print
+Please Give Date to Print (dd/mm/yyyy):10/11/2000
+10 Nov 2000 01:00:00 PM - 10 Nov 2000 02:00:00 PM: Meeting downtown
+>> print
+Please Give Date to Print (dd/mm/yyyy):09/11/2000
+No Appointments for that Day
+>> quit
+MMMAC:q03 mitmaro$ 
