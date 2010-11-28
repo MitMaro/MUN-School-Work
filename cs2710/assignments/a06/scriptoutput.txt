@@ -1,0 +1,53 @@
+
+OUTPUT FOR QUESTION 1:
+MMMAC:q01 mitmaro$ java ListMethods
+List Values:
+2 0 7 1 5 5 1 8 6 7 7 4 8 0 7 3 5 2 4 5 7 2 5 1 0 7 1 
+Count of nodes between 4 and 1 is 10
+Unique Values:
+2 3 4 6 8 5 1 7 0 
+MMMAC:q01 mitmaro$ java ListMethods
+List Values:
+3 0 4 5 4 1 0 3 3 2 3 2 5 4 3 2 5 3 5 5 1 
+Count of nodes between 1 and 2 is 5
+Unique Values:
+3 2 1 5 4 0 
+MMMAC:q01 mitmaro$ java ListMethods
+List Values:
+1 6 4 3 7 8 7 8 0 3 7 6 0 4 8 2 4 6 0 2 1 4 
+Count of nodes between 1 and 1 is 2
+Unique Values:
+1 2 0 8 7 3 4 6 
+
+
+OUTPUT FOR QUESTION 2:
+MMMAC:q02 mitmaro$ java Student
+Number of students to enter:5
+Student Name:Tim
+Student Number:1
+Student Mark:93.24
+Student Added
+Student Name:Ben
+Student Number:2
+Student Mark:86.34
+Student Added
+Student Name:Joel
+Student Number:3
+Student Mark:82.44
+Student Added
+Student Name:Chris
+Student Number:4
+Student Mark:89.12
+Student Added
+Student Name:Amanda
+Student Number:5
+Student Mark:93.24
+Student Added
+Student Average: 88.8760
+Student(s) with below average mark:
+Joel
+Ben
+Highest Mark: 93.2400
+Student(s) with highest mark:
+Amanda
+Tim
