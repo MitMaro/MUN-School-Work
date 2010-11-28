@@ -1,0 +1,51 @@
+
+# this will prepare the maze data for use
+define: function findExits (maze, mazeSize, startPosition):
+	define: padded_maze as 2D integer array
+	
+	# pad the maze with 0s
+	add array of 0s to padded_maze
+	for each array in maze:
+		insert 0 to the start and end of the inner array
+	add arrays of 0s to the padded_maze
+	
+	call findExitFromPosition
+	
+	if exitFound is False:
+		print "Not reachable"
+
+# this will recursively go through the maze looking for paths to an exit
+define: function findExitFromPosition(maze, position, exits):
+	
+	if current position in maze is a 0:
+		return
+	
+	# since this position has been visited we can set it to 0
+	set current position to 0
+	
+	if current position is an exit:
+		print "(point x, point y)"
+		set exitFound to True
+		add position to exits array
+	
+	call findExitFromPosition for position to the right
+	call findExitFromPosition for position to the left
+	call findExitFromPosition for position above
+	call findExitFromPosition for position below
+
+
+
+define: maze as 2D integer array
+define: start as point
+define: mazeStart as integer
+
+open file supplied in arguments
+set mazeSize to integer value of first line read
+set start to integer values of second line read
+
+for each remaining line in file:
+	for each value in line:
+		add value to the maze array
+
+close open file
+call findExits
