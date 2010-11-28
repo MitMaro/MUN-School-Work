@@ -1,0 +1,12 @@
+#!/bin/bash
+clear
+echo
+
+echo "complex% python ditrans.py"
+python ditrans.py
+echo "complex% python ditrans.py e2p1.txt text1.txt"
+python ditrans.py e2p1.txt text1.txt
+echo "complex% python ditrans.py e2p2.txt text1.txt"
+python ditrans.py e2p2.txt text1.txt
+
+echo

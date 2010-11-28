@@ -1,0 +1,64 @@
+
+## English -> Pirate Translation File #1
+##  Last updated Nov 13, 2008
+
+
+## Translation system lists
+
+  INTERJECTIONS = {"Avast!", "Ya scumbucket!", "Scurvy dog!", "Arrrrr!", "Ahoy!"}
+
+## Politeness modifiers
+
+  "Excuse me" => "Look sharp"
+
+  "Please" => "Do"
+  "please" => "now"
+  
+  "Sir" => "Matey"
+  "sir" => "matey"
+  
+  "well" => "bloody marvelous"
+
+## Greeting modifiers
+
+  "Yes" => "Aye"
+  "yes" => "aye"
+  
+  "Hello" => "Ahoy"
+  "hello" => "ahoy"
+  
+## Query modifers
+
+  "How" => "Howse"
+  "how" => "howse"
+  
+## Possessive / pronouns modifiers
+
+  "You" => "Ye"
+  "you" => "ye"
+  "My" => "Me"
+  "my" => "me"
+  
+  "There" => "Thar"
+  "there" => "thar"
+  
+## Be-verb modifiers
+
+  "Are" => "Be"
+  " are " => " be "
+  
+  "I am" => "I be"
+  
+  "be not" => "not be"
+  
+  "ing" => "in'"
+  
+## Excitability intensifiers
+
+  "Ar" => "Arrr"
+  "ar" => "arrr"
+  
+  "!"  => "!!!!!"
+  "\?" => "??!?!"
+  "\." => "!" 
+

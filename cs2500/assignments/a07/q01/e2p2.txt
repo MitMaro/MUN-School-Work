@@ -1,0 +1,64 @@
+
+## English -> Pirate Translation File #2
+##  Last updated Nov 13, 2008
+
+
+## Excitability intensifiers
+
+ "Ar" => "Arrr"
+ "ar" => "arrr"
+ 
+ "!"  => "!!!!!"
+ "\?" => "??!?!"
+ "\." => "!" 
+
+## Politeness modifiers
+
+ "Excuse me" => "Look sharp"
+
+ "Please" => "Do"
+ "please" => "now"
+ 
+# "Sir" => "Cap'n"
+ "sir" => "cap'n"
+ 
+ "well" => "bloody marvelous"
+
+## Greeting modifiers
+
+ "Yes" => "Aye-aye"
+ "yes" => "aye-aye"
+ 
+ "Hello" => "Avast there"
+ "hello" => "avast there"
+ 
+## Query modifers
+
+ "How" => "Howse"
+ "how" => "howse"
+ 
+## Possessive / pronouns modifiers
+
+ "You" => "Ye"
+ "you" => "ye"
+ "My" => "Me"
+ "my" => "me"
+ 
+## Adverb modifiers
+
+ "Very" => "Right"
+ "very" => "right"
+
+## Be-verb modifiers
+
+ "Are" => "Be"
+ " are " => " be "
+ 
+ "I am" => "I be"
+ 
+ "ing" => "in'"
+ 
+## Translation system lists
+
+INTERJECTIONS = {"Shiver me timbers!", "By Poseidon's trident!!", "Ya scurvy sea-trash!", "Arrrrr!"}
+
