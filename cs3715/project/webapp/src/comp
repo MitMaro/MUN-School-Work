@@ -1,0 +1,19 @@
+#!/bin/bash
+: '
+Computer Science 3715
+Team Project
+Music Wishlist
+
+By: Lauren Stratton #########
+    Tim Oram        #########
+'
+
+LIB_BASE="../WEB-INF/lib"
+
+JARS=( "gson-1.5.jar" "jetty-6.1.26.jar" "jetty-util-6.1.26.jar" "servlet-api-2.5-20081211.jar" "sqlitejdbc-v056.jar" )
+
+for lib in "${JARS[@]}"; do
+	MY_CLASSPATH="$MY_CLASSPATH:$LIB_BASE/$lib"
+done
+
+CLASSPATH=".:$MY_CLASSPATH" javac -d ../WEB-INF/classes/ ca/mitmaro/*java

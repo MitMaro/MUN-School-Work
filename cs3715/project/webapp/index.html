@@ -1,0 +1,109 @@
+<!DOCTYPE html><!-- HTML 5 ftw -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<!--
+		Computer Science 3715
+		Team Project
+		Music Wishlist
+		
+		By: Lauren Stratton #########
+		    Tim Oram        #########
+		-->
+		<title>Music Wishlist</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script type="text/javascript" src="js/artists.js"></script>
+		<script type="text/javascript" src="js/json2.js"></script>
+	</head>
+	<body>
+		<div class="app">
+			<div class="header">
+				Music Wishlist - Artists List
+			</div>
+			<div class="body">
+				<form id="form-add-edit" action="" method="post">
+					<div><input id="addEdit-artist_priority" type="hidden" name="priority" value="MEDIUM"/></div>
+					<table class="list">
+						<thead>
+							<tr>
+								<th id="header-artist" class="sortable">
+									Artist Name<img src="images/arrow_down_dark_grey_8x8.png" alt="" title="Click to Sort"/>
+								</th>
+								<th id="header-priority" class="sortable">
+									Priority<img src="images/arrow_down_light_grey_8x8.png" alt="" title="Click to Sort"/>
+								</th>
+								<th id="header-controls">Controls</th>
+							</tr>
+						</thead>
+						<tbody id="list">
+							<tr class="template">
+								<td>My Artist</td>
+								<td class="priority">
+									<img src="images/heart_fill_orange_12x11.png" alt="Lowest Priority" title="Lowest Priority" />
+									<img src="images/heart_stroke_dark_grey_12x11.png" alt="Low Priority" title="Low Priority" />
+									<img src="images/heart_stroke_dark_grey_12x11.png" alt="Medium Priority" title="Medium Priority" />
+									<img src="images/heart_stroke_dark_grey_12x11.png" alt="High Priority" title="High Priority" />
+									<img src="images/heart_stroke_dark_grey_12x11.png" alt="Highest Priority" title="Highest Priority" />
+								</td>
+								<td class="controls">
+									<img src="images/pen_alt_fill_dark_grey_12x12.png" alt="Edit Artist" title="Edit Artist"/>
+									<img src="images/trash_stroke_dark_grey_12x12.png" alt="Delete Artist" title="Delete Artist"/>
+								</td>
+							</tr>
+						</tbody>
+						<tbody id="controls">
+							<tr id="add_control">
+								<td colspan="3">&lt; Click Here to Add New Artist &gt;</td>
+							</tr>
+							<tr id="add_inputs">
+								<td>
+									<input id="add-artist_name" type="text" name="name" />
+								</td>
+								<td class="priority">
+									<img id="add-heart_one" src="images/heart_fill_orange_12x11.png" alt="Lowest Priority" title="Lowest Priority" /><!--
+									--><img id="add-heart_two" src="images/heart_fill_orange_12x11.png" alt="Low Priority" title="Low Priority" /><!--
+									--><img id="add-heart_three" src="images/heart_fill_orange_12x11.png" alt="Medium Priority" title="Medium Priority" /><!--
+									--><img id="add-heart_four" src="images/heart_stroke_dark_grey_12x11.png" alt="High Priority" title="High Priority" /><!--
+									--><img id="add-heart_five" src="images/heart_stroke_dark_grey_12x11.png" alt="Highest Priority" title="Highest Priority" />
+								</td>
+								<td class="controls">
+									<input id="add-submit" type="submit" value="Add"/>
+								</td>
+							</tr>
+							<tr id="edit_inputs">
+								<td>
+									<input id="edit-artist_id" type="hidden" name="id" />
+									<input id="edit-artist_name" type="text" name="name" />
+								</td>
+								<td class="priority">
+									<img id="edit-heart_one" src="images/heart_fill_orange_12x11.png" alt="Lowest Priority" title="Lowest Priority" /><!--
+									--><img id="edit-heart_two" src="images/heart_fill_orange_12x11.png" alt="Low Priority" title="Low Priority" /><!--
+									--><img id="edit-heart_three" src="images/heart_fill_orange_12x11.png" alt="Medium Priority" title="Medium Priority" /><!--
+									--><img id="edit-heart_four" src="images/heart_stroke_dark_grey_12x11.png" alt="High Priority" title="High Priority" /><!--
+									--><img id="edit-heart_five" src="images/heart_stroke_dark_grey_12x11.png" alt="Highest Priority" title="Highest Priority" />
+								</td>
+								<td class="controls">
+									<input id="edit-submit" type="submit" value="Save"/>
+								</td>
+							</tr>
+						</tbody>
+						<tbody id="empty">
+							<tr>
+								<td colspan="3">No Artists to Display</td>
+							</tr>
+						</tbody>
+						<tbody id="list-loader">
+							<tr>
+								<td colspan="3"><img src="images/loader.gif" alt="Loading Artists" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<div id="paginate">
+				</div>
+			</div>
+			<div class="footer">
+				By: Lauren Stratton and Tim Oram
+			</div>
+		</div>
+	</body>
+</html>

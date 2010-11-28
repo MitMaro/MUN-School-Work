@@ -1,0 +1,259 @@
+/*
+Computer Science 3715
+Team Project
+Music Wishlist
+
+By: Lauren Stratton #########
+    Tim Oram        #########
+*/
+
+html {
+	margin:0;
+	padding:0;
+	font-family: times, "times new roman", freeserif, serif;
+	background:#efefef;
+}
+
+input[type=text] {
+	border:1px solid #000;
+	padding:2px 0;
+	width:350px;
+	-moz-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:1px 1px 3px #000;
+	background-color:#fff;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #FFFFFF),
+		color-stop(0.60, #F7F7F7),
+		color-stop(1, #F9F9F9)
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		#FFFFFF 0%,
+		#F7F7F7 60%,
+		#F9F9F9 100%
+	);
+	font-weight:bold;
+	padding:2px 3px;
+	outline-width:0;
+}
+
+input[type=submit] {
+	border:1px solid #000;
+	-moz-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:1px 1px 3px #000;
+	background-color:#fff;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #fff),
+		color-stop(0.60, #F7F7F7),
+		color-stop(1, #ECECEC)
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		#EFEFF0 0%,
+		#FFFFFF 60%,
+		#EFEFF0 100%
+	);
+	padding:4px 10px;
+	font-weight:bold;
+}
+
+div.app {
+	width:1000px;
+	margin:auto;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+div.header {
+	background-color:#000;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #EFEFF0),
+		color-stop(0.60, #FFFFFF),
+		color-stop(1, #EFEFF0)
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		#EFEFF0 0%,
+		#FFFFFF 60%,
+		#EFEFF0 100%
+	);
+	color:#000;
+	text-shadow: #aaa 1px 1px 0px;
+	margin-bottom:8px;
+	-moz-box-shadow:1px 1px 3px #000;
+	-webkit-box-shadow:1px 1px 3px #000;
+	box-shadow:1px 1px 3px #000;
+	font-size:24px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-weight:bold;
+	font-variant:small-caps;
+	text-align:center;
+	padding:10px 0;
+}
+
+table {
+	width:90%;
+	margin:10px;
+	border-collapse:collapse;
+	border-spacing: 0 0;
+	margin:auto;
+}
+
+table thead th {
+	border-bottom:1px solid #333;
+}
+
+table thead th.sortable {
+	padding-left:10px;
+	cursor:pointer;
+}
+
+table thead th img {
+	margin: 0 2px;
+}
+
+table thead th#header-artist {
+}
+
+table thead th#header-priority {
+	width:100px;
+}
+
+table thead th#header-controls {
+	width:110px;
+}
+
+table tbody tr td {
+	padding:5px 0;
+	border-bottom: 1px dotted #999;
+}
+
+table tbody tr#add_control td {
+}
+
+table tbody tr#add_inputs,
+table tbody tr#edit_inputs {
+	display:none;
+}
+
+table tbody tr#add_inputs td,
+table tbody tr#edit_inputs td {
+	text-align:center;
+}
+
+table tbody td.priority {
+	text-align:center;
+}
+
+table tbody td.priority img {
+	margin:0 2px;
+	cursor:pointer;
+}
+
+table tbody td.controls {
+	text-align:center;
+}
+
+table tbody td.controls img {
+	margin:0 3px;
+	cursor:pointer;
+}
+
+table tbody#empty td {
+	text-align:center;
+	font-weight:bold;
+	
+}
+
+table tbody#empty {
+	display: none;
+}
+
+table tbody#list {
+	display:none;
+}
+
+table tbody#list-loader {
+	text-align:center;
+}
+
+table tbody#list-loader td {
+	padding:35px 0;
+}
+
+table tbody#controls {
+	display:none;
+}
+
+table tr#add_control {
+	text-align:center;
+	font-family:serif;
+	font-variant:small-caps;
+	font-weight:bold;
+}
+
+div#paginate {
+	text-align:center;
+	padding:10px 0;
+}
+
+div#paginate a {
+	color:#212161;
+	text-decoration:none;
+	padding:0 3px;
+}
+
+div#paginate a:hover {
+	text-decoration:underline;
+	display:inline-block;
+}
+
+div#paginate img {
+	cursor:pointer;
+	margin:0 3px;
+}
+
+div.footer {
+	background-color:#000;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #EFEFF0),
+		color-stop(0.60, #FFFFFF),
+		color-stop(1, #EFEFF0)
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		#EFEFF0 0%,
+		#FFFFFF 60%,
+		#EFEFF0 100%
+	);
+	color:#333;
+	-moz-box-shadow:1px -1px 3px #000;
+	-webkit-box-shadow:1px -1px 3px #000;
+	box-shadow:1px -1px 3px #000;
+	font-size:12px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-variant:small-caps;
+	text-align:center;
+	padding:3px 0;
+}
