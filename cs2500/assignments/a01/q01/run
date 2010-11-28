@@ -1,0 +1,12 @@
+#!/bin/bash
+clear
+echo "BASH$ python sumfiles.py"
+python sumfiles.py
+echo "BASH$ python sumfiles.py sf1.dat"
+python sumfiles.py sf1.dat
+echo "BASH$ python sumfiles.py sf2.dat"
+python sumfiles.py sf2.dat
+echo "BASH$ python sumfiles.py sf3.dat"
+python sumfiles.py sf3.dat
+echo "BASH$ python sumfiles.py sf4.dat"
+python sumfiles.py sf4.dat

@@ -1,0 +1,12 @@
+#!/bin/bash
+clear
+echo "BASH$ python wlo.py"
+python wlo.py
+echo "BASH$ python wlo.py wlo.dat second"
+python wlo.py wlo.dat second
+echo "BASH$ python wlo.py wlo.dat line"
+python wlo.py wlo.dat line
+echo "BASH$ python wlo.py wlo.dat line of"
+python wlo.py wlo.dat line of
+echo "BASH$ python wlo.py wlo.dat line of and"
+python wlo.py wlo.dat line of and
