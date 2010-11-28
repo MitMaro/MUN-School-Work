@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+echo
+
+echo "complex% python vocProg.py"
+python vocProg.py
+
+echo "complex% python vocProg.py vocProg1.dat"
+python vocProg.py vocProg1.dat
+
+echo "complex% python vocProg.py vocProg2.dat"
+python vocProg.py vocProg2.dat
+
+echo

@@ -1,0 +1,14 @@
+bob carol ted alice
+bob likes alice
+ted likes alice
+carol likes alice
+bob likes carol
+ted likes carol
+alice dislikes carol
+bob dislikes ted
+ted dislikes bob
+carol dislikes alice
+bob ignores ted
+carol ignores alice
+ted ignores alice
+bob ignores carol

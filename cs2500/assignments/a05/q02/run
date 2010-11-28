@@ -1,0 +1,16 @@
+#!/bin/bash
+clear
+echo
+
+
+echo "complex% python socEval.py"
+python socEval.py
+
+echo "complex% python socEval.py socEval1.dat"
+python socEval.py socEval1.dat
+
+echo "complex% python socEval.py socEval2.dat"
+python socEval.py socEval2.dat
+
+
+echo
