@@ -1,0 +1,70 @@
+{extends "structure"}
+
+{block section_title}
+	Add Issue
+{/block}
+
+{block content}
+<div class='section'>
+	<h1>Add Issue</h1>
+	<form id="add_issue" action="{$.config.site_path}issues_add.php" method="post">
+	<fieldset>
+		<legend>General</legend>
+		<ol>
+			<li>
+				<label for="name">Issue Name:</label>
+				<input type="text" name="name" id="name" />
+			</li>
+			<li>
+				<label for="type">Type:</label>
+				<select name="type" id="type">
+					{foreach $trackers t name=trackers}
+						<option value="{$.foreach.trackers.index}">{$t}</option>
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<label for="target">Target Version:</label>
+				<select name="target" id="target">
+					{foreach $versions v name=versions}
+						<option value="{$.foreach.versions.index}">{$v}</option>
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<label for="assign">Assigned To:</label>
+				<select name="assign" id="assign">
+					{foreach $developers d name=devels}
+						<option value="{$.foreach.devels.index}">{$d}</option>
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<label for="status">Status:</label>
+				<select name="status" id="status">
+					<option value="open">Open</option>
+					<option value="closed">Closed</option>
+				</select>
+			</li>
+			<li>
+				<label for="due">Date Due:</label>
+				<input name="due" id="due" type="text"/>
+			</li>
+			
+		</ol>
+	</fieldset>
+	<fieldset>
+		<legend>Details</legend>
+		<div class="details">
+			<div class="help">Use HTML tags for formatting.</div>
+			<textarea cols="0" rows="10" name="details" id="details"></textarea>
+		</div>
+	</fieldset>
+	<ol>
+		<li class="submit">
+			<input type="submit" value="Add Issue"/>
+		</li>
+	</ol>
+	</form>
+</div>
+{/block}

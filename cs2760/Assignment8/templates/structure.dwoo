@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{$.config.title} :: {block section_title}{/block}</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="title" content="{$.config.title} - {block section_title}{/block}" />
+<meta name="author" content="{$.config.author}, {$.config.developer}" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.0r4/build/reset-fonts/reset-fonts.css"/>
+<link rel="stylesheet" type="text/css" href="{$.config.site_path}css/main.css"/>
+<link rel="stylesheet" type="text/css" href="{$.config.site_path}css/calendar-eightysix-default.css"/>
+{block styles}{/block}
+</head>
+<body>
+{block nojs}
+<noscript><div class='nojs'>
+{$.config.name} Admin requires JavaScript. Some functionality will be disabled.
+</div><div class="nojs_pad"></div></noscript>
+{/block}
+<div id='doc'>
+	<div id='hd'>
+		<a href="{$.config.site_path}index.php">
+			Second Life Build Projects
+		</a>
+	</div>
+	{block navigation}
+	<div id='nav'>
+		<ul>
+			<li><a title="Select a Project" href="{$.config.site_path}index.php">Projects</a></li>
+			<li><a title="Disabled in Demo" class="disabled" href="{$.config.site_path}index.php">News</a></li>
+			<li><a title="Disabled in Demo" class="disabled" href="{$.config.site_path}index.php">Roadmap</a></li>
+			<li><a title="View, Add, Edit and Delete Issues" href="{$.config.site_path}issues.php">Issues</a></li>
+			<li><a title="Disabled in Demo" class="disabled" href="{$.config.site_path}index.php">Files</a></li>
+			<li><a title="Disabled in Demo" class="disabled" href="{$.config.site_path}index.php">Repository</a></li>
+		</ul>
+	</div>
+	{/block}
+	<div id="bd">
+		{if $site.messages}
+		<ol class="messages">
+			{foreach $site.messages msg}
+				<li>{$msg}</li>
+			{/foreach}
+		</ol>
+		{/if}
+		{block content}BLANK SECTION PAGE...{/block}
+	</div>
+	<div id='ft'>
+		<div class='version'>{$.config.version}</div>
+		<div class='gt'>Generation Time: {math "(a-$.server.SCRIPT_TIME_MICRO)" "%01.4f" a=microtime(true)}s</div>
+		<div class='cr'>{$.config.copyright}</div>
+	</div>
+</div>
+<script type="text/javascript" src="{$.config.site_path}js/mootools.js"></script>
+<script type="text/javascript" src="{$.config.site_path}js/mootools-more.js"></script>
+<script type="text/javascript" src="{$.config.site_path}js/mootools-formcheck.js"></script>
+<script type="text/javascript" src="{$.config.site_path}js/mootools-eightysix.js"></script>
+<script type="text/javascript" src="{$.config.site_path}js/mootools-omnigrid.js"></script>
+<script type="text/javascript" src="{$.config.site_path}js/common.js"></script>
+{block javascript}{/block}
+</body>
+</html>

@@ -1,0 +1,49 @@
+{extends "structure"}
+
+{block section_title}
+	Project Issues
+{/block}
+
+{block content}
+<div class='section'>
+	<div class="controls">
+		<a href="{$.config.site_path}issues_add.php">ADD ISSUE</a>
+	</div>
+	<h1>Issues</h1>
+	<table summary="Issues List">
+		<thead>
+			<tr>
+				<th class="issues">Issue</th>
+				<th class="type">Type</th>
+				<th class="date">Date</th>
+				<th class="author">Author</th>
+				<th class="cmds" colspan="2">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{foreach $issues i name=issues}
+			<tr class="{if $.foreach.issues.index % 2 != 0}odd{else}even{/if}" >
+				<td class="issues"><a href="issues_detail.php?id={$i.id}">{$i.name}</a></td>
+				<td class="type">{$trackers[$i.tracker_id]}</td>
+				<td class="date">{date_format $i.date_due "%b %e, %Y"}</td>
+				<td class="author">{$developers[$i.author_id]}</td>
+				<td class="cmd edit">
+					<a href="{$.config.site_path}issues_edit.php?id={$i.id}">
+						<img title="Edit Issue" alt="Edit Issue" src="{$.config.site_path}images/icons/edit.gif"/>
+					</a>
+				</td>
+				<td class="cmd delete">
+					<a class="delete" href="{$.config.site_path}issues_delete.php?id={$i.id}">
+						<img title="Delete Issue" alt="Delete Issue" src="{$.config.site_path}images/icons/trash.gif"/>
+					</a>
+				</td>
+			</tr>
+			{foreachelse}
+			<tr>
+				<td colspan="6" class="empty">There are currently no issues for this project.</td>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+</div>
+{/block}

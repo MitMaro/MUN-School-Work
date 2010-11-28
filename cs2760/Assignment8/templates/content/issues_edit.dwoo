@@ -1,0 +1,71 @@
+{extends "structure"}
+
+{block section_title}
+	Edit Issue
+{/block}
+
+{block content}
+<div class='section'>
+	<h1>Edit Issue</h1>
+	<form id="edit_issue" action="{$.config.site_path}issues_edit.php" method="post">
+	<fieldset>
+		<input type='hidden' name='id' value='{$issue.id}'/>
+		<legend>General</legend>
+		<ol>
+			<li>
+				<label for="name">Issue Name:</label>
+				<input type="text" name="name" id="name" value="{$issue.name}" />
+			</li>
+			<li>
+				<label for="type">Type:</label>
+				<select name="type" id="type">
+					{foreach $trackers t name=trackers}
+						<option value="{$.foreach.trackers.index}" {if $issue.tracker_id == $.foreach.trackers.index} selected="selected"{/if}>{$t}</option>
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<label for="target">Target Version:</label>
+				<select name="target" id="target">
+					{foreach $versions v name=versions}
+						<option value="{$.foreach.versions.index}" {if $issue.target_version_id == $.foreach.versions.index} selected="selected"{/if}>{$v}</option>
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<label for="assign">Assigned To:</label>
+				<select name="assign" id="assign">
+					{foreach $developers d name=devels}
+						<option value="{$.foreach.devels.index}" {if $issue.assigned_to == $.foreach.devels.index} selected="selected"{/if}>{$d}</option>
+					{/foreach}
+				</select>
+			</li>
+			<li>
+				<label for="status">Status:</label>
+				<select name="status" id="status">
+					<option value="open" {if $issue.status == 'open'} selected="selected"{/if}>Open</option>
+					<option value="closed" {if $issue.status == 'closed'} selected="selected"{/if}>Closed</option>
+				</select>
+			</li>
+			<li>
+				<label for="due">Date Due:</label>
+				<input name="due" id="due" type="text" value="{$issue.date_due}"/>
+			</li>
+			
+		</ol>
+	</fieldset>
+	<fieldset>
+		<legend>Details</legend>
+		<div class="details">
+			<div class="help">Use HTML tags for formatting.</div>
+			<textarea cols="0" rows="10" name="details" id="details">{$issue.details}</textarea>
+		</div>
+	</fieldset>
+	<ol>
+		<li class="submit">
+			<input type="submit" value="Save Changes"/>
+		</li>
+	</ol>
+	</form>
+</div>
+{/block}

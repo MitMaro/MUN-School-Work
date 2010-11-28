@@ -1,0 +1,34 @@
+{extends "structure"}
+
+{block section_title}
+	Issue Details
+{/block}
+
+{block content}
+<div class='section'>
+	<div class="controls">
+		<a href="{$.config.site_path}issues_edit.php?id={$issue.id}">EDIT</a> |
+		<a class="delete" href="{$.config.site_path}issues_delete.php?id={$issue.id}">DELETE</a>
+	</div>
+	<h1>Issue Details</h1>
+	<fieldset>
+		<legend>General</legend>
+		<div class="detail"><div class="label">Issue Name:</div>{$issue.name}</div>
+		<div class="detail"><div class="label">Target Version:</div> {$versions[$issue.target_version_id]}</div>
+		<div class="detail"><div class="label">Type:</div> {$trackers[$issue.tracker_id]}</div>
+		<div class="detail"><div class="label">Author:</div> {$developers[$issue.author_id]}</div>
+		<div class="detail"><div class="label">Assigned To:</div> {$developers[$issue.assigned_to]}</div>
+		<div class="detail"><div class="label">Status:</div> {$issue.status}</div>
+		<div class="detail"><div class="label">Date Due:</div> {date_format $issue.date_due "%b %e, %Y"}</div>
+		<div class="detail"><div class="label">Date Added:</div> {date_format $issue.date_added "%b %e, %Y"}</div>
+		<div class="detail"><div class="label">Date Updated:</div> {date_format $issue.date_edited "%b %e, %Y"}</div>
+	</fieldset>
+	<fieldset>
+		<legend>Details</legend>
+		<div class="details">
+			{$issue.details}
+		</div>
+	</fieldset>
+	
+</div>
+{/block}

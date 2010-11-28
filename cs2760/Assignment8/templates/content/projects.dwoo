@@ -1,0 +1,53 @@
+{extends "structure"}
+
+{block section_title}
+	Projects
+{/block}
+
+{block navigation}
+{/block}
+
+{block content}
+<div class='section'>
+	<h1>Projects</h1>
+	<fieldset>
+		<legend>Second Life Project 1</legend>
+		<div class="details">
+			<ul>
+				<li>Current Version: 0.1.0</li>
+				<li>Developers: Tim Oram, Simon McIlhargey, Lauren Stratton</li>
+				<li>Open Issues: <a href="issues.php">4</a></li>
+				<li>Closed Issues: <a href="issues.php">12</a></li> 
+			</ul>
+			<div class="more"><a href="issues.php">Project Details</a></div>
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Second Life Project 2</legend>
+		<div class="details">
+			<ul>
+				<li>Current Version: 1.2.3</li>
+				<li>Developers: Tim Oram, Lauren Stratton</li>
+				<li>Open Issues: <a href="issues.php">6</a></li>
+				<li>Closed Issues: <a href="issues.php">3</a></li> 
+			</ul>
+			<div class="more"><a href="issues.php">Project Details</a></div>
+		</div>
+	</fieldset>
+	
+	
+	<fieldset>
+		<legend>Second Life Project 3</legend>
+		<div class="details">
+			<ul>
+				<li>Current Version: 0.3.9</li>
+				<li>Developers: Lauren Stratton</li>
+				<li>Open Issues: <a href="issues.php">10</a></li>
+				<li>Closed Issues: <a href="issues.php">1</a></li> 
+			</ul>
+			<div class="more"><a href="issues.php">Project Details</a></div>
+		</div>
+	</fieldset>
+</div>
+{/block}
