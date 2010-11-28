@@ -1,0 +1,10 @@
+You will need to find and copy the following jars into webapp/WEB-INF/lib/.
+
+http://code.google.com/p/google-gson/
+	gson-1.5.jar
+http://dist.codehaus.org/jetty/jetty-6.1.26/
+	jetty-6.1.26.jar
+	jetty-util-6.1.26.jar
+	servlet-api-2.5-20081211.jar
+http://www.zentus.com/sqlitejdbc/
+	sqlitejdbc-v056.jar

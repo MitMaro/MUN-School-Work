@@ -1,0 +1,28 @@
+#!/bin/bash
+: '
+Computer Science 3715
+Assignment #5
+Image Rotate With Comments
+
+By: Tim Oram
+Student Number: #########
+'
+
+LIB_BASE="../WEB-INF/lib"
+
+JARS=( "gson-1.5.jar" "jetty-6.1.26.jar" "jetty-util-6.1.26.jar" "servlet-api-2.5-20081211.jar" "sqlitejdbc-v056.jar" )
+
+for lib in "${JARS[@]}"; do
+	MY_CLASSPATH="$MY_CLASSPATH:$LIB_BASE/$lib"
+done
+
+if [ "$1" != "" ]; then
+	PORT=$1
+else
+	echo "Using default port. To change: run PORT_NUMBER"
+	PORT=8080
+fi
+
+echo "Starting Jetty on Port $PORT"
+
+CLASSPATH="../WEB-INF/classes/:$MY_CLASSPATH" java ca/mitmaro/Server 8080 ../

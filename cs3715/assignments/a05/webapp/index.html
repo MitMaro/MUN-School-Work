@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+	Computer Science 3715
+	Assignment #5
+	Image Rotate With Comments
+	
+	By: Tim Oram
+	Student Number: #########
+	-->
+	<title>Image Rotate With Comments</title>
+	<script type="text/javascript" src="js/json2.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<div class="app">
+		<div class="title">
+			<h1>Image Rotate With Comments</h1>
+		</div>
+		<div class="images">
+			<div class="controls">
+				<div id="button-prev" class="button">Previous</div>
+				<div id="button-next" class="button">Next</div>
+				<div class="clear"></div>
+			</div>
+			<img id="rotate-image" alt="An Image" src="images/A.png" />
+		</div>
+		<div class="comments">
+			<div class="title">Comments:</div>
+			<div id="comments-loader"><img src="images/loader.gif" alt="Loading Comments" /></div>
+			<ul id="comments-list">
+				<li class="empty">No Comments Yet</li>
+			</ul>
+			<form id="comments-form" action="" method="post">
+				<div id="comments-form-loader"><img src="images/loader.gif" alt="Loading Comments" /></div>
+				<ul id="comments-form-list" class="form">
+					<li class="hidden"><input id="comment-image_name" type="hidden" name="image_name" value="A.png"/></li>
+					<li><label for="comment-name">Name:</label>
+						<input type="text" name="author" id="comment-name"/></li>
+					<li><label for="comment-comment">Comment:</label>
+						<textarea cols="1" rows="1" name="comment" id="comment-comment"></textarea></li>
+					<li class="controls"><input type="submit" value="Post Comment" /></li>
+				</ul>
+			</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>
