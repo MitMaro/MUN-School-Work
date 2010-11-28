@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+echo
+
+echo "complex% python matm2.py"
+python matm2.py
+
+echo "complex% python matm2.py com1.txt"
+python matm2.py com1.txt
+
+echo

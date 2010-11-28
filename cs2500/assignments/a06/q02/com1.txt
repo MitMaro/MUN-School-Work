@@ -1,0 +1,38 @@
+read m1
+dimensions m1
+print m1
+read m2
+dimensions m2
+print m2
+read m3
+dimensions m3
+print m3
+add 2 to m1
+print m1
+append columns of m3 to m1
+dimensions m1
+print m1
+add 2 to m3
+print m3
+print m1
+read m1
+print m1
+append rows of m2 to m1
+dimensions m1
+print m1
+add 3 to m2
+print m2
+print m1
+print m4
+dimensions m4
+add 5 to m4
+append columns of m4 to m3
+append columns of m2 to m4
+append columns of m2 to m3
+print m3
+print m2
+append rows of m4 to m3
+append rows of m2 to m4
+append rows of m2 to m3
+print m3
+print m2
