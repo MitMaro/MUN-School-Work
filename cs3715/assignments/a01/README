@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------
+                                 Chatter Readme
+--------------------------------------------------------------------------------
+
+By: Tim Oram
+Student Number: #########
+
+1. Modifications to Assignment Requirements
+--------------------------------------------------------------------------------
+
+I have made several modifications to the assignment because of some of the
+extra functionality I have added. These are:
+    1) The ChatterClients create there ServerSocket immediately. This was 
+       because the ChatterServer doesn't keep track of which of any two clients
+       the other is connecting to. It simply picks one to be the "ChatterClient
+       Server".
+    2) The ChatterServer sends an "ALIVE" request to every ChatterClient
+       connected. In turn each ChatterClient will send an "ACK" response to this
+       request. This was to pool each ChatterClient to see if it was still
+       connected.
+    3) The ChatterServer works on more than just two clients. It can handle as
+       many clients as there is memory available. It also connects these clients
+       to one like chatroulette does. If any two ChatterClients are not paired
+       they will be paired until one disconnects.
+
+
+2. How To Use:
+--------------------------------------------------------------------------------
+
+Start the ChatterServer:
+    java mitmaro.Chatter.ChatterServer
+
+This will provide a port for use, use ctrl-c to shutdown
+
+Start a Client:
+    java mitmaro.Chatter.ChatterClient host port
+
+host and port are the connection information for the ChatterServer
+
+You can connect as many ChatterClients as you wish, disconnect one and it's pair
+will reconnect to another, or wait for another client to connect.
+
+3. A Video
+--------------------------------------------------------------------------------
+Just not understanding me, check out the screen cast of the assignment in action
+at http://www.youtube.com/watch?v=WswVxXuI5p0
