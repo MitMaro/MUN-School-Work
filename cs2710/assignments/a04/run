@@ -1,0 +1,31 @@
+#/bin/bash
+
+echo
+echo
+echo "CS 2710 (Fall 2008)"
+echo "Script Output"
+echo "  By: Tim Oram (#########)"
+echo "Date: November 03, 2008"
+echo
+echo
+
+cd q01
+java SmallestValue
+
+echo
+echo
+
+cd ../q02
+java Sentence
+
+echo
+echo
+
+cd ../q03
+java CharsInString
+
+echo
+echo
+
+exit
+

@@ -1,0 +1,30 @@
+MMMAC:ass04 mitmaro$ ./run
+
+
+CS 2710 (Fall 2008)
+Script Output
+  By: Tim Oram (#########)
+Date: November 03, 2008
+
+
+Run Time (100000 Runs): 26ms
+Array:3 7 5 7 9 2 3 6 4 6 8 2 3 5 7 
+Smallest Integer: 2
+
+
+ Should be true: true
+ Should be true: true
+Should be false: false
+
+
+Searching String: 
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Vivamus nec lacus. Fusce vulputate venenatis lacus. Maecenas semper magnafeugiat ipsum.
+
+Number of 'a': 12
+Number of 'f': 1
+Number of 'h': 0
+Number of ' ': 17
+Number of 'L': 1
+
+
+MMMAC:ass04 mitmaro$ 
