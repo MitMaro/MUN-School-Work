@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Tim's Pizza Delivery</title>
+	<link rel="stylesheet" type="text/css" href="pizza.css" />
+	<script src="js/mootools-core.js" type="text/javascript"></script>
+	<script src="js/mootools-more.js" type="text/javascript"></script>
+	<script src="js/sprintf.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		window.addEvent('domready', function(){
+			var prices = {
+				'base_price': {
+					'small': 4.0,
+					'medium': 6.00,
+					'large': 8.00
+				},
+				'ingredients': {
+					'small': 0.50,
+					'medium': 0.75,
+					'large': 1.00
+				}
+			}
+			
+			function updatePrice() {
+				var size = document.getElement('#pizza_size input[type=radio]:checked').value;
+				var total = prices['base_price'][size];
+				
+				total += prices['ingredients'][size] * $$('#pizza_ingredients input[type=checkbox]:checked').length;
+				
+				$$('#total_price').set('value', "$" + sprintf("%.2f", total));
+			}
+			
+			$$('#pizza_size input[type=radio]').addEvent('change', updatePrice);
+			$$('#pizza_ingredients input[type=checkbox]').addEvent('change', updatePrice);
+			updatePrice();
+		});
+	</script>
+</head>
+<body>
+	<div id="body">
+		<div class="header">
+			<h1>Tim's Pizza Delivery</h1>
+			<div class="contact_info">
+				<div class="phone">1-709-555-5555</div>
+				<div class="website"><a href="http://www.mitmaro.ca">www.mitmaro.ca</a></div>
+				<div class="address">1 CS Ave. St. John's NL</div>
+			</div>
+		</div>
+		<form method="get" action="">
+			<div class="body">
+				<div id="pizza_size">
+					<div class="section_title">Pizza Size</div>
+					<ul>
+						<li><label for="pizza_type_small">Small Pizza</label>
+							<input id="pizza_type_small" type="radio" name="size" value="small" /></li>
+						<li class="price">Base Price: 4.0</li>
+						<li class="price">Toppings: 0.50</li>
+						<li><label for="pizza_type_medium">Medium Pizza</label>
+							<input id="pizza_type_medium" checked="checked" type="radio" name="size"
+								value="medium" /></li>
+						<li class="price">Base Price: 6.0</li>
+						<li class="price">Toppings: 0.75</li>
+						<li><label for="pizza_type_large">Large Pizza</label>
+							<input id="pizza_type_large" type="radio" name="size" value="large" /></li>
+						<li class="price">Base Price: 8.0</li>
+						<li class="price">Toppings: 1.00</li>
+					</ul>
+				</div>
+				
+				<div id="pizza_ingredients">
+					<div class="section_title">Pizza Ingredients</div>
+					<ul>
+						<li><label for="pizza_ingredient_pepperoni">Pepperoni</label>
+							<input id="pizza_ingredient_pepperoni" type="checkbox" name="ingredient"
+								value="Pepperoni" /></li>
+						<li><label for="pizza_ingredient_italian_sausage">Italian Sausage</label>
+							<input id="pizza_ingredient_italian_sausage" type="checkbox" name="ingredient"
+								value="Italian Sausage" /></li>
+						<li><label for="pizza_ingredient_mushrooms">Mushrooms</label>
+							<input id="pizza_ingredient_mushrooms" type="checkbox" name="ingredient"
+								value="Mushrooms" /></li>
+						<li><label for="pizza_ingredient_black_olives">Black Olives</label>
+							<input id="pizza_ingredient_black_olives" type="checkbox" name="ingredient"
+								value="Black Olives" /></li>
+						<li><label for="pizza_ingredient_vidallia_onions">Vidallia Onions</label>
+							<input id="pizza_ingredient_vidallia_onions" type="checkbox" name="ingredient"
+								value="Vidallia Onions" /></li>
+						<li><label for="pizza_ingredient_green_bell_pepper">Green Bell Pepper</label>
+							<input id="pizza_ingredient_green_bell_pepper" type="checkbox" name="ingredient"
+								value="Green Bell Pepper" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="controls">
+				<div class="total_price">
+					<label for="total_price">Total Price:</label>
+					<input type="text" id="total_price" value="" readonly="readonly"/>
+				</div>
+				<input type="submit" value="Order Pizza"/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

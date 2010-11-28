@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Tim's Pizza Delivery</title>
+	<link rel="stylesheet" type="text/css" href="pizza.css" />
+</head>
+<body>
+	<div id="body">
+		<div class="header">
+			<h1>Tim's Pizza Delivery</h1>
+			<div class="contact_info">
+				<div class="phone">1-709-555-5555</div>
+				<div class="website"><a href="http://www.mitmaro.ca">www.mitmaro.ca</a></div>
+				<div class="address">1 CS Ave. St. John's NL</div>
+			</div>
+		</div>
+		<form method="get" action="">
+			<input type='hidden' name='size' value='{size}' />
+			<div class="body">
+				You have selected to purchase a <b>{size}</b> pizza with the following toppings:
+				<ul class="ingredients">
+					{block toppings}<li>{ingredient}<input type="hidden" name="ingredient" value="{ingredient}"/></li>{/block}
+				</ul>
+				The total price of the pizza is $<b>{total}</b>. Please provide the following
+				information to confirm your order.
+				<ul class="form">
+					<li><label for="name">Name:</label>
+						<input id="name" type='text' name='name' value='' /></li>
+					<li><label for="phone">Phone:</label>
+						<input id="phone" type='text' name='phone' value='' /></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="controls">
+				<input type="submit" value="Order Pizza"/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+	font-size:100%;
+	line-height:1.125em;
+	margin:0;
+	padding:25px;
+	background:#fff url(backgrounds/gradient_hatch.png) repeat;
+}
+
+div#body {
+	width:600px;
+	margin:auto;
+	padding:5px 0 5px 0;
+	border-bottom:1px solid #999;
+}
+
+div.header {
+	text-align:center;
+	border-bottom: 1px solid #666;
+}
+
+div.header h1 {
+	border-bottom: 1px solid #666;
+	padding:5px 0 15px 0;
+	font-variant:small-caps;
+	margin:5px 0;
+}
+
+div.contact_info {
+	padding:5px;
+	color:#777;
+	font-variant:small-caps;
+}
+
+div.phone {
+	float:right;
+	width:125px;
+	text-align:right;
+	padding-right:10px;
+}
+
+div.website {
+	float:left;
+	width:125px;
+	padding-left:10px;
+}
+
+div.address {
+	margin:auto;
+	width:300px;
+}
+
+div#pizza_size, div#pizza_ingredients {
+	width:45%;
+	clear:none;
+	padding:0 10px;
+}
+
+div#pizza_size {
+	float:left;
+}
+
+div#pizza_ingredients {
+	float:right;
+}
+
+div.section_title {
+	font-weight:bold;
+	margin:5px 0;
+	text-align:center;
+	font-variant:small-caps;
+}
+
+div.clear {
+	clear:both;
+}
+
+div.controls {
+	text-align:right;
+	padding:5px 10px 0 10px;
+	border-top:1px solid #ddd;
+	margin-top:15px;
+}
+
+ul {
+	padding:0;
+	margin:0;
+}
+
+li {
+	list-style:none;
+	padding:7px 0;
+	margin:0;
+	clear:both;
+	font-weight:bold;
+}
+
+li.price {
+	padding:0 0 0 25px;
+	font-size:0.9em;
+	color:#333;
+	font-weight:normal;
+}
+
+label {
+	width:200px;
+	float: left;
+	line-height:18px;
+}
+
+input[type=radio], input[type=checkbox] {
+	margin:0;
+	padding:0;
+	float:right;
+}
+
+input[type=submit] {
+	border: 1px solid #999;
+	padding:0 5px;
+}
+
+a {
+	color:#777;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+div.total_price {
+	text-align:right;
+	width:200px;
+	float:left;
+}
+
+div.total_price label {
+	width:100px;
+}
+
+input#total_price {
+	border:0px;
+	text-align:right;
+	background:none;
+	width:50px;
+}

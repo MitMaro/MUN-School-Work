@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Tim's Pizza Delivery</title>
+	<link rel="stylesheet" type="text/css" href="pizza.css" />
+</head>
+<body>
+	<div id="body">
+		<div class="header">
+			<h1>Tim's Pizza Delivery</h1>
+			<div class="contact_info">
+				<div class="phone">1-709-555-5555</div>
+				<div class="website"><a href="http://www.mitmaro.ca">www.mitmaro.ca</a></div>
+				<div class="address">1 CS Ave. St. John's NL</div>
+			</div>
+		</div>
+		<div class="body">
+			Thanks you {name} ({phone}). We have processed your order of a  <b>{size}</b>
+			pizza with the following extra toppings:
+			<ul class="ingredients">
+				{block toppings}<li>{ingredient}</li>{/block}
+			</ul>
+			for a total of $<b>{total}</b>.
+		</div>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>
