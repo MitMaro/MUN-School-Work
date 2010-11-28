@@ -1,0 +1,50 @@
+#!/bin/bash
+clear
+echo
+
+echo "complex% python maze2.py"
+python maze2.py
+
+echo "complex% python maze2.py maze1.dat move1.dat 2 1"
+python maze2.py maze1.dat move1.dat 2 1
+
+echo "complex% python maze2.py maze1.dat move1.dat 1 1"
+python maze2.py maze1.dat move1.dat 1 1
+
+echo "complex% python maze2.py maze1.dat move1.dat 3 3"
+python maze2.py maze1.dat move1.dat 3 3
+
+echo "complex% python maze2.py maze1.dat move2.dat 2 1"
+python maze2.py maze1.dat move2.dat 2 1
+
+echo "complex% python maze2.py maze1.dat move2.dat 1 1"
+python maze2.py maze1.dat move2.dat 1 1
+
+echo "complex% python maze2.py maze1.dat move2.dat 3 3"
+python maze2.py maze1.dat move2.dat 3 3
+
+echo "complex% python maze2.py maze2.dat move1.dat 5 3"
+python maze2.py maze2.dat move1.dat 5 3
+
+echo "complex% python maze2.py maze2.dat move1.dat -4 -4"
+python maze2.py maze2.dat move1.dat -4 -4
+
+echo "complex% python maze2.py maze2.dat move2.dat 5 3"
+python maze2.py maze2.dat move2.dat 5 3
+
+echo "complex% python maze2.py maze2.dat move2.dat -4 -4"
+python maze2.py maze2.dat move2.dat -4 -4
+
+echo "complex% python maze2.py maze1.dat move3.dat 1 8"
+python maze2.py maze1.dat move3.dat 1 8
+
+echo "complex% python maze2.py maze2.dat move3.dat 1 8"
+python maze2.py maze2.dat move3.dat 1 8
+
+echo "complex% python maze2.py maze1.dat move4.dat 2 0"
+python maze2.py maze1.dat move4.dat 2 0
+
+echo "complex% python maze2.py maze2.dat move4.dat 2 0"
+python maze2.py maze2.dat move4.dat 2 0
+
+echo
