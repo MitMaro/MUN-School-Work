@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<title>Tim's PyCalc Documentation</title>
+	<style type="text/css">
+		
+		div.page_title {
+			color:#600;
+			text-align:center;
+			font-size:32px;
+			padding:5px 0 15px 0;
+		}
+		
+		div.section {
+			width:600px;
+			margin: auto;
+		}
+		
+		div.title{
+			font-size:20px;
+			color:#900;
+			text-align:Left;
+			padding-left:25px;
+			margin: 10px 0;
+			border-bottom:1px dotted #900;
+		}
+		div.body div.title{
+			font-size:16px;
+			color:#600;
+			text-align:Left;
+			padding-left:10px;
+			margin: 5px 0;
+			border-width:0px;
+		}
+		div.body p{
+			text-indent:15px;
+		}
+		th{
+			color:#300;
+			text-align:left;
+		}
+		td{
+			border-bottom:1px dashed #a00;
+		}
+		
+	
+	</style>
+</head>
+<body>
+	<div class='page_title'>Tim's PyCal Source Documentation</div>
+	<div class='section'>
+		<div class='title'>Introduction</div>
+		<div class='body'>
+			<p>
+				I tried to implement all the bonus features I could and I believe the only additional features
+				I did not implement are the undo last operations and the internally stored quantities. These
+				features however are not needed in the way the calculator is designed. Although you can not
+				undo the last operation you can retrieve the previous result using the result history. The
+				result history can also be used to store values by simply inputting a value and hitting enter.
+			</p>
+			<p>
+				Another thing to note is that when looking at the source code things may seem more complicated
+				then they need be. This is generally true, as the code is written to be dynamic. I started
+				writing this code with the purpose of
+				adding a feature where the user of the calculator, if they had knowledge of Python, could write
+				their own mathematical functions and add them to the calculator. I didn't have time to add
+				this feature but it wouldn't take long to add it.
+			</p>
+		</div>
+		
+		<div class='title'>The Source Files</div>
+		<div class='body'>
+			<p>
+				In reading the source for this application I would suggest reading them in the order provided
+				below to ensure your not reading code that is referencing code yet unread.
+			<p>
+			<div class='title'>CalcWidgets.py</div>
+			<p>
+				I wrote all the buttons in the calculator in groups. This file contains all the GUI megawidgets
+				that are used in the calculator. Mostly they are just groups of buttons that when clicked generate
+				a virtual event that can be later captured in the main application. The only exception to this is
+				the display which is only used for display purposes only. All key bindings are also  done within
+				this file. I decided to generate virtual events in place of using callback functions because I
+				found the callbacks were added a lot of bulk to the application.
+			</p>
+			<div class='title'>CalcFunctions.py</div>
+			<p>
+				A very small file containing several mathematical functions that are used by the calculator to
+				calculate a result.
+			</p>
+			<div class='title'>History.py</div>
+			<p>
+				This file contains a class that handles the storing and iteration of histories. The standard
+				iterator in Python doesn't allow backwards iteration and I needed a way to have the iterative
+				index to start at -1 for the purpose of displaying the current value. The History class also
+				stores the current input when the history is being iterated. 
+			</p>
+			<div class='title'>Number.py</div>
+			<p>
+				If I had my time back I would have called this class NumericalInput. The Number class allows
+				for the creation of a valid number one character at a time. The class stops there being two 
+				decimals in a given input, no decimal in the exponent part and handles unary minus. This
+				class will always produce a string that is valid for parsing by both Decimal and Float.
+			</p>
+			<div class='title'>CalculatorValues.py</div>
+			<p>
+				Certain functions (the Log function for example) take multiple user inputs. The class contained
+				within the CalculatorValues.py file allows for easy creation, manipulation and accessing of these
+				values. It assures the data is always in the correct type, makes sure there is always at least
+				one value in its internal list and provides iteration over the list of values.
+			</p>
+			<div class='title'>Calculator.py</div>
+			<p>
+				This file is the heart of the calculator. It contains all the necessary functions to handle user
+				input, storing and retrieving histories, function argument handling, calculating both functional
+				operational operations and formatting and displaying of the input and result.
+			</p>
+			<div class='title'>addmachGUI.py</div>
+			<p>
+				The various calculator classes are useless if the user doesn't have a way to interact with them.
+				The addmachGUI.py file creates a user interface and links the virtual events from the megawidgets
+				to their corresponding methods in the calculator class.  
+			</p>
+		</div>
+		<div class='title'>Additions I Would Like to Make But Didn't Have Time</div>
+		<div class='body'>
+			<p>
+				Below are some ideas that I though of while doing this assignment that I would really like to add.
+				In brackets is the particular class file in which the additions would go. The main reason I did
+				not add these was I didn't feel I had adequate time to fully test these to my satisfaction.
+			</p>
+			<ul>
+				<li>Proper clear and delete when history is involved (Calculator.py)</li>
+				<li>Editable history entries (Calculator.py)</li>
+				<li>Implement reverse polish notation (Calculator.py)</li>
+				<li>Implement user created functions (New)</li>
+				<li>Dynamically get the number of arguments for a function (Calculator.py)</li>
+				<li>Optional arguments on functions (Calculator.py)</li>
+				<li>Unlimited argument functions (Calculator.py)</li>
+				<li>Better handling of named constants (Calculator.py, CalculatorValues.py)</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>		

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<title>Tim's PyCalc Documentation</title>
+	<style type="text/css">
+		
+		div.page_title {
+			color:#600;
+			text-align:center;
+			font-size:32px;
+			padding:5px 0 15px 0;
+		}
+		
+		div.section {
+			width:600px;
+			margin: auto;
+		}
+		
+		div.title{
+			font-size:20px;
+			color:#900;
+			text-align:Left;
+			padding-left:25px;
+			margin: 10px 0;
+			border-bottom:1px dotted #900;
+		}
+		div.body p{
+			text-indent:15px;
+		}
+		th{
+			color:#300;
+			text-align:left;
+		}
+		td{
+			border-bottom:1px dashed #a00;
+		}
+		
+	
+	</style>
+</head>
+<body>
+	<div class='page_title'>Tim's PyCal Documentation</div>
+	<div class='section'>
+		<div class='title'>Introduction</div>
+		<div class='body'>
+			<p>
+				This calculator supports two different forms of mathematical calculations. Calculations
+				using operators and calculations using functions. For every calculation done, stored in
+				history are the operation and result that can be recalled later. A two line display
+				shows the current result on the first line and the operation being performed on the
+				second. Input to the calculator is done using the buttons on the interface. For some
+				input a keyboard can also be used for input.
+			</p>
+		</div>
+		
+		<div class='title'>Numerical Input</div>
+		<div class='body'>
+			<p>
+				The calculator supports full numerical input with scientific notation. The calculator doesn't
+				allow invalid input (you can't have two decimals for example). Negation of a number is done by
+				the &plusmn; button. Pressing the equals button assigns the current numerical input to the result.
+			</p>
+		</div>
+		
+		<div class='title'>Scientific Notation</div>
+		<div class='body'>
+		<p>
+			Scientific notation is inputed using the `EE` button negative scientific notation is also supported.<br/>
+		Example: Pressing the 1, 2, 3, EE and then 2 buttons will show 1.23E2 which is the same as
+		123x10<sup>2</sup>
+		</p>
+		</div>
+		
+		<div class='title'>Two Line Display</div>
+		<div class='body'>
+			<p>
+				The calculator has a two line display, the first line show the current result and the second
+				line show the current user input. If the text in the display become to large to be shown then
+				'&gt;&gt;' and/or '&lt;&lt;' will be shown to the left and/or right of the text. You can scroll
+				the display using the left and right arrow keys on your keyboard. 
+			</p>
+		</div>
+		
+		
+		<div class='title'>Operational Math</div>
+		<div class='body'>
+			<p>
+				The calculator supports the addition (+), subtraction (-), multiplication (*), division (/),
+				modulo (%) and power (^) operations. The operation is always performed on the current
+				result. For example if the current result is 5 and you press the + button and the input
+				3 the result will be 8.
+			</p>
+		</div>
+		<div class='title'>Functional Math</div>
+		<div class='body'>
+			<p>
+				Support for mathematical functions is provided within the calculator. A list of the mathematical
+				functions provided within the calculator is provided below. When a function only requires one
+				input (argument) then you press the function button, input the number and then the equals button
+				to get a result.  For example the Sin function takes one argument as input. To calculate the sine of
+				0.5 you press the Sin function button then enter 0.5 and press enter.
+			</p>
+			<p>
+				When a function requires more
+				then one argument you press the argument separator button (,) to enter the next argument (repeat
+				the process for any additional arguments that need to be inputed). For example the Log function
+				requires two arguments, the base and a number, to calculate the base 10 log of 3 you press the
+				Log button then input 10, you then press the argument separator button and input 3 and hit enter to
+				get the result.
+			</p>
+			<p>
+			 The calculator will not allow you to input more arguments then is required for any particular
+			 function. An ARGUMENTS ERROR message will be displayed if to few arguments are supplied.
+			</p>
+		</div>
+		<div class='title'>Clear, Clear Entry, Delete and Exit</div>
+		<div class='body'>
+			<p>
+				The calculators clear button (C) will remove all user input and reset the result to 0. It resets the
+				calculator back to its state when it was first started. However, history is not cleared. 
+			</p>
+			<p>
+				The clear entry button (CE) will clear the current user input and errors. Nothing else is cleared.
+			</p>
+			<p>
+				The delete button (Del) will delete one character of user input at a time. This allows you to go back
+				and fix an error that you may have made. When you are using history for input, delete will clear the
+				whole entry.
+			</p>
+			<p>
+				To exit the calculator just press the Off button.
+			</p>
+		</div>
+		
+		<div class='title'>Result and Operational History</div>
+		<div class='body'>
+			<p>
+				The calculator supports full result and operational history, what this means is any operation you
+				perform the result of the operation as well as that operation is stored in history and can be recalled.
+				To access the histories your use the next (<<) and previous (>>) history buttons for each history.
+				From this point onwards everything discussed can be applied to the operational and result histories.
+				Pressing the previous button will display the last history and pressing it again will display the history
+				before that and so on. The next button is used for going forwards in history. The calculator remembers
+				your current input and pressing the next history button enough will bring back your current input.
+				There are several limitations on using history however. Pressing any clear button while viewing
+				history will clear both your history and current input and you can not modify the input while viewing history.
+			</p>
+		</div>
+		
+		<div class='title'>Functions List</div>
+		<div class='body'>
+			<ul>
+				<li>Sine of Angle: Sin &thetasym;</li>
+				<li>Cosine of Angle: Cos &thetasym;</li>
+				<li>Tangent of Angle: Tan &thetasym;</li>
+				<li>Arcsine of value: aSin x</li>
+				<li>Arccosine of value: aCos x</li>
+				<li>Arctangent of value: aTan x</li>
+				<li>Logarithm of value to the base: Log base, x</li>
+				<li>Natural logarithm of value: ln a</li>
+				<li>Radian to Degree Conversion: Deg x</li>
+				<li>Degree to Radian Conversion: Rad x</li>
+				<li>Square Root of number: &radic; x</li>
+				<li>Exponent to the power of value: e^ x</li>
+				<li>Factorial of value (!): Factorial x </li>
+			</ul>
+		</div>
+		<div class='title'> Keyboard Input Keys:</div>
+		<div class='body'>
+			<table>
+				<tr>
+					<th style='width:200px;'>Input</th><th style='width:200px;'>Keyboard Button</th>
+				</tr>
+				<tr>
+					<td>0 to 9</td><td>0 to 9</td>
+				</tr>
+				<tr>
+					<td>Decimal `.`</td><td>Period `.`</td>
+				</tr>
+				<tr>
+					<td>Uniary Minus &plusmn;</td><td>Ctrl + -</td>
+				</tr>
+				<tr>
+					<td>Function Separator `,`</td><td>,</td>
+				</tr>
+				<tr>
+					<td>Scientific Notation EE</td><td>e</td>
+				</tr>
+				<tr>
+					<td>Answer History Next</td><td>Shift + Down</td>
+				</tr>
+				<tr>
+					<td>Answer History Prev</td><td>Shift + Up</td>
+				</tr>
+				<tr>
+					<td>Operation History Next</td><td>Down</td>
+				</tr>
+				<tr>
+					<td>Operation History Prev</td><td>Up</td>
+				</tr>
+				<tr>
+					<td>Decimal `.`</td><td>Period `.`</td>
+				</tr>
+				<tr>
+					<td>Uniary Minus &plusmn;</td><td>ctrl + -</td>
+				</tr>
+				<tr>
+					<td>Function Separator `,`</td><td>,</td>
+				</tr>
+				<tr>
+					<td>Scientific Notation EE</td><td>e</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
