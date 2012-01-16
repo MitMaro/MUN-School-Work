@@ -1,0 +1,49 @@
+/////////////////////////////////////////////////////////////////
+//  CS 3718 (Winter 2012), Assignment #1                       //
+//  Program File Name: LDB.java                                //
+//       Student Name: Tim Oram                                //
+//         Login Name: oram                                    //
+//              MUN #: 200529220                               //
+/////////////////////////////////////////////////////////////////
+
+Compiling
+-----------------------------------------------------------------
+For convenience the project can be compiled using GNU make.
+Compile by using the `make` command. Compiled classes will be
+placed into the 'bin' directory.
+
+
+Running
+-----------------------------------------------------------------
+There are three possible ways to run the program:
+1) Run java setting the classpath option to bin: `java -cp bin LDB`
+2) Run the LDB script `sh LDB`; which contains the above command.
+3) Change into the bin directory and run java: `cd bin && java LDB` 
+
+
+Commnands
+-----------------------------------------------------------------
+help: Print a list of all system operations.
+loadpap FILE as NAME: Load a paper description list stored in
+      file FILE into the system and store under name NAME.
+loadref FILE as NAME: Load a paper reference list stored in
+    file FILE into the system and store under name NAME.
+listpap: List all paper description lists stored in the
+      system.
+listref: List all paper reference lists stored in the system.
+addpap NAME: Add the paper description list stored by name
+      NAME to the master paper description list.
+addref NAME: Add the paper reference list stored by name NAME
+      to the master paper reference list.
+printpap: Print the master paper description list.
+printpap NAME: Print the paper description list stored by
+      name NAME.
+printref: Print the master paper reference list.
+printref NAME: Print the paper reference list stored by name
+      NAME.
+setcwp PID: Set current working paper to paper in master
+      paper description list with paper ID PID.
+setcwp RX: Set current working paper to reference X of the
+      current working paper.
+printcwp: Print current working paper and its references.
+exit: Exit the system.
