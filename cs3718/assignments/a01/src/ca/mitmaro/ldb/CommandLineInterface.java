@@ -64,7 +64,7 @@ public class CommandLineInterface {
 			)
 		);
 		setcwp_help.add(
-			new HelpMessage("setcwp RX", "Set current working paper to reference X of the current working paper.")
+			new HelpMessage("setcwp RX", "Set current working paper to reference X (1-indexed) of the current working paper.")
 		);
 		
 		this

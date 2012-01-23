@@ -172,7 +172,7 @@ public class Application {
 			in = new BufferedReader(new FileReader(filepath));
 		} catch (FileNotFoundException e) {
 			// should never reach here, but it is possible
-			System.out.println("Provided file not found: " + name);
+			System.out.println("Provided file not found: " + filepath);
 			System.exit(3);
 		}
 		String line;
@@ -209,7 +209,7 @@ public class Application {
 	public void setCurrentWorkingPaper(String id) {
 		
 		int index;
-		int i = 0;
+		int i = 1;
 		
 		if (id.startsWith("P")) {
 			this.current_working_publication = this.publications.get(id);
