@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////////////////
+//  CS 3716 (Winter 2012), Assignment #1                       //
+//  Program File Name: IMDB.java                               //
+//       Student Name: Tim Oram                                //
+//         Login Name: oram                                    //
+//              MUN #: 200529220                               //
+/////////////////////////////////////////////////////////////////
+
+Compiling
+-----------------------------------------------------------------
+For convenience the project can be compiled using GNU make.
+Compile by using the `make` command. Compiled classes will be
+placed into the 'bin' directory.
+
+
+Running
+-----------------------------------------------------------------
+There are three possible ways to run the program:
+1) Run java setting the classpath option to bin: `java -cp bin IMDB`
+2) Run the LDB script `sh IMDB`; which contains the above command.
+3) Change into the bin directory and run java: `cd bin && java IMDB` 
+
