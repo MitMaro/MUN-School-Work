@@ -1,0 +1,225 @@
+Project Description
+--------------------------------------------------------------------------------
+
+A movie-goer wants to know what movies to see and which to avoid. They can do 
+this by viewing movie recommendations. The movie-goer would also like to see the 
+recommendation of a particular movie. The system should help the movie-goer list 
+all recommendations and view a particular movie recommendation.
+
+The movie recommendation system would allow a user to load one or more 
+recommendation lists from the file system, list the lists that are loaded and 
+add those lists to a master list of movie recommendations. The user can then 
+display the movie recommendations from a list or display the recommendations 
+from the master list. When displaying the list the user has the option to sort 
+the displayed recommendation by title and then by year. The movie 
+recommendations can be searched and displayed by exact name and year of a movie.
+
+Actors
+--------------------------------------------------------------------------------
+* A movie goer/user
+* File system
+
+Glossary
+--------------------------------------------------------------------------------
+Movie: A motion picture.
+
+Movie Title: The title of the movie.
+
+Recommendation: The rating a movie has received.
+
+Year: The year the movie was released.
+
+Main Menu: The menu which contains the base operations.
+
+Base Operation: The operations of loadrec, listrecs, mergerec, displayrec, 
+searchrec, help and exit.
+
+Master List: A list of recommendations that are the combination of one or more 
+recommendation lists.
+
+Recommendation List: A list of movies with a recommendation rating.
+
+Non-Functional Requirements
+--------------------------------------------------------------------------------
+- The system must work on the Linux operating system, more specifically the 
+version and setup of Linux running on the Memorial Labnet computers.
+- The system must run on the Java Virtual Machine.
+- The system must have a 3 second or better response time.
+
+Functional Requirements
+--------------------------------------------------------------------------------
+
+-- System Entry --
+	Description
+		This use case will describe the process of which by the users starts the 
+		Movie Recommendation application.
+	Context Diagram
+	Flow of Events
+		1) The users begins by starting up the Movie Recommendation application.
+		2) The system displays the Main Menu.
+		3) The use case ends.
+
+-- System Menu --
+	Description
+		This use case will describe the process of which a user selects a 
+		operation from main menu.
+	Preconditions
+		The user has started the Movie Recommendation application.
+	Flow of Events
+		1) The use case starts with the displaying of commands/options to the 
+		user via a textual menu. The commands are help, loadrec, listrecs, 
+		mergerec, displayrec, searchrec and exit.
+		2) The user selects a operation by providing the number corresponding to 
+		the menu item or by entering the operation name as displayed in the menu 
+		and hitting enter.
+		3) The system then acts upon the user provided operation running it's 
+		associated use case.
+	Alternative Paths
+		2.1) If the user enters no input and hits enter the system returns to 
+		step 1.
+
+-- Abort Operation --
+	Description
+		This use case will describe how an operation is aborted when aborting an 
+		operation is permitted.
+	Preconditions
+		An operation has been started and the user has decided to abort an 
+		operation by providing empty input at the appropriate place as described 
+		in the operation use cases. 
+	Flow of Events
+		1) System prompts the user to abort the operation.
+		2) User types 1 or yes and hits enter.
+		3) The system starts the System Menu use case by returning to the Main 
+		Menu.
+	Alternative Paths
+		2.1) The user types 2 or no and hits enter.
+		2.2) The system returns the user to the previous operation menu.	
+
+-- Load Rec-list --
+	Description
+		This use case will describe the process for which a user loads a 
+		recommendation list into the database.
+	Preconditions
+		The user has started the Movie Recommendation application and has 
+		selected the loadrec operation from the Main Menu as described in System 
+		Menu use case.
+	Flow of Events
+		1) The system prompts the user for the recommendation list file path.
+		2) The user provides the file path by typing in the path and hitting 
+		enter.
+		4) If the file path provided is invalid or missing system returns to 
+		step 2.
+		5) The system prompts for the recommendation list name.
+		6) The user provides the list name by typing in the name and hitting 
+		enter.
+		7) If the list name provided is invalid system returns to step 5.
+		8) System read the file from the file system and stores the the list in 
+		the system.
+		9) System starts the System Menu use case by returning to the Main Menu.
+		
+-- List Rec-lists --
+	Description
+		This use case will describe the process for which a user loads a 
+		recommendation list into the database.
+	Preconditions
+		The user has started the Movie Recommendation application and has 
+		selected the listrecs operation from the Main Menu as described in 
+		System Menu use case.
+	Flow of Events:
+		1) The system displays the names of the lists that have been loaded.
+		2) System starts the System Menu use case by returning to the Main Menu.
+
+	Alternative Path
+		1.1) If no lists are loaded the system displays no lists loaded in place 
+		of a list of list names.
+		
+-- Merge Rec-List --
+	Description
+		This use case will describe the process for which a user merges a 
+		recommendation list into the master recommendation database.
+	Preconditions
+		The user has started the Movie Recommendation application and has 
+		selected the mergerec operation from the Main Menu as described in 
+		System Menu use case.
+	Flow of Events:
+		1) The system displays a list of recommendation list names prefixed by 
+		numbers.
+		2) The user selects a recommendation list by providing the number 
+		corresponding to the menu item or by entering the recommendation name as 
+		displayed in the menu and hitting enter.
+		3) The system merges the list into the master database and displays the 
+		Main System menu.
+		
+	Alternative Path:
+		2.1) The user enters empty input and hits enter.
+		2.2) The System runs the Abort Operation use case.
+		2.3) If the Abort Operation did not abort operation return to step 1
+	
+-- Display --
+	Description
+		This use case will describe the process for which a user displays a list 
+		of movie recommendations.
+	Preconditions
+		The user has started the Movie Recommendation application and has 
+		selected the displayrec operation from the Main Menu as described in 
+		System Menu use case.
+	Flow of Events:
+		1) The system displays a list of list names prefixed by a number 
+		including the master database list.
+		2) The user selects a recommendation list by providing the number 
+		corresponding to the menu item or by entering the recommendation name as 
+		displayed in the menu and hitting enter.
+		3) The system asks the user if the list of recommendations are to be 
+		sorted.
+		4) The user types 1 or yes to have the list sorted. The user types 0 or 
+		no to have the list displayed in natural order.
+		5) The system displays the list of recommendations sorted based on the 
+		user input.
+		6) System starts the System Menu use case by returning to the Main Menu.
+			
+	Alternative Path:
+		2.1) The user enters empty input and hits enter.
+		2.2) The system selects the master list as a default
+
+-- Search --
+	Description
+		This use case will describe the process for which a user searches for a 
+		movie recommendation.
+	Preconditions
+		The user has started the Movie Recommendation application and has 
+		selected the searchrec operation from the Main Menu as described in 
+		System Menu use case.
+	Flow of Events:
+		1) The system displays a list of list names prefixed by a number 
+		including the master database list.
+		2) The user selects a recommendation list by providing the number 
+		corresponding to the menu item or by entering the recommendation name as 
+		displayed in the menu and hitting enter.
+		3) The system prompts for a search term.
+		4) The user specifies the title and year of the movie.
+		5) The system displays the movie recommendation if the movie exists in 
+		list.
+		6) System starts the System Menu use case by returning to the Main Menu.
+	
+	Alternative Path:
+		2.1) The user enters empty input and hits enter.
+		2.2) The system selects the master list as a default
+		6.1) The system displays a not found message if the movie was not found.
+
+-- System Exit --
+	Description
+		This use case will describe the process of which by the user exits the
+		Movie Recommendation application.
+	Preconditions
+		The user has started the Movie Recommendation application and has 
+		selected the exit operation from the Main Menu as described in System 
+		Menu use case.
+	Flow of Events:
+		1) The system asks if the user is sure they want to quit with a yes no 
+		selection. 
+		2) The user types 1 or yes to confirm quit or 0 or no to cancel.
+		3) If the user selected yes the system shuts down. 
+	
+	Alternative Path:
+		3.1) If the quit was cancelled the system starts the System Menu use 
+		case by returning to the Main Menu.
