@@ -1,0 +1,105 @@
+/**
+ * CS 3725 - Assignment #1
+ * By: Tim Oram (200529220)
+ * Simple MIPS Processor
+ *
+ * Control Unit - One controller to rule them all
+ */
+
+Compiling
+-----------------------------------------------------------------
+For convenience the project can be compiled using GNU make.
+Compile by using the `make` command. Compiled classes will be
+placed into the 'bin' directory.
+
+
+Running
+-----------------------------------------------------------------
+There are three possible ways to run the program:
+1) Run java setting the classpath option to bin: `java -cp bin MIPSSim`
+2) Run the LDB script `sh MIPS`; which contains the above command.
+3) Change into the bin directory and run java: `cd bin && java MIPS`
+
+Description
+-----------------------------------------------------------------
+The simulator uses a single cycle datapath and all operations are
+constructed by setting the processor into a state using a control
+module. New instructions are added by simply adding a new series of
+states to the control module.
+
+What Was Not Done
+-----------------------------------------------------------------
+The system doesn't handle most exceptions. For example integer
+overflows are silently ignored.
+
+Additions
+-----------------------------------------------------------------
+The `addi` instruction was added because it was easier to set starting
+register values using an immediate value vs using a memory core or
+implementing a system to arbitrary set registers.
+
+Usage
+-----------------------------------------------------------------
+The system will display a menu. Menu items can be selected by entering
+the number next to the menu item or by entering the command name. The
+following commands are:
+    help   Print a list of all system commands. 
+    exit   Exit the MIPS Simulator. 
+    load   Load a MIPS binary file into the simulator memory. 
+    mem    Load a memory dump file into the simulator memory. 
+    run    Run the simulation. 
+    regs   Print the registers to the screen. 
+
+Test Cases
+-----------------------------------------------------------------
+All the test cases are located in the data/ directory. Additional
+test cases can be generated using the MARS MIPS simulator and creating
+a binary memory dump using File>Dump Memory.
+
+Some test cases may require values placed into the memory at the
+start. To acomplish this you can load a memory core using the `mem`
+command. The only pre defined test case that uses a memory core
+is the 'load_store_word' test case.
+
+
+ -- Example Usage --
+ 
+*** Commands ***
+  1: load    2: mem     3: run     4: regs    5: help    6: exit  
+What now> 2
+MIPS memory dump file path?
+mem> data/load_store_word.mem
+
+*** Commands ***
+  1: load    2: mem     3: run     4: regs    5: help    6: exit  
+What now> 1
+MIPS binary file path?
+load> data/load_store_word.bin
+
+*** Commands ***
+  1: load    2: mem     3: run     4: regs    5: help    6: exit  
+What now> 3
+
+*** Commands ***
+  1: load    2: mem     3: run     4: regs    5: help    6: exit  
+What now> 4
+$zero: 0x00000000     $t0: 0x0000000F     $s0: 0x0000000A     $t8: 0x00000000
+  $at: 0x00000000     $t1: 0x00000000     $s1: 0x00000000     $t9: 0x00000000
+  $v0: 0x00000000     $t2: 0x00000000     $s2: 0x0000000A     $k0: 0x00000000
+  $v1: 0x00000000     $t3: 0x00000000     $s3: 0x00000000     $k1: 0x00000000
+  $a0: 0x00000000     $t4: 0x00000000     $s4: 0x00000000     $gp: 0x00000000
+  $a1: 0x00000000     $t5: 0x00000000     $s5: 0x00000000     $sp: 0x00000000
+  $a2: 0x00000000     $t6: 0x00000000     $s6: 0x00000000     $fp: 0x00000000
+  $a3: 0x00000000     $t7: 0x00000000     $s7: 0x00000000     $ra: 0x00000000
+
+*** Commands ***
+  1: load    2: mem     3: run     4: regs    5: help    6: exit  
+What now>
+
+-- Test Cases --
+ * data/basic_addition_subtraction.bin
+ * data/branch_equals.bin
+ * data/branch_not_equals.bin
+ * data/jump.bin
+ * data/load_store_word.bin
+ * data/write_all_registers.bin
