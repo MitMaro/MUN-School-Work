@@ -62,7 +62,6 @@ public class ALU {
 		this.op = op;
 	}
 	public void setFunct(byte func) {
-		System.out.format("ALU Function: %x\n", func);
 		this.funct = Op.get(func);
 	}
 	
