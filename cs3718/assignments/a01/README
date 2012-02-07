@@ -21,7 +21,7 @@ There are three possible ways to run the program:
 3) Change into the bin directory and run java: `cd bin && java LDB` 
 
 
-Commnands
+Commands
 -----------------------------------------------------------------
 help: Print a list of all system operations.
 loadpap FILE as NAME: Load a paper description list stored in
