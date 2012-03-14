@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG new reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-AllTests">
+              <span class="suite-name border-failed">AllTests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-AllTests">
+                    <span>Tests.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-AllTests">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-AllTests">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-AllTests">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-AllTests">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-AllTests">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-AllTests">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">57 methods, 5 failed,   52 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AllTests" class="hide-methods failed suite-AllTests"> (hide)</a> <!-- hide-methods failed suite-AllTests -->
+                      <a href="#" panel-name="suite-AllTests" class="show-methods failed suite-AllTests"> (show)</a> <!-- show-methods failed suite-AllTests -->
+                    </span>
+                    <div class="method-list-content failed suite-AllTests">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="editPaperCommand">editPaperCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="printCurrentWorkingPaperCommand">printCurrentWorkingPaperCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="printPaperCommand">printPaperCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="printReferenceCommand">printReferenceCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="setCurrentWorkingPaperCommand">setCurrentWorkingPaperCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AllTests -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-AllTests" class="hide-methods passed suite-AllTests"> (hide)</a> <!-- hide-methods passed suite-AllTests -->
+                      <a href="#" panel-name="suite-AllTests" class="show-methods passed suite-AllTests"> (show)</a> <!-- show-methods passed suite-AllTests -->
+                    </span>
+                    <div class="method-list-content passed suite-AllTests">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="addCitation">addCitation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="addPaperCommand">addPaperCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="addPaperCommand_fail">addPaperCommand_fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="addReference">addReference</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="addReferenceCommand">addReferenceCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="addReferenceCommand_fail">addReferenceCommand_fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="addToList_Success">addToList_Success</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="addToList_missingOldList">addToList_missingOldList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookTest" hash-for-method="addToList_missingOldList">addToList_missingOldList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.ConferencePaperTest" hash-for-method="addToList_missingOldList">addToList_missingOldList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookChapterTest" hash-for-method="addToList_missingOldList">addToList_missingOldList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PHDThesisTest" hash-for-method="addToList_missingOldList">addToList_missingOldList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="clearPaperCommand">clearPaperCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="clearPaperCommand_fail">clearPaperCommand_fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="clearReferenceCommand">clearReferenceCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="clearReferenceCommand_fail">clearReferenceCommand_fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="editPaperCommand_missingPaper">editPaperCommand_missingPaper</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="getAuthorFirst_Fail">getAuthorFirst_Fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="getAuthorLast_Fail">getAuthorLast_Fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.JournalPaperTest" hash-for-method="getPages_differentPage">getPages_differentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.ConferencePaperTest" hash-for-method="getPages_differentPage">getPages_differentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookChapterTest" hash-for-method="getPages_differentPage">getPages_differentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookChapterTest" hash-for-method="getPages_samePage">getPages_samePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.JournalPaperTest" hash-for-method="getPages_samePage">getPages_samePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.ConferencePaperTest" hash-for-method="getPages_samePage">getPages_samePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookTest" hash-for-method="getPrintable">getPrintable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.JournalPaperTest" hash-for-method="getPrintable">getPrintable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PHDThesisTest" hash-for-method="getPrintable">getPrintable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.ConferencePaperTest" hash-for-method="getPrintable">getPrintable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookChapterTest" hash-for-method="getPrintable">getPrintable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="getTitle_Fail">getTitle_Fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="getYear_Fail">getYear_Fail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="listPaperListsCommand">listPaperListsCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="listPaperListsCommand_invalid">listPaperListsCommand_invalid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="listReferenceListsCommand">listReferenceListsCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="listReferenceListsCommand_invalid">listReferenceListsCommand_invalid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="loadPaperListCommand">loadPaperListCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="loadPaperListCommand_invalidArgs">loadPaperListCommand_invalidArgs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="loadReferenceListCommand">loadReferenceListCommand</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.CommandsTest" hash-for-method="loadReferenceListCommand_invalidArgs">loadReferenceListCommand_invalidArgs</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="setDataSet">setDataSet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.JournalPaperTest" hash-for-method="setDataSet">setDataSet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookChapterTest" hash-for-method="setDataSet">setDataSet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.ConferencePaperTest" hash-for-method="setDataSet">setDataSet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PHDThesisTest" hash-for-method="setDataSet">setDataSet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookTest" hash-for-method="setDataSet">setDataSet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.JournalPaperTest" hash-for-method="update">update</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookChapterTest" hash-for-method="update">update</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.BookTest" hash-for-method="update">update</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PaperTest" hash-for-method="update">update</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.PHDThesisTest" hash-for-method="updateField">updateField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-AllTests" title="ca.mitmaro.ldb.entity.ConferencePaperTest" hash-for-method="updateField">updateField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-AllTests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-AllTests" class="panel AllTests">
+          <div class="suite-AllTests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.CommandsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="editPaperCommand">
+                  </a> <!-- editPaperCommand -->
+                  <span class="method-name">editPaperCommand</span>
+                  <div class="stack-trace"><b>"expected:<Paper ...> but was:<...>"</b><br>junit.framework.Assert.assertEquals(Assert.java:81)<br>junit.framework.Assert.assertEquals(Assert.java:87)<br>ca.mitmaro.ldb.CommandsTest.editPaperCommand(CommandsTest.java:148)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:701)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:768)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1110)<br>org.testng.TestNG.run(TestNG.java:1022)<br>org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="printCurrentWorkingPaperCommand">
+                  </a> <!-- printCurrentWorkingPaperCommand -->
+                  <span class="method-name">printCurrentWorkingPaperCommand</span>
+                  <div class="stack-trace"><b>"Test not implemented"</b><br>ca.mitmaro.ldb.CommandsTest.printCurrentWorkingPaperCommand(CommandsTest.java:228)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:701)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:768)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1110)<br>org.testng.TestNG.run(TestNG.java:1022)<br>org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="printPaperCommand">
+                  </a> <!-- printPaperCommand -->
+                  <span class="method-name">printPaperCommand</span>
+                  <div class="stack-trace"><b>"Test not implemented"</b><br>ca.mitmaro.ldb.CommandsTest.printPaperCommand(CommandsTest.java:233)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:701)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:768)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1110)<br>org.testng.TestNG.run(TestNG.java:1022)<br>org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="printReferenceCommand">
+                  </a> <!-- printReferenceCommand -->
+                  <span class="method-name">printReferenceCommand</span>
+                  <div class="stack-trace"><b>"Test not implemented"</b><br>ca.mitmaro.ldb.CommandsTest.printReferenceCommand(CommandsTest.java:238)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:701)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:768)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1110)<br>org.testng.TestNG.run(TestNG.java:1022)<br>org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setCurrentWorkingPaperCommand">
+                  </a> <!-- setCurrentWorkingPaperCommand -->
+                  <span class="method-name">setCurrentWorkingPaperCommand</span>
+                  <div class="stack-trace"><b>"Test not implemented"</b><br>ca.mitmaro.ldb.CommandsTest.setCurrentWorkingPaperCommand(CommandsTest.java:243)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:701)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:768)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1110)<br>org.testng.TestNG.run(TestNG.java:1022)<br>org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-failed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.entity.BookTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToList_missingOldList">
+                  </a> <!-- addToList_missingOldList -->
+                  <span class="method-name">addToList_missingOldList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPrintable">
+                  </a> <!-- getPrintable -->
+                  <span class="method-name">getPrintable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDataSet">
+                  </a> <!-- setDataSet -->
+                  <span class="method-name">setDataSet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update">
+                  </a> <!-- update -->
+                  <span class="method-name">update</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.entity.JournalPaperTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPages_differentPage">
+                  </a> <!-- getPages_differentPage -->
+                  <span class="method-name">getPages_differentPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPages_samePage">
+                  </a> <!-- getPages_samePage -->
+                  <span class="method-name">getPages_samePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPrintable">
+                  </a> <!-- getPrintable -->
+                  <span class="method-name">getPrintable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDataSet">
+                  </a> <!-- setDataSet -->
+                  <span class="method-name">setDataSet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update">
+                  </a> <!-- update -->
+                  <span class="method-name">update</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.entity.ConferencePaperTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToList_missingOldList">
+                  </a> <!-- addToList_missingOldList -->
+                  <span class="method-name">addToList_missingOldList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPages_differentPage">
+                  </a> <!-- getPages_differentPage -->
+                  <span class="method-name">getPages_differentPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPages_samePage">
+                  </a> <!-- getPages_samePage -->
+                  <span class="method-name">getPages_samePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPrintable">
+                  </a> <!-- getPrintable -->
+                  <span class="method-name">getPrintable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDataSet">
+                  </a> <!-- setDataSet -->
+                  <span class="method-name">setDataSet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateField">
+                  </a> <!-- updateField -->
+                  <span class="method-name">updateField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.entity.PHDThesisTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToList_missingOldList">
+                  </a> <!-- addToList_missingOldList -->
+                  <span class="method-name">addToList_missingOldList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPrintable">
+                  </a> <!-- getPrintable -->
+                  <span class="method-name">getPrintable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDataSet">
+                  </a> <!-- setDataSet -->
+                  <span class="method-name">setDataSet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateField">
+                  </a> <!-- updateField -->
+                  <span class="method-name">updateField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.entity.PaperTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addCitation">
+                  </a> <!-- addCitation -->
+                  <span class="method-name">addCitation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addReference">
+                  </a> <!-- addReference -->
+                  <span class="method-name">addReference</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToList_Success">
+                  </a> <!-- addToList_Success -->
+                  <span class="method-name">addToList_Success</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToList_missingOldList">
+                  </a> <!-- addToList_missingOldList -->
+                  <span class="method-name">addToList_missingOldList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAuthorFirst_Fail">
+                  </a> <!-- getAuthorFirst_Fail -->
+                  <span class="method-name">getAuthorFirst_Fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAuthorLast_Fail">
+                  </a> <!-- getAuthorLast_Fail -->
+                  <span class="method-name">getAuthorLast_Fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTitle_Fail">
+                  </a> <!-- getTitle_Fail -->
+                  <span class="method-name">getTitle_Fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getYear_Fail">
+                  </a> <!-- getYear_Fail -->
+                  <span class="method-name">getYear_Fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDataSet">
+                  </a> <!-- setDataSet -->
+                  <span class="method-name">setDataSet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update">
+                  </a> <!-- update -->
+                  <span class="method-name">update</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.entity.BookChapterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToList_missingOldList">
+                  </a> <!-- addToList_missingOldList -->
+                  <span class="method-name">addToList_missingOldList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPages_differentPage">
+                  </a> <!-- getPages_differentPage -->
+                  <span class="method-name">getPages_differentPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPages_samePage">
+                  </a> <!-- getPages_samePage -->
+                  <span class="method-name">getPages_samePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getPrintable">
+                  </a> <!-- getPrintable -->
+                  <span class="method-name">getPrintable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDataSet">
+                  </a> <!-- setDataSet -->
+                  <span class="method-name">setDataSet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update">
+                  </a> <!-- update -->
+                  <span class="method-name">update</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+          <div class="suite-AllTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ca.mitmaro.ldb.CommandsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addPaperCommand">
+                  </a> <!-- addPaperCommand -->
+                  <span class="method-name">addPaperCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addPaperCommand_fail">
+                  </a> <!-- addPaperCommand_fail -->
+                  <span class="method-name">addPaperCommand_fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addReferenceCommand">
+                  </a> <!-- addReferenceCommand -->
+                  <span class="method-name">addReferenceCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addReferenceCommand_fail">
+                  </a> <!-- addReferenceCommand_fail -->
+                  <span class="method-name">addReferenceCommand_fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clearPaperCommand">
+                  </a> <!-- clearPaperCommand -->
+                  <span class="method-name">clearPaperCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clearPaperCommand_fail">
+                  </a> <!-- clearPaperCommand_fail -->
+                  <span class="method-name">clearPaperCommand_fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clearReferenceCommand">
+                  </a> <!-- clearReferenceCommand -->
+                  <span class="method-name">clearReferenceCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clearReferenceCommand_fail">
+                  </a> <!-- clearReferenceCommand_fail -->
+                  <span class="method-name">clearReferenceCommand_fail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="editPaperCommand_missingPaper">
+                  </a> <!-- editPaperCommand_missingPaper -->
+                  <span class="method-name">editPaperCommand_missingPaper</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="listPaperListsCommand">
+                  </a> <!-- listPaperListsCommand -->
+                  <span class="method-name">listPaperListsCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="listPaperListsCommand_invalid">
+                  </a> <!-- listPaperListsCommand_invalid -->
+                  <span class="method-name">listPaperListsCommand_invalid</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="listReferenceListsCommand">
+                  </a> <!-- listReferenceListsCommand -->
+                  <span class="method-name">listReferenceListsCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="listReferenceListsCommand_invalid">
+                  </a> <!-- listReferenceListsCommand_invalid -->
+                  <span class="method-name">listReferenceListsCommand_invalid</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loadPaperListCommand">
+                  </a> <!-- loadPaperListCommand -->
+                  <span class="method-name">loadPaperListCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loadPaperListCommand_invalidArgs">
+                  </a> <!-- loadPaperListCommand_invalidArgs -->
+                  <span class="method-name">loadPaperListCommand_invalidArgs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loadReferenceListCommand">
+                  </a> <!-- loadReferenceListCommand -->
+                  <span class="method-name">loadReferenceListCommand</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loadReferenceListCommand_invalidArgs">
+                  </a> <!-- loadReferenceListCommand_invalidArgs -->
+                  <span class="method-name">loadReferenceListCommand_invalidArgs</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AllTests-class-passed -->
+        </div> <!-- panel AllTests -->
+        <div panel-name="test-xml-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/mitmaro/Code/MUN/cs3718/assignments/a04/Tests.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;AllTests&quot;&gt;
+  &lt;test name=&quot;Entities&quot; preserve-order=&quot;true&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.entity.PaperTest&quot;/&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.entity.BookTest&quot;/&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.entity.BookChapterTest&quot;/&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.entity.ConferencePaperTest&quot;/&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.entity.JournalPaperTest&quot;/&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.entity.PHDThesisTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Entities --&gt;
+  &lt;test name=&quot;CommandLine&quot; preserve-order=&quot;true&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;ca.mitmaro.ldb.CommandsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CommandLine --&gt;
+&lt;/suite&gt; &lt;!-- AllTests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for AllTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Entities (6 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">CommandLine (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for AllTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for AllTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_AllTests');
+function tableData_AllTests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(57);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'editPaperCommand')
+data.setCell(0, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(0, 3, 41);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loadPaperListCommand')
+data.setCell(1, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(1, 3, 24);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addPaperCommand')
+data.setCell(2, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(2, 3, 17);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loadPaperListCommand_invalidArgs')
+data.setCell(3, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(3, 3, 15);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'addCitation')
+data.setCell(4, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(4, 3, 9);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'setDataSet')
+data.setCell(5, 2, 'ca.mitmaro.ldb.entity.JournalPaperTest')
+data.setCell(5, 3, 8);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'addToList_missingOldList')
+data.setCell(6, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(6, 3, 6);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'addToList_missingOldList')
+data.setCell(7, 2, 'ca.mitmaro.ldb.entity.BookChapterTest')
+data.setCell(7, 3, 3);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'getPages_differentPage')
+data.setCell(8, 2, 'ca.mitmaro.ldb.entity.BookChapterTest')
+data.setCell(8, 3, 3);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'addToList_missingOldList')
+data.setCell(9, 2, 'ca.mitmaro.ldb.entity.PHDThesisTest')
+data.setCell(9, 3, 3);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'getPrintable')
+data.setCell(10, 2, 'ca.mitmaro.ldb.entity.BookTest')
+data.setCell(10, 3, 2);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'addToList_missingOldList')
+data.setCell(11, 2, 'ca.mitmaro.ldb.entity.BookTest')
+data.setCell(11, 3, 2);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'setDataSet')
+data.setCell(12, 2, 'ca.mitmaro.ldb.entity.BookTest')
+data.setCell(12, 3, 2);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'listPaperListsCommand_invalid')
+data.setCell(13, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'editPaperCommand_missingPaper')
+data.setCell(14, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(14, 3, 1);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'listReferenceListsCommand_invalid')
+data.setCell(15, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(15, 3, 1);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'addReferenceCommand_fail')
+data.setCell(16, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(16, 3, 1);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'addReferenceCommand')
+data.setCell(17, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'listReferenceListsCommand')
+data.setCell(18, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'loadReferenceListCommand')
+data.setCell(19, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(19, 3, 1);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'addPaperCommand_fail')
+data.setCell(20, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(20, 3, 1);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'listPaperListsCommand')
+data.setCell(21, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(21, 3, 1);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'printCurrentWorkingPaperCommand')
+data.setCell(22, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(22, 3, 1);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'printReferenceCommand')
+data.setCell(23, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(23, 3, 1);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'update')
+data.setCell(24, 2, 'ca.mitmaro.ldb.entity.JournalPaperTest')
+data.setCell(24, 3, 1);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'setDataSet')
+data.setCell(25, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(25, 3, 1);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'getPages_differentPage')
+data.setCell(26, 2, 'ca.mitmaro.ldb.entity.JournalPaperTest')
+data.setCell(26, 3, 1);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'getPages_samePage')
+data.setCell(27, 2, 'ca.mitmaro.ldb.entity.BookChapterTest')
+data.setCell(27, 3, 1);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'update')
+data.setCell(28, 2, 'ca.mitmaro.ldb.entity.BookChapterTest')
+data.setCell(28, 3, 1);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'getAuthorFirst_Fail')
+data.setCell(29, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(29, 3, 1);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'getPrintable')
+data.setCell(30, 2, 'ca.mitmaro.ldb.entity.JournalPaperTest')
+data.setCell(30, 3, 1);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'getPrintable')
+data.setCell(31, 2, 'ca.mitmaro.ldb.entity.PHDThesisTest')
+data.setCell(31, 3, 1);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'setDataSet')
+data.setCell(32, 2, 'ca.mitmaro.ldb.entity.BookChapterTest')
+data.setCell(32, 3, 1);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'getPrintable')
+data.setCell(33, 2, 'ca.mitmaro.ldb.entity.ConferencePaperTest')
+data.setCell(33, 3, 1);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'update')
+data.setCell(34, 2, 'ca.mitmaro.ldb.entity.BookTest')
+data.setCell(34, 3, 1);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'getPages_samePage')
+data.setCell(35, 2, 'ca.mitmaro.ldb.entity.JournalPaperTest')
+data.setCell(35, 3, 1);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'setDataSet')
+data.setCell(36, 2, 'ca.mitmaro.ldb.entity.ConferencePaperTest')
+data.setCell(36, 3, 1);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'updateField')
+data.setCell(37, 2, 'ca.mitmaro.ldb.entity.PHDThesisTest')
+data.setCell(37, 3, 1);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'setDataSet')
+data.setCell(38, 2, 'ca.mitmaro.ldb.entity.PHDThesisTest')
+data.setCell(38, 3, 1);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'getPrintable')
+data.setCell(39, 2, 'ca.mitmaro.ldb.entity.BookChapterTest')
+data.setCell(39, 3, 1);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'addReference')
+data.setCell(40, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(40, 3, 1);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'addToList_missingOldList')
+data.setCell(41, 2, 'ca.mitmaro.ldb.entity.ConferencePaperTest')
+data.setCell(41, 3, 1);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'updateField')
+data.setCell(42, 2, 'ca.mitmaro.ldb.entity.ConferencePaperTest')
+data.setCell(42, 3, 1);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'getYear_Fail')
+data.setCell(43, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(43, 3, 1);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'addToList_Success')
+data.setCell(44, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(44, 3, 1);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'update')
+data.setCell(45, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(45, 3, 1);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'clearReferenceCommand_fail')
+data.setCell(46, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(46, 3, 0);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'clearPaperCommand')
+data.setCell(47, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(47, 3, 0);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'clearPaperCommand_fail')
+data.setCell(48, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(48, 3, 0);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'loadReferenceListCommand_invalidArgs')
+data.setCell(49, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(49, 3, 0);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'clearReferenceCommand')
+data.setCell(50, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(50, 3, 0);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'printPaperCommand')
+data.setCell(51, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(51, 3, 0);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'setCurrentWorkingPaperCommand')
+data.setCell(52, 2, 'ca.mitmaro.ldb.CommandsTest')
+data.setCell(52, 3, 0);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'getAuthorLast_Fail')
+data.setCell(53, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(53, 3, 0);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'getPages_differentPage')
+data.setCell(54, 2, 'ca.mitmaro.ldb.entity.ConferencePaperTest')
+data.setCell(54, 3, 0);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'getTitle_Fail')
+data.setCell(55, 2, 'ca.mitmaro.ldb.entity.PaperTest')
+data.setCell(55, 3, 0);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'getPages_samePage')
+data.setCell(56, 2, 'ca.mitmaro.ldb.entity.ConferencePaperTest')
+data.setCell(56, 3, 0);
+window.suiteTableData['AllTests']= { tableData: data, tableDiv: 'times-div-AllTests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 168 ms</span>
+              <div id="times-div-AllTests">
+              </div> <!-- times-div-AllTests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for AllTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-AllTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.BookChapterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.BookTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.ConferencePaperTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.JournalPaperTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.PHDThesisTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.PaperTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">14 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">addCitation</span>
+                <span class="method-start">27 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addReference</span>
+                <span class="method-start">49 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addToList_missingOldList</span>
+                <span class="method-start">51 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAuthorFirst_Fail</span>
+                <span class="method-start">59 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAuthorLast_Fail</span>
+                <span class="method-start">63 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getTitle_Fail</span>
+                <span class="method-start">66 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getYear_Fail</span>
+                <span class="method-start">68 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setDataSet</span>
+                <span class="method-start">71 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update</span>
+                <span class="method-start">73 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addToList_Success</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.BookTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToList_missingOldList</span>
+                <span class="method-start">82 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setDataSet</span>
+                <span class="method-start">93 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPrintable</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update</span>
+                <span class="method-start">102 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.BookChapterTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToList_missingOldList</span>
+                <span class="method-start">104 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setDataSet</span>
+                <span class="method-start">109 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPages_differentPage</span>
+                <span class="method-start">112 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPages_samePage</span>
+                <span class="method-start">117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPrintable</span>
+                <span class="method-start">121 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update</span>
+                <span class="method-start">159 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.ConferencePaperTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToList_missingOldList</span>
+                <span class="method-start">163 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setDataSet</span>
+                <span class="method-start">165 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPages_differentPage</span>
+                <span class="method-start">168 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPages_samePage</span>
+                <span class="method-start">172 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPrintable</span>
+                <span class="method-start">173 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateField</span>
+                <span class="method-start">210 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.JournalPaperTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">setDataSet</span>
+                <span class="method-start">212 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPages_differentPage</span>
+                <span class="method-start">221 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPages_samePage</span>
+                <span class="method-start">223 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPrintable</span>
+                <span class="method-start">225 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update</span>
+                <span class="method-start">228 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.entity.PHDThesisTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToList_missingOldList</span>
+                <span class="method-start">229 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setDataSet</span>
+                <span class="method-start">233 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getPrintable</span>
+                <span class="method-start">235 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateField</span>
+                <span class="method-start">238 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ca.mitmaro.ldb.CommandsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">372 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">addPaperCommand</span>
+                <span class="method-start">674 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addPaperCommand_fail</span>
+                <span class="method-start">691 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addReferenceCommand</span>
+                <span class="method-start">694 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addReferenceCommand_fail</span>
+                <span class="method-start">695 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clearPaperCommand</span>
+                <span class="method-start">697 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clearPaperCommand_fail</span>
+                <span class="method-start">698 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clearReferenceCommand</span>
+                <span class="method-start">699 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clearReferenceCommand_fail</span>
+                <span class="method-start">700 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">editPaperCommand</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editPaperCommand_missingPaper</span>
+                <span class="method-start">757 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">listPaperListsCommand</span>
+                <span class="method-start">759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">listPaperListsCommand_invalid</span>
+                <span class="method-start">760 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">listReferenceListsCommand</span>
+                <span class="method-start">762 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">listReferenceListsCommand_invalid</span>
+                <span class="method-start">763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loadPaperListCommand</span>
+                <span class="method-start">765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loadPaperListCommand_invalidArgs</span>
+                <span class="method-start">791 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loadReferenceListCommand</span>
+                <span class="method-start">807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loadReferenceListCommand_invalidArgs</span>
+                <span class="method-start">809 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">printCurrentWorkingPaperCommand</span>
+                <span class="method-start">810 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">printPaperCommand</span>
+                <span class="method-start">812 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">printReferenceCommand</span>
+                <span class="method-start">813 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setCurrentWorkingPaperCommand</span>
+                <span class="method-start">815 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

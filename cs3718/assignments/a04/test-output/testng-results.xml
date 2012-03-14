@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="5" total="57" passed="52">
+  <reporter-output>
+  </reporter-output>
+  <suite name="AllTests" duration-ms="821" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+    <groups>
+    </groups>
+    <test name="CommandLine" duration-ms="444" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+      <class name="ca.mitmaro.ldb.CommandsTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="beforeClass" is-config="true" duration-ms="301" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="addPaperCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="addPaperCommand" duration-ms="17" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- addPaperCommand -->
+        <test-method status="PASS" signature="addPaperCommand_fail()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="addPaperCommand_fail" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Missing parameter.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Missing parameter.
+	at ca.mitmaro.ldb.Commands.addPaperCommand(Commands.java:74)
+	at ca.mitmaro.ldb.CommandsTest.addPaperCommand_fail(CommandsTest.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- addPaperCommand_fail -->
+        <test-method status="PASS" signature="addReferenceCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="addReferenceCommand" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- addReferenceCommand -->
+        <test-method status="PASS" signature="addReferenceCommand_fail()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="addReferenceCommand_fail" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Missing parameter.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Missing parameter.
+	at ca.mitmaro.ldb.Commands.addPaperCommand(Commands.java:74)
+	at ca.mitmaro.ldb.CommandsTest.addReferenceCommand_fail(CommandsTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- addReferenceCommand_fail -->
+        <test-method status="PASS" signature="clearPaperCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="clearPaperCommand" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- clearPaperCommand -->
+        <test-method status="PASS" signature="clearPaperCommand_fail()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="clearPaperCommand_fail" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Unkown Parameter]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Unkown Parameter
+	at ca.mitmaro.ldb.Commands.clearPaperCommand(Commands.java:107)
+	at ca.mitmaro.ldb.CommandsTest.clearPaperCommand_fail(CommandsTest.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- clearPaperCommand_fail -->
+        <test-method status="PASS" signature="clearReferenceCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="clearReferenceCommand" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- clearReferenceCommand -->
+        <test-method status="PASS" signature="clearReferenceCommand_fail()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="clearReferenceCommand_fail" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Unkown Parameter]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Unkown Parameter
+	at ca.mitmaro.ldb.Commands.clearReferenceCommand(Commands.java:123)
+	at ca.mitmaro.ldb.CommandsTest.clearReferenceCommand_fail(CommandsTest.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- clearReferenceCommand_fail -->
+        <test-method status="FAIL" signature="editPaperCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="editPaperCommand" duration-ms="41" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<Paper ...> but was:<...>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: expected:<Paper ...> but was:<...>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at ca.mitmaro.ldb.CommandsTest.editPaperCommand(CommandsTest.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
+        </test-method> <!-- editPaperCommand -->
+        <test-method status="PASS" signature="editPaperCommand_missingPaper()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="editPaperCommand_missingPaper" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Invalid paper.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Invalid paper.
+	at ca.mitmaro.ldb.Commands.editPaperCommand(Commands.java:161)
+	at ca.mitmaro.ldb.CommandsTest.editPaperCommand_missingPaper(CommandsTest.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- editPaperCommand_missingPaper -->
+        <test-method status="PASS" signature="listPaperListsCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="listPaperListsCommand" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- listPaperListsCommand -->
+        <test-method status="PASS" signature="listPaperListsCommand_invalid()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="listPaperListsCommand_invalid" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Invalid parameter(s).]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Invalid parameter(s).
+	at ca.mitmaro.ldb.Commands.listPaperListsCommand(Commands.java:339)
+	at ca.mitmaro.ldb.CommandsTest.listPaperListsCommand_invalid(CommandsTest.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- listPaperListsCommand_invalid -->
+        <test-method status="PASS" signature="listReferenceListsCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="listReferenceListsCommand" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- listReferenceListsCommand -->
+        <test-method status="PASS" signature="listReferenceListsCommand_invalid()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="listReferenceListsCommand_invalid" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Invalid parameter(s).]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Invalid parameter(s).
+	at ca.mitmaro.ldb.Commands.listReferenceListsCommand(Commands.java:358)
+	at ca.mitmaro.ldb.CommandsTest.listReferenceListsCommand_invalid(CommandsTest.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- listReferenceListsCommand_invalid -->
+        <test-method status="PASS" signature="loadPaperListCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="loadPaperListCommand" duration-ms="24" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- loadPaperListCommand -->
+        <test-method status="PASS" signature="loadPaperListCommand_invalidArgs()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="loadPaperListCommand_invalidArgs" duration-ms="15" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Missing parameters.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Missing parameters.
+	at ca.mitmaro.ldb.Commands.loadPaperListCommand(Commands.java:259)
+	at ca.mitmaro.ldb.CommandsTest.loadPaperListCommand_invalidArgs(CommandsTest.java:206)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- loadPaperListCommand_invalidArgs -->
+        <test-method status="PASS" signature="loadReferenceListCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="loadReferenceListCommand" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- loadReferenceListCommand -->
+        <test-method status="PASS" signature="loadReferenceListCommand_invalidArgs()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="loadReferenceListCommand_invalidArgs" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Missing parameters.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Missing parameters.
+	at ca.mitmaro.ldb.Commands.loadReferenceListCommand(Commands.java:298)
+	at ca.mitmaro.ldb.CommandsTest.loadReferenceListCommand_invalidArgs(CommandsTest.java:223)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+        </test-method> <!-- loadReferenceListCommand_invalidArgs -->
+        <test-method status="FAIL" signature="printCurrentWorkingPaperCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="printCurrentWorkingPaperCommand" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test not implemented]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test not implemented
+	at ca.mitmaro.ldb.CommandsTest.printCurrentWorkingPaperCommand(CommandsTest.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+        </test-method> <!-- printCurrentWorkingPaperCommand -->
+        <test-method status="FAIL" signature="printPaperCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="printPaperCommand" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test not implemented]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test not implemented
+	at ca.mitmaro.ldb.CommandsTest.printPaperCommand(CommandsTest.java:233)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+        </test-method> <!-- printPaperCommand -->
+        <test-method status="FAIL" signature="printReferenceCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="printReferenceCommand" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test not implemented]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test not implemented
+	at ca.mitmaro.ldb.CommandsTest.printReferenceCommand(CommandsTest.java:238)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+        </test-method> <!-- printReferenceCommand -->
+        <test-method status="FAIL" signature="setCurrentWorkingPaperCommand()[pri:0, instance:ca.mitmaro.ldb.CommandsTest@4e513d61]" name="setCurrentWorkingPaperCommand" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test not implemented]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test not implemented
+	at ca.mitmaro.ldb.CommandsTest.setCurrentWorkingPaperCommand(CommandsTest.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+        </test-method> <!-- setCurrentWorkingPaperCommand -->
+      </class> <!-- ca.mitmaro.ldb.CommandsTest -->
+    </test> <!-- CommandLine -->
+    <test name="Entities" duration-ms="244" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+      <class name="ca.mitmaro.ldb.entity.BookChapterTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="beforeClass" is-config="true" duration-ms="13" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="beforeClass" is-config="true" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.entity.JournalPaperTest@1232784a]" name="beforeClass" is-config="true" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.entity.PHDThesisTest@4104c575]" name="beforeClass" is-config="true" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.entity.BookTest@2c766a24]" name="beforeClass" is-config="true" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="beforeClass" is-config="true" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="addToList_missingOldList()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="addToList_missingOldList" duration-ms="3" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.addToList(Paper.java:96)
+	at ca.mitmaro.ldb.entity.BookChapterTest.addToList_missingOldList(BookChapterTest.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- addToList_missingOldList -->
+        <test-method status="PASS" signature="setDataSet()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="setDataSet" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- setDataSet -->
+        <test-method status="PASS" signature="getPages_differentPage()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="getPages_differentPage" duration-ms="3" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.BookChapterTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPages_differentPage -->
+        <test-method status="PASS" signature="getPages_samePage()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="getPages_samePage" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.BookChapterTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPages_samePage -->
+        <test-method status="PASS" signature="getPrintable()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="getPrintable" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.BookChapterTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPrintable -->
+        <test-method status="PASS" signature="update()[pri:0, instance:ca.mitmaro.ldb.entity.BookChapterTest@3295cfbe]" name="update" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.BookChapterTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- update -->
+      </class> <!-- ca.mitmaro.ldb.entity.BookChapterTest -->
+      <class name="ca.mitmaro.ldb.entity.BookTest">
+        <test-method status="PASS" signature="addToList_missingOldList()[pri:0, instance:ca.mitmaro.ldb.entity.BookTest@2c766a24]" name="addToList_missingOldList" duration-ms="2" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.addToList(Paper.java:96)
+	at ca.mitmaro.ldb.entity.BookTest.addToList_missingOldList(BookTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- addToList_missingOldList -->
+        <test-method status="PASS" signature="setDataSet()[pri:0, instance:ca.mitmaro.ldb.entity.BookTest@2c766a24]" name="setDataSet" duration-ms="2" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- setDataSet -->
+        <test-method status="PASS" signature="getPrintable()[pri:0, instance:ca.mitmaro.ldb.entity.BookTest@2c766a24]" name="getPrintable" duration-ms="2" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.BookTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPrintable -->
+        <test-method status="PASS" signature="update()[pri:0, instance:ca.mitmaro.ldb.entity.BookTest@2c766a24]" name="update" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.BookTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- update -->
+      </class> <!-- ca.mitmaro.ldb.entity.BookTest -->
+      <class name="ca.mitmaro.ldb.entity.PaperTest">
+        <test-method status="PASS" signature="addCitation()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="addCitation" duration-ms="9" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- addCitation -->
+        <test-method status="PASS" signature="addReference()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="addReference" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- addReference -->
+        <test-method status="PASS" signature="addToList_missingOldList()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="addToList_missingOldList" duration-ms="6" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.addToList(Paper.java:96)
+	at ca.mitmaro.ldb.entity.PaperTest.addToList_missingOldList(PaperTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- addToList_missingOldList -->
+        <test-method status="PASS" signature="getAuthorFirst_Fail()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="getAuthorFirst_Fail" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.getAuthorFirst(Paper.java:115)
+	at ca.mitmaro.ldb.entity.PaperTest.getAuthorFirst_Fail(PaperTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- getAuthorFirst_Fail -->
+        <test-method status="PASS" signature="getAuthorLast_Fail()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="getAuthorLast_Fail" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.getAuthorLast(Paper.java:122)
+	at ca.mitmaro.ldb.entity.PaperTest.getAuthorLast_Fail(PaperTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- getAuthorLast_Fail -->
+        <test-method status="PASS" signature="getTitle_Fail()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="getTitle_Fail" duration-ms="0" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.getTitle(Paper.java:108)
+	at ca.mitmaro.ldb.entity.PaperTest.getTitle_Fail(PaperTest.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- getTitle_Fail -->
+        <test-method status="PASS" signature="getYear_Fail()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="getYear_Fail" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.getYear(Paper.java:129)
+	at ca.mitmaro.ldb.entity.PaperTest.getYear_Fail(PaperTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- getYear_Fail -->
+        <test-method status="PASS" signature="setDataSet()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="setDataSet" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- setDataSet -->
+        <test-method status="PASS" signature="update()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="update" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- update -->
+        <test-method status="PASS" signature="addToList_Success()[pri:0, instance:ca.mitmaro.ldb.entity.PaperTest@203fa5ac]" name="addToList_Success" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.PaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- addToList_Success -->
+      </class> <!-- ca.mitmaro.ldb.entity.PaperTest -->
+      <class name="ca.mitmaro.ldb.entity.ConferencePaperTest">
+        <test-method status="PASS" signature="addToList_missingOldList()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="addToList_missingOldList" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.addToList(Paper.java:96)
+	at ca.mitmaro.ldb.entity.ConferencePaperTest.addToList_missingOldList(ConferencePaperTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- addToList_missingOldList -->
+        <test-method status="PASS" signature="setDataSet()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="setDataSet" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- setDataSet -->
+        <test-method status="PASS" signature="getPages_differentPage()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="getPages_differentPage" duration-ms="0" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.ConferencePaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPages_differentPage -->
+        <test-method status="PASS" signature="getPages_samePage()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="getPages_samePage" duration-ms="0" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.ConferencePaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPages_samePage -->
+        <test-method status="PASS" signature="getPrintable()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="getPrintable" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.ConferencePaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPrintable -->
+        <test-method status="PASS" signature="updateField()[pri:0, instance:ca.mitmaro.ldb.entity.ConferencePaperTest@2f774b9b]" name="updateField" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.ConferencePaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- updateField -->
+      </class> <!-- ca.mitmaro.ldb.entity.ConferencePaperTest -->
+      <class name="ca.mitmaro.ldb.entity.PHDThesisTest">
+        <test-method status="PASS" signature="addToList_missingOldList()[pri:0, instance:ca.mitmaro.ldb.entity.PHDThesisTest@4104c575]" name="addToList_missingOldList" duration-ms="3" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+          <exception class="ca.mitmaro.ldb.exception.InvalidListException">
+            <full-stacktrace>
+              <![CDATA[ca.mitmaro.ldb.exception.InvalidListException
+	at ca.mitmaro.ldb.entity.Paper.addToList(Paper.java:96)
+	at ca.mitmaro.ldb.entity.PHDThesisTest.addToList_missingOldList(PHDThesisTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:701)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:893)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1218)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:768)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1022)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:109)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:202)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:173)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ca.mitmaro.ldb.exception.InvalidListException -->
+        </test-method> <!-- addToList_missingOldList -->
+        <test-method status="PASS" signature="setDataSet()[pri:0, instance:ca.mitmaro.ldb.entity.PHDThesisTest@4104c575]" name="setDataSet" duration-ms="1" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- setDataSet -->
+        <test-method status="PASS" signature="getPrintable()[pri:0, instance:ca.mitmaro.ldb.entity.PHDThesisTest@4104c575]" name="getPrintable" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.PHDThesisTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPrintable -->
+        <test-method status="PASS" signature="updateField()[pri:0, instance:ca.mitmaro.ldb.entity.PHDThesisTest@4104c575]" name="updateField" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.PHDThesisTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- updateField -->
+      </class> <!-- ca.mitmaro.ldb.entity.PHDThesisTest -->
+      <class name="ca.mitmaro.ldb.entity.JournalPaperTest">
+        <test-method status="PASS" signature="setDataSet()[pri:0, instance:ca.mitmaro.ldb.entity.JournalPaperTest@1232784a]" name="setDataSet" duration-ms="8" started-at="2012-03-13T09:57:17Z" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- setDataSet -->
+        <test-method status="PASS" signature="getPages_differentPage()[pri:0, instance:ca.mitmaro.ldb.entity.JournalPaperTest@1232784a]" name="getPages_differentPage" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.JournalPaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPages_differentPage -->
+        <test-method status="PASS" signature="getPages_samePage()[pri:0, instance:ca.mitmaro.ldb.entity.JournalPaperTest@1232784a]" name="getPages_samePage" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.JournalPaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPages_samePage -->
+        <test-method status="PASS" signature="getPrintable()[pri:0, instance:ca.mitmaro.ldb.entity.JournalPaperTest@1232784a]" name="getPrintable" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.JournalPaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- getPrintable -->
+        <test-method status="PASS" signature="update()[pri:0, instance:ca.mitmaro.ldb.entity.JournalPaperTest@1232784a]" name="update" duration-ms="1" started-at="2012-03-13T09:57:17Z" depends-on-methods="ca.mitmaro.ldb.entity.JournalPaperTest.setDataSet" finished-at="2012-03-13T09:57:17Z">
+        </test-method> <!-- update -->
+      </class> <!-- ca.mitmaro.ldb.entity.JournalPaperTest -->
+    </test> <!-- Entities -->
+  </suite> <!-- AllTests -->
+</testng-results>

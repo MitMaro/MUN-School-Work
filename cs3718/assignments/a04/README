@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////////////
+//  CS 3718 (Winter 2012), Assignment #2                       //
+//  Program File Name: LDB.java                                //
+//       Student Name: Tim Oram                                //
+//         Login Name: oram                                    //
+//              MUN #: 200529220                               //
+/////////////////////////////////////////////////////////////////
+
+Compiling
+-----------------------------------------------------------------
+For convenience the project can be compiled using GNU make.
+Compile by using the `make` command. Compiled classes will be
+placed into the 'bin' directory and a jar file will be created in
+the project directory.
+
+
+Running
+-----------------------------------------------------------------
+There are four possible ways to run the program:
+1) Run using the jar: `java -jar LDB.jar`
+1) Run java setting the classpath option to bin: `java -cp bin LDB`
+2) Run the LDB script `sh LDB`; which runs the using the jar.
+3) Change into the bin directory and run java: `cd bin && java LDB` 
+
+
+Commnands
+-----------------------------------------------------------------
+
