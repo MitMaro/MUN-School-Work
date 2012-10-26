@@ -1,0 +1,33 @@
+PID P012
+PTY Book
+AUT Karmiloff-Smith, A
+PYR 1992
+BTL Beyond Modularity.
+PUB The MIT Press
+ADD Cambridge, MA
+END
+
+PID P013
+PTY Book chapter
+AUT Elton, B and Atkinson, R
+PYR 2002
+TLE A Comedian's Perspective on Flight.
+BED Alon, N and Wareham, T
+BTL The Mammalian Aeronautics Handbook.
+PUB CRC Press
+ADD Boca Raton, FL
+BNP 16-22
+END
+
+PID P014
+PTY Conference paper
+AUT Smith, KRK
+PYR 2010
+TLE Robotic Implementations of Barnyard Flight.
+BED Elton, B
+BTL Robots: System and Science VII
+PUB Lawrence Erlbaum Associates
+ADD New Bedford, NH
+BNP 1-7
+END
+
