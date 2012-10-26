@@ -41,13 +41,13 @@ public class BookTest {
 	}
 
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void addToList_missingOldList() {
+	public void addToList_missingOldList() throws InvalidListException {
 		Book pap = new Book("id");
 		pap.addToList("new_list", "old_list");
 	}
 
 	@Test
-	public void setDataSet() {
+	public void setDataSet() throws InvalidListException {
 		Book book = new Book("id");
 		book.setDataSet("list_name", this.init_context);
 
@@ -60,7 +60,7 @@ public class BookTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void update() {
+	public void update() throws InvalidListException {
 		Book book = new Book("id");
 		book.setDataSet("list_name", this.init_context);
 		book.update("list_name", this.update_context);
@@ -74,7 +74,7 @@ public class BookTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPrintable() {
+	public void getPrintable() throws InvalidListException {
 		Book book = new Book("id");
 		book.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(

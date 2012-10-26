@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -7,25 +7,40 @@
 /////////////////////////////////////////////////////////////////
 package ca.mitmaro.commandline.command;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
+import ca.mitmaro.commandline.CommandLine.StatusCode;
 import ca.mitmaro.commandline.help.Message;
 import ca.mitmaro.commandline.help.System;
 import ca.mitmaro.commandline.term.Terminal;
 import ca.mitmaro.commandline.userinterface.YesNoQuestion;
 import ca.mitmaro.lang.StringUtils;
 
+/**
+ * Class that contains some common default commands
+ * 
+ * @author Tim Oram (MitMaro)
+ */
 public class DefaultCommands {
 	
+	/**
+	 * The terminal interface
+	 */
 	private Terminal terminal;
-	private System help;
-	
-	private YesNoQuestion exit_prompt;
-	
-	private boolean no_exit_prompt = false;
 	
 	/**
+	 * The help system
+	 */
+	private System help;
+	
+	/**
+	 * The exit prompt
+	 */
+	private YesNoQuestion exit_prompt;
+	
+	/**
+	 * Constructs this commands class from the help and terminal interface.
+	 * 
 	 * @param help The help system
 	 * @param term The terminal interface
 	 */
@@ -37,10 +52,13 @@ public class DefaultCommands {
 	}
 	
 	/**
-	 * Displays a list of commands with their usage and help messages
+	 * Displays a list of commands with their usage and help messages or a single commands
+	 * usage.
 	 * 
-	 * @param args The arguments passed to this command
-	 * @return Always returns a successful, aka 1, code. 
+	 * @param args Argument list. An empty list prints a list of usage messages, passing a single
+	 * parameter prints the usage for the provided command.
+	 * @return Always returns StatusCode.OK
+	 * @throws IllegalArgumentException is provided arguments are invalid
 	 */
 	@ca.mitmaro.commandline.command.annotation.Command(name="help")
 	@ca.mitmaro.commandline.command.annotation.Help(usage="help", help="Print a list of all system commands.")
@@ -73,7 +91,7 @@ public class DefaultCommands {
 			throw new IllegalArgumentException("Invalid Parameter(s).");
 		}
 		
-		return 1;
+		return StatusCode.OK;
 	}
 	
 	/**
@@ -113,30 +131,4 @@ public class DefaultCommands {
 		this.terminal.out().println();
 	}
 	
-	public void disableConfirmExit(boolean value) {
-		this.no_exit_prompt = value;
-	}
-	
-	/**
-	 * Prompts the user to confirm quit. Returns a 0 if quit was a confirm, else returns
-	 * a 1.
-	 * 
-	 * @param args The arguments passed to this command
-	 * @return 1 is the command was successful, a number > 1 for an error and 0 for a non-error quit. 
-	 */
-	@ca.mitmaro.commandline.command.annotation.Command(name="exit")
-	@ca.mitmaro.commandline.command.annotation.Help(usage="exit", help="Exit the application.")
-	public int exitCommand(String[] args) {
-		
-		try {
-			if (this.no_exit_prompt || this.exit_prompt.waitForResponse()) {
-				return 0; // 0 = good shutdown
-			}
-		} catch (IOException e) {
-			this.terminal.out().println("An error occured. Aborting quit.");
-		}
-		return 1;
-	}
-	
-
 }

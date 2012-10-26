@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -11,12 +11,26 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 
+/**
+ * A help system containing usage and help messages and a global help message
+ * 
+ * @author Tim Oram (MitMaro)
+ */
 public class System {
 	
+	/**
+	 * The global help message
+	 */
 	private String global_message = "";
 	
+	/**
+	 * The max length of the command usage names
+	 */
 	private int max_command_name_length = 0;
 	
+	/**
+	 * The help messages list
+	 */
 	public final LinkedHashMap<String, ArrayList<Message>> messages = new LinkedHashMap<String, ArrayList<Message>>();
 	
 	/**
@@ -39,7 +53,7 @@ public class System {
 	}
 	
 	/**
-	 * @return The length of the command name with the greatest length.s 
+	 * @return The length of the command name with the greatest length.s
 	 */
 	public int getMaxCommandNameLength() {
 		return this.max_command_name_length;

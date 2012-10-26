@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import ca.mitmaro.ldb.exception.InvalidListException;
+
 public class JournalPaperTest {
 
 	UpdateContext init_context;
@@ -45,7 +47,7 @@ public class JournalPaperTest {
 	}
 
 	@Test
-	public void setDataSet() {
+	public void setDataSet() throws InvalidListException {
 		JournalPaper pap = new JournalPaper("id");
 		pap.setDataSet("list_name", this.init_context);
 
@@ -61,7 +63,7 @@ public class JournalPaperTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPages_samePage() {
+	public void getPages_samePage() throws InvalidListException {
 		JournalPaper pap = new JournalPaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		
@@ -69,7 +71,7 @@ public class JournalPaperTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPages_differentPage() {
+	public void getPages_differentPage() throws InvalidListException {
 		JournalPaper pap = new JournalPaper("id");
 
 		UpdateContext context = new UpdateContext();
@@ -83,7 +85,7 @@ public class JournalPaperTest {
 
 	
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPrintable() {
+	public void getPrintable() throws InvalidListException {
 		JournalPaper pap = new JournalPaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(
@@ -94,7 +96,7 @@ public class JournalPaperTest {
 	}
 	
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void update() {
+	public void update() throws InvalidListException {
 		JournalPaper pap = new JournalPaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		pap.update("list_name", this.update_context);

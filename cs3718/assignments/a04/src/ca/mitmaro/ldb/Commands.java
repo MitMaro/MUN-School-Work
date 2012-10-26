@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -27,17 +27,49 @@ import ca.mitmaro.ldb.entity.UpdateContext;
 import ca.mitmaro.ldb.exception.InvalidListException;
 import ca.mitmaro.ldb.exception.MissingPaperException;
 
+/**
+ * Contains a series of command methods
+ *
+ * @author Tim Oram (MitMaro)
+ */
 public class Commands {
 	
+	/**
+	 * The application instance
+	 */
 	private Application application;
+	/**
+	 * The terminal interface
+	 */
 	private Terminal terminal;
+	/**
+	 * The file utility interface
+	 */
 	private FileUtil file_util;
 	
+	/**
+	 * The edit menu instance
+	 */
 	private NumberedMenu edit_menu;
+	/**
+	 * The edit menu prompt instance
+	 */
 	private SimplePrompt edit_prompt;
+	/**
+	 * The exit prompt instance
+	 */
 	private YesNoQuestion exit_prompt;
+	/**
+	 * The update context
+	 */
 	private UpdateContext context;
 	
+	/**
+	 * Construct a command class instance
+	 * @param application The application instance
+	 * @param terminal The terminal interface
+	 * @param file_util The file utilities interface
+	 */
 	public Commands(Application application, Terminal terminal, FileUtil file_util) {
 		this.application = application;
 		this.terminal = terminal;
@@ -50,18 +82,35 @@ public class Commands {
 		this.exit_prompt.setTitle("Are you sure you wish to exit?");
 	}
 	
+	/**
+	 * Set the edit menu instance
+	 * @param menu The new instance
+	 */
 	public void setEditMenu(NumberedMenu menu) {
 		this.edit_menu = menu;
 	}
 	
+	/**
+	 * Set the edit prompt instance
+	 * @param prompt The new instance
+	 */
 	public void setEditPrompt(SimplePrompt prompt) {
 		this.edit_prompt = prompt;
 	}
 	
+	/**
+	 * Set the update context instance
+	 * @param context
+	 */
 	public void setUpdateContext(UpdateContext context) {
 		this.context = context;
 	}
 
+	/**
+	 * Tha add papers command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="addpap")
 	@Help(
 		usage="addpap NAME",
@@ -75,10 +124,20 @@ public class Commands {
 		}
 		
 		String name = args[0];
-		this.application.addPapersToMasterList(name);
+		try {
+			this.application.addPapersToMasterList(name);
+		} catch (InvalidListException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_LIST;
+		}
 		return StatusCode.OK;
 	}
 	
+	/**
+	 * The add reference command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="addref")
 	@Help(
 		usage="addref NAME",
@@ -92,10 +151,20 @@ public class Commands {
 		}
 		
 		String name = args[0];
-		this.application.addReferencesToMasterList(name);
+		try {
+			this.application.addReferencesToMasterList(name);
+		} catch (InvalidListException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_LIST;
+		}
 		return StatusCode.OK;
 	}
 	
+	/**
+	 * The clear paper command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="clearpap")
 	@Help(
 		usage="clearpap",
@@ -112,6 +181,11 @@ public class Commands {
 	}
 
 	
+	/**
+	 * The clear reference command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="clearref")
 	@Help(
 		usage="clearref",
@@ -127,6 +201,11 @@ public class Commands {
 		return StatusCode.OK;
 	}
 	
+	/**
+	 * The edit paper reference
+	 * @param args An array of arguments
+	 * @return
+	 */
 	@Command(name="editpap")
 	@Helps({
 		@Help(
@@ -156,7 +235,12 @@ public class Commands {
 		}
 		
 		this.terminal.out().format("Paper: %s\n", args[0]);
-		paper = this.application.getPaper(args[0]);
+		try {
+			paper = this.application.getPaper(args[0]);
+		} catch (MissingPaperException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_PAPER;
+		}
 		if (paper == null) {
 			throw new IllegalArgumentException("Invalid paper.");
 		}
@@ -196,39 +280,39 @@ public class Commands {
 				if (field.equals("Author")) {
 					if (new_value.contains(",")) {
 						tmp = new_value.split(",", 2);
-						context.author_first = tmp[1].trim();
-						context.author_last = tmp[0].trim();
+						this.context.author_first = tmp[1].trim();
+						this.context.author_last = tmp[0].trim();
 					} else {
 						this.terminal.out().println("Invalid input for author name");
 					}
 				} else if (field.equals("Year")) {
-					context.year = Integer.parseInt(new_value);
+					this.context.year = Integer.parseInt(new_value);
 				} else if (field.equals("Volume")) {
-					context.volume = Integer.parseInt(new_value);
+					this.context.volume = Integer.parseInt(new_value);
 				} else if (field.equals("Book Title")) {
-					context.book_title =  new_value;
+					this.context.book_title =  new_value;
 				} else if (field.equals("Address")) {
-					context.address = new_value;
+					this.context.address = new_value;
 				} else if (field.equals("Publisher")) {
-					context.publisher = new_value;
+					this.context.publisher = new_value;
 				} else if (field.equals("Title")) {
-					context.title = new_value;
+					this.context.title = new_value;
 				} else if (field.equals("Journal Title")) {
-					context.journal_title = new_value;
+					this.context.journal_title = new_value;
 				} else if (field.equals("Chapter Title")) {
-					context.chapter_title = new_value;
+					this.context.chapter_title = new_value;
 				} else if (field.equals("Pages")) {
 					if (new_value.contains("-")) {
 						tmp = new_value.split("-", 2);
-						context.start_page = Integer.parseInt(tmp[0]);
-						context.end_page = Integer.parseInt(tmp[1]);
+						this.context.start_page = Integer.parseInt(tmp[0]);
+						this.context.end_page = Integer.parseInt(tmp[1]);
 					} else {
-						context.start_page = context.end_page = Integer.parseInt(new_value);
+						this.context.start_page = this.context.end_page = Integer.parseInt(new_value);
 					}
 				} else if (field.equals("Editors")) {
-					context.editors = new_value;
+					this.context.editors = new_value;
 				} else if (field.equals("Paper Title")) {
-					context.paper_title = new_value;
+					this.context.paper_title = new_value;
 				} else {
 					this.terminal.err().println(String.format("Missing Update: %s", field));
 				}
@@ -241,12 +325,17 @@ public class Commands {
 		
 		this.terminal.out().println("Finished Editing");
 		
-		this.application.updatePaper(paper, list_name, context);
+		this.application.updatePaper(paper, list_name, this.context);
 		
 		return StatusCode.OK;
 		
 	}
 	
+	/**
+	 * The load paper command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="loadpap")
 	@Help(
 		usage="loadpap FILE as NAME",
@@ -287,6 +376,11 @@ public class Commands {
 		return StatusCode.OK;
 	}
 
+	/**
+	 * The load reference command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="loadref")
 	@Help(
 		usage="loadref FILE as NAME",
@@ -329,6 +423,11 @@ public class Commands {
 		return StatusCode.OK;
 	}
 
+	/**
+	 * The list paper command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="listpap")
 	@Help(
 		usage="listpap",
@@ -348,6 +447,11 @@ public class Commands {
 		return StatusCode.OK;
 	}
 
+	/**
+	 * The list reference command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="listref")
 	@Help(
 		usage="listref",
@@ -367,6 +471,11 @@ public class Commands {
 		return StatusCode.OK;
 	}
 	
+	/**
+	 * The print paper command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="printpap")
 	@Helps({
 		@Help(
@@ -382,24 +491,33 @@ public class Commands {
 		
 		LinkedHashSet<Paper> papers;
 		String list_name;
-		
-		if (args == null || args.length == 0) {
-			papers = this.application.getMasterListPapers();
-			list_name = this.application.getMasterListName();
-		} else if (args.length == 1) {
-			papers = this.application.getPaperList(args[0]);
-			list_name = args[0];
-		} else {
-			throw new IllegalArgumentException("Invalid parameter(s).");
-		}
-		
-		for (Paper paper: papers) {
-			this.printPaper(paper, list_name, false, false);
+
+		try {
+			if (args == null || args.length == 0) {
+				papers = this.application.getMasterListPapers();
+				list_name = this.application.getMasterListName();
+			} else if (args.length == 1) {
+				papers = this.application.getPaperList(args[0]);
+				list_name = args[0];
+			} else {
+				throw new IllegalArgumentException("Invalid parameter(s).");
+			}
+			for (Paper paper: papers) {
+				this.printPaper(paper, list_name, false, false);
+			}
+		} catch (InvalidListException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_LIST;
 		}
 		
 		return StatusCode.OK;
 	}
 	
+	/**
+	 * The print reference command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="printref")
 	@Helps({
 		@Help(
@@ -416,22 +534,33 @@ public class Commands {
 		LinkedHashSet<Paper> papers;
 		String list_name;
 		
-		if (args == null || args.length == 0) {
-			papers = this.application.getMasterListPapers();
-			list_name = this.application.getMasterListName();
-		} else if (args.length == 1) {
-			papers = this.application.getPaperList(args[0]);
-			list_name = args[0];
-		} else {
-			throw new IllegalArgumentException("Invalid parameter(s).");
-		}
-		
-		for (Paper paper: papers) {
-			this.printPaper(paper, list_name, true, false);
+		try {
+			if (args == null || args.length == 0) {
+				papers = this.application.getMasterListPapers();
+				list_name = this.application.getMasterListName();
+			} else if (args.length == 1) {
+				papers = this.application.getPaperList(args[0]);
+				list_name = args[0];
+			} else {
+				throw new IllegalArgumentException("Invalid parameter(s).");
+			}
+			
+			for (Paper paper: papers) {
+				this.printPaper(paper, list_name, true, false);
+			}
+			
+		} catch (InvalidListException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_LIST;
 		}
 		return StatusCode.OK;
 	}
 
+	/**
+	 * The print current working paper command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="printcwp")
 	@Help(
 		usage="printcwp",
@@ -441,11 +570,20 @@ public class Commands {
 		if (args != null && args.length != 0) {
 			throw new IllegalArgumentException("Invalid parameter(s).");
 		}
-		
-		this.printPaper(this.application.getCurrentWorkingPaper(), this.application.getMasterListName(), true, true);
+		try {
+			this.printPaper(this.application.getCurrentWorkingPaper(), this.application.getMasterListName(), true, true);
+		} catch (InvalidListException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_LIST;
+		}
 		return StatusCode.OK;
 	}
 	
+	/**
+	 * The set current working paper command
+	 * @param args An array or arguments
+	 * @return
+	 */
 	@Command(name="setcwp")
 	@Helps({
 		@Help(
@@ -471,7 +609,12 @@ public class Commands {
 		}
 		
 		String id = args[0];
-		this.application.setCurrentWorkingPaper(id);
+		try {
+			this.application.setCurrentWorkingPaper(id);
+		} catch (MissingPaperException e) {
+			this.terminal.out().println(e.getMessage());
+			return StatusCode.MISSING_PAPER;
+		}
 		return StatusCode.OK;
 	}
 	
@@ -480,9 +623,9 @@ public class Commands {
 	 * a 1.
 	 * 
 	 * @param args The arguments passed to this command
-	 * @return 1 is the command was successful, a number > 1 for an error and 0 for a non-error quit. 
+	 * @return 1 is the command was successful, a number > 1 for an error and 0 for a non-error quit.
 	 */
-	@ca.mitmaro.commandline.command.annotation.Command(name="sortpap")
+	@Command(name="sortpap")
 	@Helps({
 		@Help(
 			usage="sortpap by {\"PID\", \"author\"}",
@@ -502,10 +645,15 @@ public class Commands {
 				this.application.sortMasterListByAuthor();
 			}
 		} else if (args.length == 4) {
-			if (args[1].equals("PID")) {
-				this.application.sortPaperListByPID(args[1]);
-			} else if (args[1].equals("author")) {
-				this.application.sortPaperListByAuthor(args[1]);
+			try {
+				if (args[1].equals("PID")) {
+					this.application.sortPaperListByPID(args[1]);
+				} else if (args[1].equals("author")) {
+					this.application.sortPaperListByAuthor(args[1]);
+				}
+			} catch (InvalidListException e) {
+				this.terminal.out().println(e.getMessage());
+				return StatusCode.MISSING_LIST;
 			}
 		} else {
 			throw new IllegalArgumentException("Invalid parameters.");
@@ -518,25 +666,36 @@ public class Commands {
 	 * a 1.
 	 * 
 	 * @param args The arguments passed to this command
-	 * @return 1 is the command was successful, a number > 1 for an error and 0 for a non-error quit. 
+	 * @return StatusCode.OK if confirm quit was unsuccessful else StatusCode.EXIT
+	 * @throws IllegalArgumentException is provided arguments are invalid
 	 */
 	@ca.mitmaro.commandline.command.annotation.Command(name="exit")
+	@ca.mitmaro.commandline.command.annotation.Help(usage="exit", help="Exit the application.")
 	public int exitCommand(String[] args) {
 		
 		try {
 			if (this.exit_prompt.waitForResponse()) {
 				this.application.saveState();
-				return 0; // 0 = good shutdown
+				return StatusCode.EXIT;
 			}
 		} catch (IOException e) {
 			this.terminal.out().println("An error occured. Aborting quit.");
 			e.printStackTrace(this.terminal.err());
+			return StatusCode.FATAL_ERROR;
 		}
 		return StatusCode.OK;
 	}
 	
 	
-	private void printPaper(Paper paper, String list_name, boolean include_refs, boolean include_cits) {
+	/**
+	 * Prints the provided paper to the terminal outout
+	 * @param paper The paper to print
+	 * @param list_name The list to print from
+	 * @param include_refs To include or exclude references
+	 * @param include_cits To include or exclude citations
+	 * @throws InvalidListException If the list name doesn't exists
+	 */
+	private void printPaper(Paper paper, String list_name, boolean include_refs, boolean include_cits) throws InvalidListException {
 		
 		this.terminal.out().println(paper.getPrintable(list_name, ""));
 		if (include_refs) {

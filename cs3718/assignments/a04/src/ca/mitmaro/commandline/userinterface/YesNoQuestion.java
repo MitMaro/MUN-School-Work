@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -11,6 +11,12 @@ import java.io.IOException;
 
 import ca.mitmaro.commandline.term.Terminal;
 
+/**
+ * A Yes/No question prompt
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
 public class YesNoQuestion extends TextBased<Boolean> {
 	
 	/**
@@ -27,6 +33,7 @@ public class YesNoQuestion extends TextBased<Boolean> {
 	 * @return True if yes was selected, false if no was selected
 	 * @throws IOException
 	 */
+	@Override
 	public Boolean waitForResponse() throws IOException {
 		
 		String line = null;

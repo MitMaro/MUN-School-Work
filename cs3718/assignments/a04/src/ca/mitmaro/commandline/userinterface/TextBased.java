@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -30,7 +30,7 @@ public abstract class TextBased<R> {
 	 * @param title Set the title for the prompt
 	 */
 	public void setTitle(String title) {
-		this.title = title;	
+		this.title = title;
 	}
 	
 	/**

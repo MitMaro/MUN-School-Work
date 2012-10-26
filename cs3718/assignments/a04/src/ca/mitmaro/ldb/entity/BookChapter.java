@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -10,28 +10,63 @@ package ca.mitmaro.ldb.entity;
 import ca.mitmaro.lang.StringUtils;
 import ca.mitmaro.ldb.exception.InvalidListException;
 
+
+/**
+ * A book chapter
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
 public class BookChapter extends Paper {
 	
 	/**
-	 * 
+	 * The serialization id
 	 */
 	private static final long serialVersionUID = -8596221110373492026L;
 
+	/**
+	 * The context data for a BookChapter
+	 */
 	protected static class Context extends Paper.Context {
 		
 		/**
-		 * 
+		 * The serialization id
 		 */
 		private static final long serialVersionUID = -2769685830653690325L;
+		/**
+		 * The chapter title
+		 */
 		protected String chapter_title;
+		/**
+		 * The address
+		 */
 		protected String address;
+		/**
+		 * The publisher
+		 */
 		protected String publisher;
+		/**
+		 * The start page range
+		 */
 		protected int start_page;
+		/**
+		 * The end page range
+		 */
 		protected int end_page;
+		/**
+		 * The editors
+		 */
 		protected String editors;
 		
+		/**
+		 * Constructs an empty context 
+		 */
 		protected Context() {}
 		
+		/**
+		 * Constructs a context using an UpdateContext for information
+		 * @param context
+		 */
 		protected Context(UpdateContext context) {
 			this.update(context);
 		}
@@ -83,39 +118,78 @@ public class BookChapter extends Paper {
 		
 	}
 	
+	/**
+	 * Construct a book chapter given an id 
+	 * @param id
+	 */
 	public BookChapter(String id) {
 		super(id);
 	}
 	
-	public String getAddress(String list_name) {
+	/**
+	 * Get an address with respect to a book
+	 * 
+	 * @param list_name The name of the list
+	 * @return The address
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getAddress(String list_name) throws InvalidListException {
 		if (this.data_sets.containsKey(list_name)) {
 			return ((Context)this.data_sets.get(list_name)).address;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 
-	public String getPublisher(String list_name) {
+	/**
+	 * Get the publisher with respect to a list
+	 * 
+	 * @param list_name The name of the list
+	 * @return The publisher
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getPublisher(String list_name) throws InvalidListException {
 		if (this.data_sets.containsKey(list_name)) {
 			return ((Context)this.data_sets.get(list_name)).publisher;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 
-	public String getEditors(String list_name) {
+	/**
+	 * Gets the editor with respect to a list
+	 * 
+	 * @param list_name The name of the list
+	 * @return The editor
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getEditors(String list_name) throws InvalidListException {
 		if (this.data_sets.containsKey(list_name)) {
 			return ((Context)this.data_sets.get(list_name)).editors;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 	
-	public String getChapterTitle(String list_name) {
+	/**
+	 * Gets a chapter title with respect to a list
+	 * 
+	 * @param list_name The name of the list
+	 * @return The chapter title
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getChapterTitle(String list_name) throws InvalidListException {
 		if (this.data_sets.containsKey(list_name)) {
 			return ((Context)this.data_sets.get(list_name)).chapter_title;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 	
-	public String getPages(String list_name) {
+	/**
+	 * Gets the pages as a range (a-b or just a if a==b)
+	 * 
+	 * @param list_name The name of the list
+	 * @return The page range
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getPages(String list_name) throws InvalidListException {
 		int start;
 		int end;
 		if (this.data_sets.containsKey(list_name)) {
@@ -129,14 +203,14 @@ public class BookChapter extends Paper {
 			
 			return start + "-" + end;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 	
 	@Override
-	public String getPrintable(String list_name, String padding) {
+	public String getPrintable(String list_name, String padding) throws InvalidListException {
 		
 		if (!this.data_sets.containsKey(list_name)) {
-			throw new InvalidListException();
+			throw new InvalidListException(list_name);
 		}
 		
 		return String.format(

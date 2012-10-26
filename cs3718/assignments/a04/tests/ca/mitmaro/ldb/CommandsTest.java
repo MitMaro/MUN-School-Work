@@ -16,6 +16,7 @@ import ca.mitmaro.io.FileUtil;
 import ca.mitmaro.ldb.CommandLineInterface.StatusCode;
 import ca.mitmaro.ldb.entity.Paper;
 import ca.mitmaro.ldb.entity.UpdateContext;
+import ca.mitmaro.ldb.exception.InvalidListException;
 import ca.mitmaro.ldb.exception.MissingPaperException;
 
 import static org.mockito.Mockito.*;
@@ -38,7 +39,7 @@ public class CommandsTest {
 	}
 
 	@Test
-	public void addPaperCommand() {
+	public void addPaperCommand() throws InvalidListException {
 		String args[] = {"paper_name"};
 		Assert.assertEquals(StatusCode.OK, this.commands.addPaperCommand(args));
 		verify(this.application).addPapersToMasterList("paper_name");
@@ -51,7 +52,7 @@ public class CommandsTest {
 	}
 
 	@Test
-	public void addReferenceCommand() {
+	public void addReferenceCommand() throws InvalidListException {
 		String args[] = {"ref_name"};
 		Assert.assertEquals(StatusCode.OK, this.commands.addReferenceCommand(args));
 		verify(this.application).addReferencesToMasterList("ref_name");
@@ -90,7 +91,7 @@ public class CommandsTest {
 	}
 
 	@Test
-	public void editPaperCommand() throws IOException{
+	public void editPaperCommand() throws IOException, MissingPaperException{
 		NumberedMenu menu = mock(NumberedMenu.class);
 		SimplePrompt prompt = mock(SimplePrompt.class);
 		Paper paper = mock(Paper.class);
@@ -156,7 +157,7 @@ public class CommandsTest {
 	}
 
 	@Test(expectedExceptions= {IllegalArgumentException.class})
-	public void editPaperCommand_missingPaper() throws IOException{
+	public void editPaperCommand_missingPaper() throws IOException, MissingPaperException{
 		when(this.application.getPaper("P001")).thenReturn(null);
 
 		String args[] = {"P001", "in", "list_name"};

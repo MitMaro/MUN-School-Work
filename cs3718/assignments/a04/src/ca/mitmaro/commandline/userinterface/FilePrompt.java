@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -7,11 +7,17 @@
 /////////////////////////////////////////////////////////////////
 package ca.mitmaro.commandline.userinterface;
 
-import java.io.IOException;
 import java.io.File;
+import java.io.IOException;
 
 import ca.mitmaro.commandline.term.Terminal;
 
+/**
+ * Requires the user to input a correct file name and returns a file object
+ * 
+ * @author Tim Oram (MitMaro)
+ * 
+ */
 public class FilePrompt extends Prompt<File> {
 	
 	/**
@@ -28,6 +34,7 @@ public class FilePrompt extends Prompt<File> {
 	 * @return A file object pointing to a file.
 	 * @throws IOException
 	 */
+	@Override
 	public File waitForResponse() throws IOException {
 		
 		return new File(super.promptForNonEmptyInput());

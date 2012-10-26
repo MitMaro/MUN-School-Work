@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -8,25 +8,49 @@
 package ca.mitmaro.commandline.term;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
+/**
+ * A terminal io wrapper
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
 public class Terminal {
 	
+	/**
+	 * The prompt string
+	 */
 	private String prompt = "$ ";
 	
+	
+	/**
+	 * The (virtual) width of the terminal window  
+	 */
 	private int width = 80;
 	
+	/**
+	 * The input stream 
+	 */
 	private BufferedReader in;
+	
+	/**
+	 * The output stream
+	 */
 	private PrintWriter out;
+	
+	/**
+	 * The error output stream 
+	 */
 	private PrintWriter err;
 	
-	public Terminal() {
-		this.in = new BufferedReader(new InputStreamReader(System.in));
-		this.out = new PrintWriter(System.out);
-		this.err = new PrintWriter(System.err);
-	}
-	
+	/**
+	 * Create a terminal interface providing an input/output/error stream
+	 * 
+	 * @param in An input stream
+	 * @param out An output stream
+	 * @param err An error stream
+	 */
 	public Terminal(BufferedReader in, PrintWriter out, PrintWriter err) {
 		this.in = in;
 		this.out = out;
@@ -37,11 +61,9 @@ public class Terminal {
 	 * Set the virtual width of the terminal window
 	 * 
 	 * @param width The width
-	 * @return A fluid interface
 	 */
-	public Terminal setTermWidth(int width) {
+	public void setTermWidth(int width) {
 		this.width = width;
-		return this;
 	}
 	
 	public void flush() {
@@ -50,7 +72,7 @@ public class Terminal {
 	}
 	
 	/**
-	 * @return The virtual terminal width 
+	 * @return The virtual terminal width
 	 */
 	public int getTermWidth() {
 		return this.width;
@@ -58,31 +80,38 @@ public class Terminal {
 	
 	/**
 	 * Print of the prompt
-	 * @return A fluid interface
 	 */
-	public Terminal prompt() {
+	public void prompt() {
 		this.out.print(this.prompt);
 		this.out.flush();
-		return this;
 	}
 	
 	/**
+	 * Set the prompt string
+	 * 
 	 * @param prompt
-	 * @return A fluid interface
 	 */
-	public Terminal setPrompt(String prompt) {
+	public void setPrompt(String prompt) {
 		this.prompt = prompt;
-		return this;
 	}
 	
+	/**
+	 * @return The input reader
+	 */
 	public BufferedReader in() {
 		return this.in;
 	}
 	
+	/**
+	 * @return The output writer
+	 */
 	public PrintWriter out() {
 		return this.out;
 	}
 	
+	/**
+	 * @return The error output writer
+	 */
 	public PrintWriter err() {
 		return this.err;
 	}

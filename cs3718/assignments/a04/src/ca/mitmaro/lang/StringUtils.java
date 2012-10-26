@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -7,6 +7,12 @@
 /////////////////////////////////////////////////////////////////
 package ca.mitmaro.lang;
 
+/**
+ * Various useful string methods
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
 public class StringUtils {
 	
 	/**
@@ -45,7 +51,7 @@ public class StringUtils {
 	}
 	
 	/**
-	 * Repeats a string by concatenating together the provided string the number or repeats provided. 
+	 * Repeats a string by concatenating together the provided string the number or repeats provided.
 	 * 
 	 * @param str The string to repeat
 	 * @param repeat The number of times to repeat the string
@@ -91,7 +97,7 @@ public class StringUtils {
 	 * 
 	 * @param str The string to truncate
 	 * @param length The length of the truncated string
-	 * @param prepend The prepend 
+	 * @param prepend The prepend
 	 * @return The truncated string
 	 */
 	public static String truncate(String str, int length, String prepend) {
@@ -100,7 +106,6 @@ public class StringUtils {
 		}
 		
 		return str.substring(0, length - prepend.length()) + prepend;
-		
 	}
 	
 }

@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -7,12 +7,26 @@
 /////////////////////////////////////////////////////////////////
 package ca.mitmaro.commandline.help;
 
+/**
+ * A help message class
+ * 
+ * @author Tim Oram (MitMaro)
+ */
 public class Message {
 	
+	/**
+	 * The usage syntax
+	 */
 	private String usage;
+	
+	/**
+	 * The help message text
+	 */
 	private String help;
 	
 	/**
+	 * Constructs a message from the provided usage and help message text
+	 * 
 	 * @param usage The usage pattern
 	 * @param help The help text
 	 */

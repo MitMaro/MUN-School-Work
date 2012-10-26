@@ -42,13 +42,13 @@ public class BookChapterTest {
 
 	
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void addToList_missingOldList() {
+	public void addToList_missingOldList() throws InvalidListException {
 		BookChapter chap = new BookChapter("id");
 		chap.addToList("new_list", "old_list");
 	}
 
 	@Test
-	public void setDataSet() {
+	public void setDataSet() throws InvalidListException {
 		BookChapter chap = new BookChapter("id");
 		chap.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(chap.getTitle("list_name"), "Book Title");
@@ -64,7 +64,7 @@ public class BookChapterTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPages_samePage() {
+	public void getPages_samePage() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		UpdateContext context = new UpdateContext();
 		context.start_page = context.end_page = 1;
@@ -74,7 +74,7 @@ public class BookChapterTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPages_differentPage() {
+	public void getPages_differentPage() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		UpdateContext context = new UpdateContext();
 		context.start_page = 1;
@@ -86,7 +86,7 @@ public class BookChapterTest {
 	}
 	
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPrintable() {
+	public void getPrintable() throws InvalidListException {
 		BookChapter chap = new BookChapter("id");
 		chap.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(
@@ -98,7 +98,7 @@ public class BookChapterTest {
 	}
 	
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void update() {
+	public void update() throws InvalidListException {
 		BookChapter chap = new BookChapter("id");
 
 		chap.setDataSet("list_name", this.init_context);

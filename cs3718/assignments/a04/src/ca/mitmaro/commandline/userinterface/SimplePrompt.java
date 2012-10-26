@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -11,6 +11,12 @@ import java.io.IOException;
 
 import ca.mitmaro.commandline.term.Terminal;
 
+/**
+ * A very simple, wait for some non-empty response prompt
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
 public class SimplePrompt extends Prompt<String> {
 	
 	/**
@@ -29,6 +35,7 @@ public class SimplePrompt extends Prompt<String> {
 	 * @return True if yes was selected, false if no was selected
 	 * @throws IOException
 	 */
+	@Override
 	public String waitForResponse() throws IOException {
 		
 		return this.promptForNonEmptyInput();

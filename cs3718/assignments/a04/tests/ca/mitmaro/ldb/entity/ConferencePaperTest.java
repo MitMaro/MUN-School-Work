@@ -41,13 +41,13 @@ public class ConferencePaperTest {
 	}
 
 	@Test(expectedExceptions = { InvalidListException.class })
-	public void addToList_missingOldList() {
+	public void addToList_missingOldList() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		pap.addToList("new_list", "old_list");
 	}
 
 	@Test
-	public void setDataSet() {
+	public void setDataSet() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(pap.getTitle("list_name"), "Book Title");
@@ -63,7 +63,7 @@ public class ConferencePaperTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPages_samePage() {
+	public void getPages_samePage() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		
@@ -71,7 +71,7 @@ public class ConferencePaperTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPages_differentPage() {
+	public void getPages_differentPage() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		UpdateContext context = new UpdateContext();
 		context.start_page = 1;
@@ -83,7 +83,7 @@ public class ConferencePaperTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPrintable() {
+	public void getPrintable() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(
@@ -95,7 +95,7 @@ public class ConferencePaperTest {
 	}
 	
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void updateField() {
+	public void updateField() throws InvalidListException {
 		ConferencePaper pap = new ConferencePaper("id");
 		pap.setDataSet("list_name", this.init_context);
 		pap.update("list_name", this.update_context);

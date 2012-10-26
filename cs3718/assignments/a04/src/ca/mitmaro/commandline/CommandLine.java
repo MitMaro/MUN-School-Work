@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -18,24 +18,72 @@ import ca.mitmaro.commandline.help.Message;
 import ca.mitmaro.commandline.help.System;
 import ca.mitmaro.commandline.term.Terminal;
 
+/**
+ * A command line application base class. Contains a basc while loop,
+ * return code system, command system and a help system.
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
+/**
+ * @author mitmaro
+ *
+ */
+/**
+ * @author mitmaro
+ *
+ */
 public abstract class CommandLine {
 	
+	/**
+	 * Status code enum (more or less)
+	 * 
+	 * @author mitmaro
+	 *
+	 */
 	public class StatusCode {
+		/**
+		 * The exit return code
+		 */
 		public static final int EXIT = 0;
+		/**
+		 * A non-fatal return code
+		 */
 		public static final int NON_FATAL = 1;
+		/**
+		 * Defines a user defined code. Used in classes that extend this one 
+		 */
 		public static final int USER = 2;
+		/**
+		 * An IO error exception
+		 */
 		public static final int IO_ERROR = 4;
-		public static final int INVALID_OPERATION = 8 | NON_FATAL;
+		/**
+		 * A non fatal invalid operation code
+		 */
+		public static final int INVALID_OPERATION = 8 | StatusCode.NON_FATAL;
+		/**
+		 * A fatal error
+		 */
+		public static final int FATAL_ERROR = 16;
 		
-		public static final int OK = NON_FATAL;
+		/**
+		 * Ok is a non fatal code
+		 */
+		public static final int OK = StatusCode.NON_FATAL;
 	}
 	
+	/**
+	 * A command with a method and object (reflection based)
+	 */
 	private static class Command {
 		private Object obj;
 		private Method method;
 		
 		/**
-		 * @param name The name of the command
+		 * Constructs a Command given the object of the command and the method
+		 * 
+		 * @param obj The command class object
 		 * @param method The method
 		 */
 		public Command(Object obj, Method method) {
@@ -43,9 +91,16 @@ public abstract class CommandLine {
 			this.method = method;
 		}
 		
+		/**
+		 * Invoke this command passing the arguments provided into the method
+		 * 
+		 * @param args The args for the method being invoked
+		 * @return A StatusCode as an int
+		 * @throws Throwable Any exception created by this method is escalated up
+		 */
 		public int invoke(String[] args) throws Throwable{
 			try {
-				return (Integer)method.invoke(this.obj, (Object)args);
+				return (Integer)this.method.invoke(this.obj, (Object)args);
 			} catch (IllegalArgumentException e) {
 				e.printStackTrace();
 			} catch (IllegalAccessException e) {
@@ -57,13 +112,28 @@ public abstract class CommandLine {
 		}
 	}
 	
+	/**
+	 * An instance of the help system
+	 */
 	protected final System help = new System();
 	
+	/**
+	 * A mapping of command names to command classes
+	 */
 	private final HashMap<String, Command> commands = new HashMap<String, Command>();
 	
+	/**
+	 * Catch any exceptions and don't let them get to the default exception handler
+	 */
 	private boolean catch_exceptions = true;
+	/**
+	 * Display a stack trace when there is an exception
+	 */
 	private boolean display_trace = true;
 	
+	/**
+	 * A terminal instance
+	 */
 	protected final Terminal terminal;
 	
 	/**
@@ -73,14 +143,16 @@ public abstract class CommandLine {
 		this.terminal = terminal;
 	}
 	
+	/**
+	 * Helper methof to add the default commands class
+	 */
 	public void addDefaultCommands() {
 		this.addCommandClass(new DefaultCommands(this.help, this.terminal));
 	}
 	
 	/**
 	 * Adds all commands to the interface annotated in the class
-	 * @param obj The object for the method
-	 * @param cls
+	 * @param obj An object containing methods annotated as commands
 	 */
 	public void addCommandClass(Object obj) {
 		
@@ -133,7 +205,7 @@ public abstract class CommandLine {
 	 * True if the command exists
 	 * 
 	 * @param name A command name
-	 * @return The command
+	 * @return True if the command exists, else false
 	 */
 	public boolean hasCommand(String name) {
 		return this.commands.containsKey(name);
@@ -152,16 +224,26 @@ public abstract class CommandLine {
 	/**
 	 * Run the command with the given name
 	 * @param name The command name
-	 * @return
+	 * @param args The arguments to pass along to the command
+	 * @return A StatusCode
 	 */
 	public int runCommand(String name, String[] args) throws Throwable {
 		return this.commands.get(name).invoke(args);
 	}
 	
+	/**
+	 * Set to catch exceptions or not
+	 * @param v The value
+	 */
 	public void catchExceptions(boolean v) {
 		this.catch_exceptions = v;
 	}
 	
+	
+	/**
+	 * Set to display a trace or not
+	 * @param v The value
+	 */
 	public void displayTrace(boolean v) {
 		this.display_trace = v;
 	}
@@ -205,10 +287,20 @@ public abstract class CommandLine {
 		}
 	}
 
+	/**
+	 * The exception handler for an invalid argument
+	 * 
+	 * @param e The exception
+	 */
 	public void invalidArgumentHandler(IllegalArgumentException e) {
 		this.terminal.err().println("Argument Error: " + e.getMessage() + "\n");
 	}
 
+	
+	/**
+	 * The IO Exception handler
+	 * @param e The exception instance
+	 */
 	public void ioExceptionHandler(IOException e) {
 		this.terminal.err().println("IO Error: " + e.getMessage() + "\n");
 	}

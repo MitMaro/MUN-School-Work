@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -7,28 +7,52 @@
 /////////////////////////////////////////////////////////////////
 package ca.mitmaro.commandline.userinterface;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.io.IOException;
 
 import ca.mitmaro.commandline.term.Terminal;
-import ca.mitmaro.commandline.userinterface.YesNoQuestion;
 
+/**
+ * Displays a menu and requires the user to select an item from the menu
+ * 
+ * @author Tim Oram (MitMaro)
+ */
 public class NumberedMenu extends TextBased<String> {
 	
+	/**
+	 * The menu options that are displayed 
+	 */
 	private ArrayList<String> options;
 	
+	/**
+	 * A cache to that the menu doesn't need to be recreated on each request
+	 */
 	private String menu_cache = null;
 	
+	/**
+	 * The default item in the list
+	 */
 	private String default_item = null;
 	
+	/**
+	 * The abort prompt
+	 */
 	private YesNoQuestion abort_prompt;
 	
+	/**
+	 * Flag to allow abort or to force user to pick an item
+	 */
 	private boolean allow_abort = true;
 	
+	/**
+	 * Flag to disable the confirm abort prompt
+	 */
 	private boolean disable_abort_prompt = false;
 	
 	/**
+	 * Constructs a numbered menu
+	 * 
 	 * @param term The terminal interface
 	 */
 	public NumberedMenu(Terminal term) {
@@ -63,13 +87,15 @@ public class NumberedMenu extends TextBased<String> {
 		this.disable_abort_prompt = true;
 	}
 	
+	/**
+	 * Disables aborting of this menu
+	 */
 	public void disableAbort() {
 		this.allow_abort = false;
 	}
 	
-	/* (non-Javadoc)
-	 * @see ca.mitmaro.commandline.userinterface.TextBased#waitForResponse()
-	 */
+	
+	@Override
 	public String waitForResponse() throws IOException {
 		
 		String line = null;

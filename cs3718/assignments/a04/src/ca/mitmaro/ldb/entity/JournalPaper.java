@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -10,26 +10,56 @@ package ca.mitmaro.ldb.entity;
 import ca.mitmaro.lang.StringUtils;
 import ca.mitmaro.ldb.exception.InvalidListException;
 
+/**
+ * A journal paper
+ * 
+ * @author Tim Oram (MitMaro)
+ *
+ */
 public class JournalPaper extends Paper {
 	
 	/**
-	 * 
+	 * The serialization id
 	 */
 	private static final long serialVersionUID = -7708267179369016444L;
 
+	/**
+	 * The data context for a ournal paper
+	 * @author mitmaro
+	 *
+	 */
 	protected static class Context extends Paper.Context {
 		
 		/**
-		 * 
+		 * The serialization id
 		 */
 		private static final long serialVersionUID = 6023474742003662921L;
+		/**
+		 * The paper title
+		 */
 		protected String paper_title;
+		/**
+		 * Th volume
+		 */
 		protected int volume;
+		/**
+		 * The page start range
+		 */
 		protected int start_page;
+		/**
+		 * The page end rage
+		 */
 		protected int end_page;
 		
+		/**
+		 * Construct an empty context
+		 */
 		protected Context() {}
 		
+		/**
+		 * Construct a context with data from an UpdateContext
+		 * @param context
+		 */
 		protected Context(UpdateContext context) {
 			super.update(context);
 		}
@@ -71,25 +101,51 @@ public class JournalPaper extends Paper {
 		
 	}
 	
+	/**
+	 * Construct a Journal Paper with an id
+	 * 
+	 * @param id
+	 */
 	public JournalPaper(String id) {
 		super(id);
 	}
 	
-	public String getPaperTitle(String list_name) {
+	/**
+	 * Gets a paper title with respect to a list
+	 * 
+	 * @param list_name The name of the list
+	 * @return The paper title
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getPaperTitle(String list_name) throws InvalidListException {
 		if (this.data_sets.containsKey(list_name)) {
 			return ((Context)this.data_sets.get(list_name)).paper_title;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 	
-	public int getVolume(String list_name) {
+	/**
+	 * Gets the volume with respect to a list
+	 * 
+	 * @param list_name The name of the list
+	 * @return The volume
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public int getVolume(String list_name) throws InvalidListException {
 		if (this.data_sets.containsKey(list_name)) {
 			return ((Context)this.data_sets.get(list_name)).volume;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 	
-	public String getPages(String list_name) {
+	/**
+	 * Gets the pages as a range (a-b or just a if a==b)
+	 * 
+	 * @param list_name The name of the list
+	 * @return The page range
+	 * @throws InvalidListException If this book is not attached to a list
+	 */
+	public String getPages(String list_name) throws InvalidListException {
 		int start;
 		int end;
 		if (this.data_sets.containsKey(list_name)) {
@@ -103,14 +159,14 @@ public class JournalPaper extends Paper {
 			
 			return start + "-" + end;
 		}
-		throw new InvalidListException();
+		throw new InvalidListException(list_name);
 	}
 
 	@Override
-	public String getPrintable(String list_name, String padding) {
+	public String getPrintable(String list_name, String padding) throws InvalidListException {
 		
 		if (!this.data_sets.containsKey(list_name)) {
-			throw new InvalidListException();
+			throw new InvalidListException(list_name);
 		}
 		
 		return String.format(

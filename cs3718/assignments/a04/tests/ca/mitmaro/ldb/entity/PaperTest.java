@@ -82,37 +82,37 @@ public class PaperTest {
 	}
 
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void addToList_missingOldList() {
+	public void addToList_missingOldList() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.addToList("new_list", "old_list");
 	}
 
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void getAuthorFirst_Fail() {
+	public void getAuthorFirst_Fail() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.getAuthorFirst("not-there");
 	}
 
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void getAuthorLast_Fail() {
+	public void getAuthorLast_Fail() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.getAuthorLast("not-there");
 	}
 
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void getYear_Fail() {
+	public void getYear_Fail() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.getYear("not-there");
 	}
 
 	@Test(expectedExceptions= {InvalidListException.class})
-	public void getTitle_Fail() {
+	public void getTitle_Fail() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.getTitle("not-there");
 	}
 	
 	@Test
-	public void setDataSet() {
+	public void setDataSet() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(pap.getTitle("list_name"), "Title");
@@ -122,7 +122,7 @@ public class PaperTest {
 	}
 	
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void addToList_Success() {
+	public void addToList_Success() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.setDataSet("old_list", this.init_context);
 		pap.addToList("new_list", "old_list");
@@ -137,7 +137,7 @@ public class PaperTest {
 	}
 	
 	@Test
-	public void update() {
+	public void update() throws InvalidListException {
 		PaperImpl pap = new PaperImpl("id");
 		pap.setDataSet("list_name", this.init_context);
 		pap.update("list_name", this.update_context);

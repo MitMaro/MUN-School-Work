@@ -41,13 +41,13 @@ public class PHDThesisTest {
 	}
 	
 	@Test(expectedExceptions = { InvalidListException.class })
-	public void addToList_missingOldList() {
+	public void addToList_missingOldList() throws InvalidListException {
 		PHDThesis thesis = new PHDThesis("id");
 		thesis.addToList("new_list", "old_list");
 	}
 
 	@Test
-	public void setDataSet() {
+	public void setDataSet() throws InvalidListException {
 		PHDThesis thesis = new PHDThesis("id");
 		thesis.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(thesis.getAuthorFirst("list_name"), "Author First");
@@ -58,7 +58,7 @@ public class PHDThesisTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void updateField() {
+	public void updateField() throws InvalidListException {
 		PHDThesis thesis = new PHDThesis("id");
 		thesis.setDataSet("list_name", this.init_context);
 		thesis.update("list_name", this.update_context);
@@ -70,7 +70,7 @@ public class PHDThesisTest {
 	}
 
 	@Test(dependsOnMethods = {"setDataSet"})
-	public void getPrintable() {
+	public void getPrintable() throws InvalidListException {
 		PHDThesis thesis = new PHDThesis("id");
 		thesis.setDataSet("list_name", this.init_context);
 		Assert.assertEquals(

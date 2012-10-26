@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////
-//  CS 3718 (Winter 2012), Assignment #2                       //
+//  CS 3718 (Winter 2012), Assignment #3                       //
 //  Program File Name: LDB.java                                //
 //       Student Name: Tim Oram                                //
 //         Login Name: oram                                    //
@@ -14,8 +14,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 import ca.mitmaro.commandline.term.Terminal;
@@ -27,36 +27,77 @@ import ca.mitmaro.ldb.entity.JournalPaper;
 import ca.mitmaro.ldb.entity.PHDThesis;
 import ca.mitmaro.ldb.entity.Paper;
 import ca.mitmaro.ldb.entity.UpdateContext;
+import ca.mitmaro.ldb.exception.InvalidListException;
 import ca.mitmaro.ldb.exception.MissingPaperException;
 
+
+/**
+ * The main application class. Contains various methods for manipulating lists of papers
+ *
+ * @author Tim Oram (MitMaro)
+ */
 public class Application {
+	/**
+	 * The input file tag operations
+	 */
 	private static enum InputTag {PID, ADD, AUT, BED, BNP, BTL, JNP, JNT, JNV, PTY, PUB, PYR, TLE, END}
 	
+	/**
+	 * The command line interface for this application
+	 */
 	private CommandLineInterface intrface; // can be substituted later for other interfaces
 	
+	/**
+	 * An instance of the file util class
+	 */
 	private FileUtil file_util;
 	
+	/**
+	 * The terminal interface
+	 */
 	private Terminal terminal;
 	
-	// global lists
+	/**
+	 * The global list of papers
+	 */
 	private LinkedHashMap<String, Paper> papers;
-	private LinkedHashMap<String, Paper> references;
 	
+	/**
+	 * The current working paper
+	 */
 	private Paper current_working_paper;
 
-	// the key of the master list
+	/**
+	 * The key of the master list
+	 */
 	private final String master_list_name = "_ _ _M A S T E R_ _ _";
 	
-	// the "master" list of paper
+	/**
+	 * The master list of papers
+	 */
 	private LinkedHashSet<Paper> master_paper_list;
-	// the "master" list of references
+	
+	/**
+	 * The master reference list
+	 */
 	private LinkedHashSet<Paper> master_references_list;
 	
-	// the named lists of paper
+	/**
+	 * The named list of papers
+	 */
 	private LinkedHashMap<String, LinkedHashSet<Paper>> file_paper_lists;
-	// the named lists of references
+	
+	/**
+	 * The named list of references
+	 */
 	private LinkedHashMap<String, LinkedHashSet<Paper>> file_references_lists;
 	
+	/**
+	 * Constructs the application class
+	 * 
+	 * @param file_manager The file util file mananger
+	 * @param terminal A terminal interface
+	 */
 	public Application(FileUtil file_manager, Terminal terminal) {
 		this.file_util = file_manager;
 		this.terminal = terminal;
@@ -76,35 +117,68 @@ public class Application {
 		
 		// load empty lists on first load/error
 		this.papers = new LinkedHashMap<String, Paper>();
-		this.references = new LinkedHashMap<String, Paper>();
 		this.file_paper_lists = new LinkedHashMap<String, LinkedHashSet<Paper>>();
 		this.file_references_lists = new LinkedHashMap<String, LinkedHashSet<Paper>>();
 		this.master_paper_list = new LinkedHashSet<Paper>();
 		this.master_references_list = new LinkedHashSet<Paper>();
 	}
 	
-	public void addPapersToMasterList(String name) {
-		for (Paper paper: this.file_paper_lists.get(name)) {
-			paper.addToList(this.master_list_name, name);
+	/**
+	 * Add paper to the master paper list
+	 * 
+	 * @param list_name The list name to add
+	 * @throws InvalidListException If list name is invalid
+	 */
+	public void addPapersToMasterList(final String list_name) throws InvalidListException {
+		
+		if (!this.file_paper_lists.containsKey(list_name)) {
+			throw new InvalidListException(list_name);
+		}
+		
+		for (Paper paper: this.file_paper_lists.get(list_name)) {
+			paper.addToList(this.master_list_name, list_name);
 			this.master_paper_list.add(paper);
 		}
 	}
 	
-	public void addReferencesToMasterList(String name) {
-		for (Paper paper: this.file_references_lists.get(name)) {
+	/**
+	 * Add references to the master paper list
+	 * 
+	 * @param list_name The list name to add
+	 * @throws InvalidListException If list name is invalid
+	 */
+	public void addReferencesToMasterList(final String list_name) throws InvalidListException {
+
+		if (!this.file_references_lists.containsKey(list_name)) {
+			throw new InvalidListException(list_name);
+		}
+		
+		for (Paper paper: this.file_references_lists.get(list_name)) {
 			this.master_references_list.add(paper);
 		}
 	}
 	
+	/**
+	 * Clear the master paper list
+	 */
 	public void clearMasterPaperList() {
 		this.master_paper_list.clear();
 	}
 	
+	/**
+	 * Clear the master reference list
+	 */
 	public void clearMasterReferenceList() {
 		this.master_references_list.clear();
 	}
 	
-	private Paper createPaper(String pid, String type) {
+	/**
+	 * Create a new paper from a paper id and a type
+	 * @param pid The paper id
+	 * @param type The type of paper
+	 * @return A paper object
+	 */
+	private Paper createPaper(final String pid, final String type) {
 		if (type.equals("book")) {
 			return new Book(pid);
 		} else if (type.equals("phd thesis")) {
@@ -120,39 +194,82 @@ public class Application {
 		throw new AssertionError("This should not have happened.");
 	}
 	
+	/**
+	 * @return the current working paper
+	 */
 	public Paper getCurrentWorkingPaper() {
 		return this.current_working_paper;
 	}
 	
+	/**
+	 * @return the paper file list names
+	 */
 	public Set<String> getFileListNames() {
 		return this.file_paper_lists.keySet();
 	}
 	
+	/**
+	 * @return the reference file list names
+	 */
 	public Set<String> getFileReferenceListNames() {
 		return this.file_references_lists.keySet();
 	}
 	
+	/**
+	 * @return the user interface
+	 */
 	public CommandLineInterface getInterface() {
 		return this.intrface;
 	}
 	
+	/**
+	 * @return the master list name
+	 */
 	public String getMasterListName() {
 		return this.master_list_name;
 	}
 	
+	/**
+	 * @return the list of papers in the master list
+	 */
 	public LinkedHashSet<Paper> getMasterListPapers() {
 		return this.master_paper_list;
 	}
 	
-	public Paper getPaper(String pid) {
-		return this.papers.get(pid);
+	/**
+	 * Get a paper from a paper id
+	 * 
+	 * @param pid The paper id
+	 * @return a paper instance
+	 * @throws MissingPaperException if paper doens't exist
+	 */
+	public Paper getPaper(final String pid) throws MissingPaperException {
+		if (this.papers.containsKey(pid)) {
+			return this.papers.get(pid);
+		}
+		throw new MissingPaperException(pid);
 	}
 
-	public LinkedHashSet<Paper> getPaperList(String list_name) {
-		return this.file_paper_lists.get(list_name);
+	/**
+	 * Get a list of papers from a paper list
+	 * @param list_name The name of the list
+	 * @return A list of papers
+	 * @throws InvalidListException If list doesn't exist
+	 */
+	public LinkedHashSet<Paper> getPaperList(final String list_name) throws InvalidListException {
+		if (this.file_paper_lists.containsKey(list_name)) {
+			return this.file_paper_lists.get(list_name);
+		}
+		throw new InvalidListException(list_name);
 	}
 
-	public void loadPaperDescriptionListFile(File file, String name) throws IOException {
+	/**
+	 * Loads a paper description list, parses it and adds papers
+	 * @param file The file object pointing to the list
+	 * @param list_name A name of the list
+	 * @throws IOException
+	 */
+	public void loadPaperDescriptionListFile(final File file, final String list_name) throws IOException {
 		
 		BufferedReader in = this.file_util.getBufferedReader(file);
 		
@@ -161,10 +278,10 @@ public class Application {
 		InputTag input_tag;
 		
 		// load the file paper list, if one exists. if not create it
-		LinkedHashSet<Paper> file_paper = this.file_paper_lists.get(name);
+		LinkedHashSet<Paper> file_paper = this.file_paper_lists.get(list_name);
 		if (file_paper == null) {
 			file_paper = new LinkedHashSet<Paper>();
-			this.file_paper_lists.put(name, file_paper);
+			this.file_paper_lists.put(list_name, file_paper);
 		}
 		
 
@@ -269,7 +386,7 @@ public class Application {
 						this.papers.put(pid, paper);
 					}
 					
-					paper.update(name, context);
+					paper.update(list_name, context);
 					
 					// update paper for this list
 					file_paper.add(paper);
@@ -284,7 +401,15 @@ public class Application {
 		}
 	}
 
-	public void loadPaperReferenceListFile(File file, String name) throws IOException, MissingPaperException {
+	/**
+	 * Load a paper reference list
+	 * 
+	 * @param file A file instance to the reference file
+	 * @param list_name The name of the reference list
+	 * @throws IOException
+	 * @throws MissingPaperException If a paper in the reference map doesn't exist
+	 */
+	public void loadPaperReferenceListFile(final File file, final String list_name) throws IOException, MissingPaperException {
 		
 		BufferedReader in = this.file_util.getBufferedReader(file);
 		
@@ -294,10 +419,10 @@ public class Application {
 		Paper reference;
 		
 		// load the file reference list, if one exists. if not create it
-		LinkedHashSet<Paper> file_references = this.file_references_lists.get(name);
+		LinkedHashSet<Paper> file_references = this.file_references_lists.get(list_name);
 		if (file_references == null) {
 			file_references = new LinkedHashSet<Paper>();
-			this.file_references_lists.put(name, file_references);
+			this.file_references_lists.put(list_name, file_references);
 		}
 		
 		while ((line = in.readLine()) != null) {
@@ -314,7 +439,7 @@ public class Application {
 			paper = this.papers.get(tmp[0]);
 			// does not yet exist
 			if (paper == null) {
-				throw new MissingPaperException(String.format("The paper with id, %s, does not exist.", tmp[0]));
+				throw new MissingPaperException(tmp[0]);
 			}
 			
 			// split references
@@ -327,7 +452,7 @@ public class Application {
 				}
 				reference = this.papers.get(ref);
 				if (reference == null) {
-					throw new MissingPaperException(String.format("The paper with id, %s, does not exist.", ref));
+					throw new MissingPaperException(tmp[0]);
 				}
 				file_references.add(reference);
 				reference.addCitation(paper);
@@ -336,7 +461,13 @@ public class Application {
 		}
 	}
 
-	public void setCurrentWorkingPaper(String id) {
+	/**
+	 * Set the current working paper by id
+	 * 
+	 * @param id The id of the paper
+	 * @throws MissingPaperException If no paper with id exists
+	 */
+	public void setCurrentWorkingPaper(final String id) throws MissingPaperException {
 		
 		int index;
 		int i = 1;
@@ -373,50 +504,91 @@ public class Application {
 				i++;
 			}
 		}
-		this.terminal.out().println("Current working paper set to: " + this.current_working_paper.getId());
+		throw new MissingPaperException(id);
 	}
 
+	/**
+	 * Set the user interface
+	 * 
+	 * @param intf
+	 */
 	public void setInterface (CommandLineInterface intf) {
 		this.intrface = intf;
 	}
 
-	public void updatePaper(Paper paper, String list_name, UpdateContext context) {
+	/**
+	 * Update a paper given a paper, list name and an update context
+	 * 
+	 * @param paper The paper to update
+	 * @param list_name The list to update paper on
+	 * @param context The update context
+	 */
+	public void updatePaper(final Paper paper, final String list_name, final UpdateContext context) {
 		paper.update(list_name, context);
 	}
 
-	public void sortPaperListByAuthor(String list_name) {
+	/**
+	 * Sort a paper list by author name
+	 * 
+	 * @param list_name The name of the list
+	 * @throws InvalidListException If the list doesn't exist
+	 */
+	public void sortPaperListByAuthor(final String list_name) throws InvalidListException {
+		
+		if (!this.file_paper_lists.containsKey(list_name)) {
+			throw new InvalidListException(list_name);
+		}
+		
 		ArrayList<Paper> tmp = new ArrayList<Paper>(this.file_paper_lists.get(list_name));
 		Collections.sort(tmp, new PaperCompareAuthor(list_name));
 		this.file_paper_lists.put(list_name, new LinkedHashSet<Paper>(tmp));
 	}
 	
-	public void sortPaperListByPID(String list_name) {
+	/**
+	 * Sort a paper list by pid
+	 * 
+	 * @param list_name The name of the list
+	 * @throws InvalidListException if the list doesn't exist
+	 */
+	public void sortPaperListByPID(final String list_name) throws InvalidListException {
+		
+		if (!this.file_paper_lists.containsKey(list_name)) {
+			throw new InvalidListException(list_name);
+		}
+		
 		ArrayList<Paper> tmp = new ArrayList<Paper>(this.file_paper_lists.get(list_name));
 		Collections.sort(tmp, new PaperComparePID());
 		this.file_paper_lists.put(list_name, new LinkedHashSet<Paper>(tmp));
 	}
 	
+	/**
+	 * Sort the master paper list by author name
+	 */
 	public void sortMasterListByAuthor() {
 		ArrayList<Paper> tmp = new ArrayList<Paper>(this.master_paper_list);
 		Collections.sort(tmp, new PaperCompareAuthor(this.getMasterListName()));
 		this.master_paper_list = new LinkedHashSet<Paper>(tmp);
 	}
 	
+	/**
+	 * Sort the master paper list by paper id
+	 */
 	public void sortMasterListByPID() {
 		ArrayList<Paper> tmp = new ArrayList<Paper>(this.master_paper_list);
 		Collections.sort(tmp, new PaperComparePID());
 		this.master_paper_list = new LinkedHashSet<Paper>(tmp);
 	}
 
+	/**
+	 * Save the state of all lists in the system using serialization
+	 * 
+	 * @throws IOException
+	 */
 	public void saveState() throws IOException {
 		ObjectOutputStream writer;
 
 		writer = this.file_util.getBufferedObjectWriter("./data/papers.lst");
 		writer.writeObject(this.papers);
-		writer.close();
-		
-		writer = this.file_util.getBufferedObjectWriter("./data/references.lst");
-		writer.writeObject(this.references);
 		writer.close();
 		
 		writer = this.file_util.getBufferedObjectWriter("./data/master_paper.lst");
@@ -436,15 +608,18 @@ public class Application {
 		writer.close();
 	}
 	
+	/**
+	 * Load the list state from a serialized state
+	 * 
+	 * @throws IOException
+	 * @throws ClassNotFoundException
+	 */
 	@SuppressWarnings("unchecked")
 	public void readState() throws IOException, ClassNotFoundException {
 		ObjectInputStream reader;
 		
 		reader = this.file_util.getBufferedObjectReader("./data/papers.lst");
 		this.papers = (LinkedHashMap<String, Paper>)reader.readObject();
-		
-		reader = this.file_util.getBufferedObjectReader("./data/references.lst");
-		this.references = (LinkedHashMap<String, Paper>)reader.readObject();
 		
 		reader = this.file_util.getBufferedObjectReader("./data/master_paper.lst");
 		this.master_paper_list = (LinkedHashSet<Paper>)reader.readObject();
