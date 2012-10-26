@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////////////
+//  CS 3716 (Winter 2012), Assignment #5                       //
+//  Program File Name: IMDB.java                               //
+//         Login Name: oram                                    //
+//       Student Name: Oram, Timothy A.                        //
+//       Student Name: Alfosool Saheb, Ali Mohammad            //
+//       Student Name: Chen, Shike                             //
+//       Student Name: Zakzouk, Omar S.                        //
+/////////////////////////////////////////////////////////////////
+
+package ca.mun.imdb.command;
+
+import ca.mun.imdb.Application;
+
+public class ListDatabase extends Command {
+	
+	private Application app;
+	
+	public ListDatabase(Application application) {
+		this.app = application;
+	}
+
+	public void call(String[] args) {
+		for (String name: this.app.getDatabaseNames()) {
+			System.out.println(name);
+		}
+	}
+}

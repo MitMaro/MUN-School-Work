@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////////////
+//  CS 3716 (Winter 2012), Assignment #5                       //
+//  Program File Name: IMDB.java                               //
+//         Login Name: oram                                    //
+//       Student Name: Oram, Timothy A.                        //
+//              MUN #:                                         //
+//       Student Name: Alfosool Saheb, Ali Mohammad            //
+//              MUN #:                                         //
+//       Student Name: Chen, Shike                             //
+//              MUN #:                                         //
+//       Student Name: Zakzouk, Omar S.                        //
+//              MUN #:                                         //
+/////////////////////////////////////////////////////////////////
+
+Compiling
+-----------------------------------------------------------------
+For convenience the project can be compiled using an ant script.
+Compile by using the `ant` command. Compiled classes will be
+placed into the 'build' directory and a jar file will be created in
+the project directory.
+
+There is really no reason to compile the project as a jar has been
+provided.
+
+
+Running
+-----------------------------------------------------------------
+Running is super simple. Simply run `java -jar imdb.jar`.
