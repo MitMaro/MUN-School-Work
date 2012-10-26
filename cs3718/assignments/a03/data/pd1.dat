@@ -1,0 +1,39 @@
+PID P001
+PTY Journal paper
+AUT Wareham, T
+PYR 2008
+TLE Pigs can (finally) fly: Charting a new frontier in gene manipulation.
+JNT Journal of Agricultural Investigation
+JNV 27
+JNP 134-151
+END
+
+PID P002
+PTY Journal paper
+AUT Smith, JM
+PYR 1956
+TLE The aeronautical viability of common livestock.
+JNT Aeronautics Monthly
+JNV 2
+JNP 1-124
+END
+
+PID P003
+PTY Journal paper
+AUT Karmiloff-Smith, TAS
+PYR 1967
+TLE The implausibility of barnyard aviation I. Mathematical preliminaries.
+JNT Journal of Discrete Mathematics
+JNV 245
+JNP 221-219
+END
+
+PID P004
+PTY Journal paper
+AUT Williams, K
+PYR 2009
+TLE Commentary: Pigs most certainly cannot fly!
+JNT Journal of Agricultural Investigation
+JNV 28
+JNP 504
+END
