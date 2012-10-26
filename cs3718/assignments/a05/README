@@ -1,0 +1,42 @@
+/////////////////////////////////////////////////////////////////
+//  CS 3718 (Winter 2012), Assignment #4                       //
+//  Program File Name: LDB.java                                //
+//       Student Name: Tim Oram                                //
+//         Login Name: oram                                    //
+//              MUN #: 200529220                               //
+/////////////////////////////////////////////////////////////////
+
+Compiling
+-----------------------------------------------------------------
+For convenience the project can be compiled using an ant script.
+Compile by using the `ant` command. Compiled classes will be
+placed into the 'build' directory and a jar file will be created in
+the project directory.
+
+There is really no reason to compile the project as a jar has been
+provided.
+
+
+Running
+-----------------------------------------------------------------
+There are two interfaces available for this program. The first is
+a command line only interface. To run the command line interface
+simply run the command `java -jar LDB.jar`. For second interface
+is a graphical interface and can be run using the following
+command `java -jar LDB.jar -gui`.
+
+GUI
+-----------------------------------------------------------------
+The GUI recreates every aspect of the command line interface plus
+provides a few additional features.
+
+Change Log
+-----------------------------------------------------------------
+ * Fixed critical bug in the persistence code. Empty data lists
+   were completely breaking the system.
+ * Refactored Application class to not use as many lists and as
+   such use less memory.
+ * Added a GUI option. Usable by passing -gui argument.
+ * Fixed bug in Paper when using HashSets by adding hashCode()
+   method.
+ * Fixed a persistence bug with hashsets and serialization.

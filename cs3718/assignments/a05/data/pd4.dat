@@ -1,0 +1,41 @@
+PID P008
+PTY Book
+AUT Alon, N
+PYR 1999
+BTL Approximating Optimal Flight Patterns.
+PUB Addison-Wesley
+ADD Reading, MA
+END
+
+PID P009
+PTY PhD Thesis
+AUT Wareham, T.
+PYR 1999
+TLE Systematic Parameterized Complexity Analysis in Computational Phonology.
+ADD Departnment of Computer Science, Memorial University of Newfpoundland.
+END
+
+PID P010
+PTY Book chapter
+AUT Alon, N
+PYR 2002
+TLE Barnyard Flight: An Annotated Bibliography.
+BED Alon, N and Wareham, T
+BTL The Mammalian Aeronautics Handbook.
+PUB CRC Press
+ADD Boca Raton, FL
+BNP 23-87
+END
+
+PID P011
+PTY Conference paper
+AUT Karmiloff-Smith, A
+PYR 1986
+TLE The Mental Representation of Flight.
+BED Wareham, T
+BTL Proceedings of the 5th International Congress on Mental Aeronautics.
+PUB Cognitive Science Society
+ADD Austin, TX
+BNP 1053-1058
+END
+

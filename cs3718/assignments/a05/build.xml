@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project name="LDB Builder" default="main" basedir=".">
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="build" />
+	<property name="dist.jar" location="ldb.jar" />
+	<property name="docs.dir" location="docs" />
+	<property name="libs.dir" location="jars" />
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${docs.dir}" />
+		<delete dir="${dist.jar}" />
+	</target>
+
+	<target name="makedir">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${docs.dir}" />
+	</target>
+	
+	<target name="compile" depends="clean, makedir">
+		<javac
+			includeantruntime="false"
+			classpath="${libs.dir}/swingx-all-1.6.3.jar"
+			srcdir="${src.dir}"
+			destdir="${build.dir}"
+			debug="true"
+		/>
+	</target>
+	
+	<target name="docs" depends="compile">
+		<javadoc packagenames="src" sourcepath="${src.dir}" destdir="${docs.dir}">
+			<fileset dir="${src.dir}"><include name="*.java" /></fileset>
+		</javadoc>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${dist.jar}" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="LDB" />
+				<attribute name="Class-Path" value="jars/swingx-all-1.6.3.jar" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="main" depends="compile, jar">
+		<description>Main target</description>
+	</target>
+</project>
