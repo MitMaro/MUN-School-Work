@@ -1,11 +1,11 @@
 /*************************************************************************
  * Memorial University of Newfoundland
  * Engineering 1020 Structured Programming
- * Assignment 1
+ * Assignment #1
  * 
- * Author: 
- * Student #: 
- * E-mail (@mun.ca): 
+ * Author: Obinna Nelson Okonkwo
+ * Student #: 201010808
+ * E-mail (@mun.ca): ono754@mun.ca
  * Author: Tim Oram
  * Student #: 200529220
  * E-mail (@mun.ca): toram@mun.ca
@@ -14,8 +14,9 @@
  * 
  * assign1.cpp -- function to display the battery voltage as a percent
  * ***********************************************************************/
-#include <iostream>
-using namespace std;
+
+#include <pololu/orangutan.h>
+#include <pololu/3pi.h>
 
 #include "assign1.h"
 
@@ -24,17 +25,16 @@ using namespace std;
  * @modifies cout -- The battery voltage percentage is appended
  * ***********************************************************************/
 
+#define MIN_VOLTS 3.5
+#define MAX_VOLTS 5.5
+
 void displayBattery() {
 	
-	// get the millivolt value from the 3pi
-	int bat = read_battery_millivolts();
-	
-	// calculate the percentage of the input from 3.5 - 5.5
-	// convert voltage to floating point number
-	double percent = (inp / 1000.0);
+	// get the millivolt value from the 3pi, convert to floating volts value
+	double volts = read_battery_millivolts() / 1000.0;
 	
 	// calculate the percent decimal voltage
-	percent = (percent - 3.5) / (5.5  - 3.5);
+	double percent = (volts - MIN_VOLTS) / (MAX_VOLTS  - MIN_VOLTS);
 	
 	// convert to a percentage
 	percent *= 100;
